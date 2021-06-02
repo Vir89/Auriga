@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Theme from "./styles/theme";
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyles from './components/GlobalStyles/GlobalStyles';
+import GlobalStyles from './styles/GlobalStyles';
 import MyAPIProvider from './context/ApiContext'
 
 ReactDOM.render(
