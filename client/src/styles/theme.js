@@ -9,6 +9,7 @@ const theme = {
         tertiary : "#B2D9DB",
         quaternary : "#517B9A",
         quinary :"#F3FAEF"
+
     },
     largeViewport : {
         size: "1000px", // to be used as min-width in media queries
@@ -27,6 +28,7 @@ const theme = {
         padding : "30px",
         margin : "30px",
     },
+
     textWeight : {
         regular : 400,
         medium : 500,
@@ -34,7 +36,6 @@ const theme = {
         bold : 700,
 
     },
-
     
     mainContentWidth : "80%", // all viewports have the same width in the outermost div that holds everything
     mainContentMaxWidth : "1080px",

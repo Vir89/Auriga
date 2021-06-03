@@ -69,6 +69,7 @@ table {
 html, body, #root {
   height: 100%;
   font-family: "Cabin";
+
 }
 `;
 
