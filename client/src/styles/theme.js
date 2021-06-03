@@ -4,13 +4,12 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
     colors : {
-        primary : "#060B26",
-        secondary : "#FFFFFF",
-        red: "#FF2900",
-        orange: "#FF662F",
-        grey:"#EEEEEE",
-        button: "#2991cc",
-        buttonHover:"#060B26"
+        primary : "#1D4A7E",
+        secondary : "#2FB695",
+        tertiary : "#B2D9DB",
+        quaternary : "#517B9A",
+        quinary :"#F3FAEF"
+
     },
     largeViewport : {
         size: "1000px", // to be used as min-width in media queries
@@ -30,6 +29,13 @@ const theme = {
         margin : "30px",
     },
 
+    textWeight : {
+        regular : 400,
+        medium : 500,
+        semiBold : 600,
+        bold : 700,
+
+    },
     
     mainContentWidth : "80%", // all viewports have the same width in the outermost div that holds everything
     mainContentMaxWidth : "1080px",
