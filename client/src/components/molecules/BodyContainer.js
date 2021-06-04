@@ -30,7 +30,7 @@ export const BodyContainer = () => {
             </DivRow>
             <DivRow>
                 <P>Valor actual de tu vehículo</P>
-                <P>{textData.HomeProfileInfo[0].carValue} €</P>
+                <H3>{textData.HomeProfileInfo[0].carValue} €</H3>
                 
             </DivRow>
 
