@@ -20,7 +20,7 @@ export const SidebarData = [
     },
     {
         title: 'Área Personal',
-        path: '/area-persona',
+        path: '/area-personal',
         icon: <IoIcons.IoMdPerson />,
         cName: 'nav-text',
     },

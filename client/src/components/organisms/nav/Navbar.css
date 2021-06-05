@@ -72,8 +72,9 @@
     border-radius: 4px;
 }
 
-.nav-text a:hover {
+.nav-text:hover {
     background-color: #517B9A;
+    border-radius: 10px;
 }
 
 .nav-menu-items {

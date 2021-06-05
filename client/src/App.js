@@ -11,7 +11,25 @@ const App = () => {
         <Router>          
           <Navbar />          
           <Switch>
-            <Route path='/' />
+            <Route exact path='/' />
+          </Switch>
+          <Switch>
+            <Route path='/area-coches' />
+          </Switch>
+          <Switch>
+            <Route path='/area-personal' />
+          </Switch>
+          <Switch>
+            <Route path='/mensajes' />
+          </Switch>
+          <Switch>
+            <Route path='/suscripciones' />
+          </Switch>
+          <Switch>
+            <Route path='/contacto' />
+          </Switch>
+          <Switch>
+            <Route path='/cerrar-sesion' />
           </Switch>
         </Router>       
     </>
