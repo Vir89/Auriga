@@ -1,17 +1,17 @@
 import React from 'react';
-//import styled from 'styled-components/macro';
 import Navbar from './components/organisms/nav/Navbar';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { Home } from './components/pages/Home';
 
 
-
+  
 const App = () => {
   return (
     <>    
         <Router>          
           <Navbar />          
           <Switch>
-            <Route exact path='/' />
+            <Route exact path='/' component={Home}/>
           </Switch>
           <Switch>
             <Route path='/area-coches' />
