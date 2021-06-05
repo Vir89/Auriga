@@ -16,19 +16,19 @@ const theme = {
     },
     largeViewport : {
         size: "1000px", // to be used as min-width in media queries
-        padding : "50px", // what is this?
+       // padding : "50px", // what is this?
         margin : "2.75%",  // gutter inbetween group of components (e.g. text sections vs accordion)
         
     },
     mediumViewport : {
         minSize : "768px",
         maxSize : "1000px",
-        padding : "30px",
+       // padding : "30px",
         margin : "30px",
     },
     smallViewport : {
         size : "768px", // to be used as max-width in media queries
-        padding : "30px",
+       // padding : "30px",
         margin : "30px",
     },
 
