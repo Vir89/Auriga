@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Virginia",
+      "lastName": "Herrera",
+      "email": "virginia@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "coches": [
+    {
+      "id": 1,
+      "modelo": "ferrari"
+    }
+  ]
+}
