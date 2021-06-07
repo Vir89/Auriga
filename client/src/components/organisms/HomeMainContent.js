@@ -1,13 +1,15 @@
 import React from 'react'
+
+import DivColumn from '../atoms/DivColumn'
 import { BodyContainer } from '../molecules/BodyContainer'
 import { HeaderContainer } from '../molecules/HeaderContainer'
 
 export const HomeMainContent = () => {
     return (
-        <div>
+        <DivColumn>
             <HeaderContainer/>
             <BodyContainer/>
             
-        </div>
+        </DivColumn>
     )
 }
