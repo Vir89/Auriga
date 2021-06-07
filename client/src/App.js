@@ -3,6 +3,7 @@ import Navbar from './components/organisms/nav/Navbar';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import { Home } from './components/pages/Home';
 import {Alta} from './components/pages/Alta';
+import { Personal } from './components/pages/Personal';
 
 
 
@@ -23,7 +24,7 @@ const App = () => {
             <Route path='/area-coches' />
           </Switch>
           <Switch>
-            <Route path='/area-personal' />
+            <Route path='/area-personal' component={Personal}/>
           </Switch>
           <Switch>
             <Route path='/mensajes' />
