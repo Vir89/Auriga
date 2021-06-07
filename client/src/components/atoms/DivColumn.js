@@ -1,9 +1,11 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 const DivColumn= styled.div `
     display: flex;
     flex-direction: column;
-    padding:10px;
+    ${props=>props.center && css`
+        align-items: center;
+    `}
     
 `
 

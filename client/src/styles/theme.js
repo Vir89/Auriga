@@ -11,7 +11,9 @@ const theme = {
         quinary :"#F3FAEF",
         danger: "#DC3545",
         warning:"#FFC107",
-        success:"#66A76F"
+        success:"#66A76F",
+        white: "#FFFFFF",
+        lightDanger: "#FF9187"
 
     },
     largeViewport : {
