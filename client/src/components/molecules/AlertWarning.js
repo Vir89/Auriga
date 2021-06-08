@@ -1,8 +1,9 @@
 import React from 'react'
 import { DivAlert } from '../atoms/DivAlert'
-import P from '../atoms/P'
 import Span from '../atoms/Span'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
+import { FaWrench } from "react-icons/fa";
+
 import H3 from '../atoms/H3';
 
 
