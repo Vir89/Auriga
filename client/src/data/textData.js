@@ -33,7 +33,7 @@ export const textData = {
             type: "repair"
         },
         {
-            name: "Vencimiento Póliza seguro",
+            name: "Vencimiento seguro",
             fechaCaducidad: "01/12/2021",
             type: "danger"
             
