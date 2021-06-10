@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SpanTitle = styled.span `
+const SpanTitle = styled.div `
     margin-left: 16px;
     text-decoration: none;
     color: #f5f5f5;

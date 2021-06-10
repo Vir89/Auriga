@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const LiNavText = styled.li `
-    background-color: #1D4A7F;
+    /* background-color: #1D4A7F;
     width: 100%;
     height: 80px;
     display: flex;
@@ -10,7 +10,14 @@ const LiNavText = styled.li `
     text-decoration: none;
     color: #f5f5f5;
     font-size: 18px;
-    padding: 0 16px;
+    padding: 0 16px; */
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
    
 `
 

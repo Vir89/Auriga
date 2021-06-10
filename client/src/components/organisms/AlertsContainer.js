@@ -1,6 +1,7 @@
 import React from 'react'
 import DivColumn from '../atoms/DivColumn'
-import H3 from '../atoms/H3'
+import H2 from '../atoms/H2'
+
 import { AlertDanger } from '../molecules/AlertDanger'
 import { AlertSuccess } from '../molecules/AlertSuccess'
 import { AlertWarning } from '../molecules/AlertWarning'
@@ -8,7 +9,7 @@ import { AlertWarning } from '../molecules/AlertWarning'
 export const AlertsContainer = () => {
     return (
         <DivColumn>
-            <H3>Avisos pendientes</H3>
+            <H2>Avisos pendientes</H2>
             
             <AlertDanger/>
             <AlertWarning/>

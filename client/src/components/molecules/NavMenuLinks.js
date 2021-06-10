@@ -11,6 +11,8 @@ import { SidebarData } from '../organisms/SidebarData';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import SpanTitle from '../atoms/SpanTitle';
+import Icons from '../atoms/Icons';
+
 
 export const NavMenuLinks = (props) => {
 
@@ -34,7 +36,9 @@ export const NavMenuLinks = (props) => {
                         return (
                             <LiNavText key={index}>
                                 <Link to={item.path}> 
-                                {item.icon}                                   
+                                  <Icons>
+                                     {item.icon}  
+                                  </Icons>                                                                   
                                     <SpanTitle>{item.title}</SpanTitle>
                                 </Link>
                                 <IoIcons.IoIosArrowForward />
