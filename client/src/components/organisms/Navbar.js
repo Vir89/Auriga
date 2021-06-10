@@ -4,7 +4,7 @@ import { NavBarDiv } from '../molecules/NavBarDiv';
 import { NavMenuLinks } from '../molecules/NavMenuLinks';
 
 function Navbar() {
-    const [sidebar, setSidebar] = useState(false);
+    const [sidebar, setSidebar] = useState(true);
     const showSidebar = () => {
         console.log("click");
         setSidebar(!sidebar)

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const H2Auriga = styled.h2 `
+const H3Cars = styled.h3 `
     color: #f5f5f5;
-    padding-left: 136px;
+    margin-left: 10px;
     font-weight: ${props => props.theme.textWeight.bold};
-`
+    `
 
-export default H2Auriga;
+export default H3Cars;
