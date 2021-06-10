@@ -4,7 +4,6 @@ import H3 from '../atoms/H3'
 import Span from '../atoms/Span'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { IoAlertCircleSharp, IoDocumentText } from "react-icons/io5"; 
-import {textData} from '../../data/textData'
 import P from '../atoms/P';
 import { FaWrench } from "react-icons/fa";
 
@@ -15,17 +14,15 @@ const icons={
     document:<IoDocumentText/>
 }
 
-export const Alert = () => {
+export const Alert = ({alert}) => {
     return (
         <>
-
-            {textData.Alerts.map(alert=>
                 <DivAlert >
                     <Span> {icons[alert.type]}  </Span>
                     <H3>{alert.name}</H3>
                     <P>{alert.fechaCaducidad}</P>
 
-                </DivAlert>)}
+                </DivAlert>
         </>
         
     )

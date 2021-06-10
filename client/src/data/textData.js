@@ -12,6 +12,16 @@ export const textData = {
 
     ],
 
+    PersonalData:[
+        {
+            email: "email@email.com",
+            phone: "6288888888",
+            address: "Calle Abecedario 1"
+        
+        
+        }
+    ],
+
     UserInfo:[
         {
             email:"email@email",

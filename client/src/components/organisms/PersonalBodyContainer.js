@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { textData } from '../../data/textData'
+import BorderBottom from '../atoms/BorderBottom'
 import DivColumn from '../atoms/DivColumn'
 import DivRow from '../atoms/DivRow'
 import H2 from '../atoms/H2'
@@ -14,19 +16,24 @@ export const PersonalBodyContainer = () => {
             <DivRow><H2>Area Personal</H2></DivRow>
 
             <DivColumn >
-                <H3>Email</H3>
-                <P>email@email.com</P>
+                <BorderBottom>
+                    <H3>Email</H3>
+                    <P>{textData.PersonalData[0].email}</P>
+                </BorderBottom>
             </DivColumn>
 
             <DivColumn >
                 <H3>Telefono</H3>
-                < P>62 666 22 22</P>
+                < P>{textData.PersonalData[0].phone}</P>
+                <BorderBottom/>
             </DivColumn>
 
             <DivColumn >
                 <H3>Dirección Principal</H3>
-                <P>Calle Abcede 1</P>
+                <P>{textData.PersonalData[0].address}</P>
+                <BorderBottom/>
             </DivColumn>
+            
 
             <DivColumn >
                 <H3>Elección de taller predeterminada</H3>

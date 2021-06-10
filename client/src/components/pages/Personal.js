@@ -3,6 +3,7 @@ import MainContainer from '../atoms/MainContainer'
 import PageContainer from '../atoms/PageContainer'
 import { PersonalBodyContainer } from '../organisms/PersonalBodyContainer'
 
+
 export const Personal = () => {
     return (
         <PageContainer>
@@ -10,6 +11,8 @@ export const Personal = () => {
                 <PersonalBodyContainer/>
 
             </MainContainer>
+        
+            
             
         </PageContainer>
     )

@@ -11,8 +11,11 @@ export const AlertsContainer = () => {
     return (
         <DivColumn>
             <H2>Avisos pendientes</H2>
-
-            <Alert/>
+            {textData.Alerts.map((alert, n)=>
+                <Alert
+                key={n}
+                alert ={alert}/>)}
+            
             
         </DivColumn>
     )
