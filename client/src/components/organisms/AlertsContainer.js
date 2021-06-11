@@ -6,6 +6,7 @@ import {textData} from '../../data/textData'
 
 
 import { Alert } from '../molecules/Alert'
+import { Alert2 } from '../molecules/Alert2'
 
 export const AlertsContainer = () => {
     return (
@@ -16,6 +17,10 @@ export const AlertsContainer = () => {
                 key={n}
                 alert ={alert}/>)}
             
+            {textData.Alerts.map((alert, n)=>
+                <Alert2
+                key={n}
+                alert ={alert}/>)}
             
         </DivColumn>
     )
