@@ -25,13 +25,16 @@ export const BodyContainer = () => {
                 <H3>{textData.HomeProfileInfo[0].infoValue3} kms</H3>
                 
             </DivRow >
+
+            
+           
             {/* <DivRow>
                 <P>KPV medio</P>
                 <P>{textData.HomeProfileInfo[0].infoValue4} kms</P>
                 
             </DivRow> */}
             <DivRow spaceBet>
-                <H3>Valor actual de tu vehículo</H3>
+                <H3>Valor de vehículo</H3>
                 <H3>{textData.HomeProfileInfo[0].carValue} €</H3>
                 
             </DivRow>
