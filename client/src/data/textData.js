@@ -7,6 +7,35 @@ export const textData = {
             totalKm: "09/2017",
             kmYear: "9.852",
             value: "13.423",
+            carStatus:[
+                
+                {
+                    name:"Motor",
+                    status:"ok"
+                },
+                {
+                    name:"Luces",
+                    status:"ko"
+                },
+                {
+                    name:"Pintura",
+                    status:"ko"
+                },
+                {
+                    name:"Chapa",
+                    status:"warning"
+                },
+                {
+                    name:"Limpieza",
+                    status:"warning"
+                },
+                {
+                    name:"Aceite",
+                    status:"ok"
+                },
+
+            
+            ]
             
         },
 

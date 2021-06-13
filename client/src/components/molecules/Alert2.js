@@ -1,14 +1,11 @@
 import React from 'react'
 import CardAlertContainer from '../atoms/CardAlertContainer'
-import SpanContainer from '../atoms/SpanContainer'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { IoAlertCircleSharp, IoDocumentText } from "react-icons/io5"; 
 import P from '../atoms/P';
 import { FaWrench } from "react-icons/fa";
 import H3 from '../atoms/H3'
 import Span from '../atoms/Span'
-import { DivAlertInfo } from '../atoms/DivAlertInfo';
-import DivRow from '../atoms/DivRow';
 import Button from '../atoms/Button';
 import DivColumn from '../atoms/DivColumn';
 
@@ -40,7 +37,6 @@ export const Alert2 = ({alert}) => {
             </CardAlertContainer>
         
         </div>
-
 
 
 

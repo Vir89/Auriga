@@ -1,14 +1,14 @@
 import React from 'react'
 import MainContainer from '../atoms/MainContainer'
 import PageContainer from '../atoms/PageContainer'
-import { PersonalBodyContainer } from '../organisms/PersonalBodyContainer'
+import { ProfileBodyContainer } from '../organisms/ProfileBodyContainer'
 
 
-export const Personal = () => {
+export const Profile = () => {
     return (
         <PageContainer>
             <MainContainer>
-                <PersonalBodyContainer/>
+                <ProfileBodyContainer/>
 
             </MainContainer>
         

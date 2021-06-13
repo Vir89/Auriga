@@ -8,7 +8,7 @@ import H3 from '../atoms/H3'
 import P from '../atoms/P'
 
 
-export const PersonalBodyContainer = () => {
+export const ProfileBodyContainer = () => {
 
     
     return (
