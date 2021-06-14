@@ -18,7 +18,7 @@ const App = () => {
           </Switch>
           <Switch>
             <Route path='/registro' component={Alta}/>
-          </Switch>  
+          </Switch>   
           <Switch>
             <Route path='/area-coches' />
           </Switch>
