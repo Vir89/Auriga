@@ -10,25 +10,21 @@ import Button from '../atoms/Button';
 import DivColumn from '../atoms/DivColumn';
 
 const icons={
-    danger: <IoAlertCircleSharp/>,
-    repair:<FaWrench/>,
-    yellow:<RiCheckboxBlankCircleFill/>,
-    document:<IoDocumentText/>
+    danger: <DivColumn danger span><Span> <IoAlertCircleSharp/></Span></DivColumn>,
+    repair:<DivColumn warning span><Span> <FaWrench/></Span></DivColumn>,
+    yellow:<DivColumn ><Span> <RiCheckboxBlankCircleFill/></Span></DivColumn>,
+    document:<DivColumn success span><Span> <IoDocumentText/></Span></DivColumn>
 }
 
 export const Alert2 = ({alert}) => {
     return (
-        <div>
+        
             <CardAlertContainer>
 
                 
 
-                <DivColumn span danger>
-                    <Span> {icons[alert.type]}  </Span>
-                    
-                    
-                </DivColumn>
-                <DivColumn center padding>
+                {icons[alert.type]}  
+                <DivColumn spaceArround center padding>
                      <H3 secondary >{alert.fechaCaducidad}</H3>
                     <H3>{alert.name}</H3>
                     <Button >Mas Info</Button>
@@ -36,7 +32,7 @@ export const Alert2 = ({alert}) => {
                     
             </CardAlertContainer>
         
-        </div>
+        
 
 
 

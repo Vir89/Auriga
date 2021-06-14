@@ -9,9 +9,8 @@ const Button = styled.button `
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
-    padding: 10x;
-    bottom: 30px;
-    right: 30px;
+    padding: 20x;
+   
     margin-top:10px;
     background-color:${props => props.theme.colors.primary} ;
     
