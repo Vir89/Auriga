@@ -24,7 +24,7 @@ export const Alert2 = ({alert}) => {
                 
 
                 {icons[alert.type]}  
-                <DivColumn spaceArround center padding>
+                <DivColumn center padding>
                      <H3 secondary >{alert.fechaCaducidad}</H3>
                     <H3>{alert.name}</H3>
                     <Button >Mas Info</Button>

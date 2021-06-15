@@ -3,7 +3,10 @@ const pool =require("./config")
 const app= express();
 const cors= require("cors");
 const path = require('path')
+require('dotenv').config
 const port = process.env.PORT || 5000 ; 
+const {dbConnection} = require('./database/config');
+
 
 // global middleware
 app.use(express.urlencoded({extended:false}));
