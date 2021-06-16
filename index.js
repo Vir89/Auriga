@@ -6,8 +6,9 @@ const cors= require("cors");
 const path = require('path');
 require('dotenv').config
 const port = process.env.PORT || 5000 ; 
-const {dbConnection} = require('./database/config');
+const {dbConnection} = require('./config');
 const User = require("./models/User")
+const Car = require("./models/Car")
 
 //connection to DB
 dbConnection();

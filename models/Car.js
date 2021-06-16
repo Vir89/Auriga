@@ -1,6 +1,6 @@
-const {Schema, model}= require('mongoose');
+const mongoose= require('mongoose');
 
-const CarSchema = Schema({
+const carSchema =new mongoose.Schema({
         staticFeatures:{
             brand:{type: String, required:true},
             model:{type: String, required:true},
@@ -107,4 +107,4 @@ const CarSchema = Schema({
             }
         }
 })
-module.exports=model("Car", CarSchema);
+module.exports = mongoose.model("Car", carSchema);

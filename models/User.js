@@ -1,7 +1,7 @@
 const mongoose= require('mongoose');
-const Car = mongoose.model("Car")
 
-const UserSchema = new mongoose.Schema({
+
+const userSchema = new mongoose.Schema({
     personalDetails:{
         firstName:{type: String, required:true},
         lastName:{type: String, required:true },
@@ -52,4 +52,4 @@ const UserSchema = new mongoose.Schema({
 
 }, {timestamps: true})
 
-module.exports = model("User", UserSchema);
+module.exports = mongoose.model("User", userSchema);
