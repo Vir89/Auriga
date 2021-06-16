@@ -1,13 +1,21 @@
-const mysql = require('mysql');
-require('dotenv').config();
+const mongoose = require("mongoose");
 
-const pool  = mysql.createPool({
-	connectionLimit : 10,
-	host : process.env.DB_HOST,
-	user : process.env.DB_USER,
-	password : process.env.DB_PASSWORD,
-	database : process.env.DB_DATABASE
-});
+const dbConnection = async()=>{
+    try{
+        mongoose.connect(process.env.DB_CONNECTION, {
+            useNewUrlParser: true,
+            useUnifiedTopology:true,
+            useCreateIndex:true
+        })
+        console.log ('DB online')
 
+    }catch(error){
+        console.log(error)
+        throw new Error("error al inicializar la base de datos")
 
-module.exports = pool;
+    }
+}
+
+module.exports={
+    dbConnection
+}
