@@ -1,12 +1,14 @@
-const {Schema, model}= require('mongoose');
+const mongoose= require('mongoose');
+const Car = mongoose.model("Car")
 
-const UserSchema = Schema({
+const UserSchema = new mongoose.Schema({
     personalDetails:{
         firstName:{type: String, required:true},
         lastName:{type: String, required:true },
         email:{ type: String, required:true, unique:true, lowercase: true, match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'], createIndexes: { unique: true } },
-        IDcard:{ type:String },
+        IDcard:{ type:String, unique:true },
         birthDate:{ type:Date },
+        nacionality:{ type:Date },
         phoneNumber:{ type: Number, required: true },
         password:{ type: String, required: true },
         address:{ 
@@ -16,144 +18,38 @@ const UserSchema = Schema({
             country:{ type: String, required:true}
         },
         jobAddress:{
-            street:{ type: String, required:true},
-            postalCode:{type: Number, required:true},
-            city:{ type: String, required:true},
-            country:{type: String, required:true}
+            street:{ type: String},
+            postalCode:{type: Number},
+            city:{ type: String},
+            country:{type: String}
         },
         workshop:{
             proximity:{
-                street:{ type: String, required:true},
-                postalCode:{type: Number, required:true},
-                city:{type: String, required:true },
-                phoneNumber:{type: Number, required:true},
-                price:{type: Number, required:true}
+                street:{ type: String},
+                postalCode:{type: Number},
+                city:{type: String},
+                phoneNumber:{type: Number},
+                price:{type: Number}
             },
             oficial:{
-                street:{ type: String, required:true},
-                postalCode:{type: Number, required:true},
-                city:{type: String, required:true },
-                phoneNumber:{type: Number, required:true},
-                price:{type: Number, required:true}
+                street:{ type: String},
+                postalCode:{type: Number},
+                city:{type: String},
+                phoneNumber:{type: Number},
+                price:{type: Number}
             },
             multiBrand:{
-                street:{ type: String, required:true},
-                postalCode:{type: Number, required:true},
-                city:{type: String, required:true },
-                phoneNumber:{type: Number, required:true},
-                price:{type: Number, required:true}
+                street:{ type: String},
+                postalCode:{type: Number},
+                city:{type: String},
+                phoneNumber:{type: Number},
+                price:{type: Number}
             }
         }
     },
-    Cars:{
-        staticFeatures:{
-            brand:{},
-            model:{},
-            colour:{},
-            horsePower:{},
-            dataSheet:{},
-            Image:{},
-            fuel:{},
-            carRegistration:{},
-            circulationPermit:{},
+    cars:[{type:mongoose.Schema.Types.ObjectId, required:true, ref:"Car"}]
 
-
-        },
-        variableFeatures:{
-            currentValue:{},
-            kM:{},
-            tires:{
-                pressure:{},
-                marca:{},
-                modelo:{},
-                thickness:{},
-            },
-            insurance:{
-                coverage:{},
-                dueDate:{},
-                company:{},
-            },
-            picture:{},
-            engine:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            lights:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            headlightTransparency:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            sheetMetal:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            painting:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            wiperWasher:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            brakePad:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            brakeFluid:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            waterLevel:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            coolant:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            ralenti:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            interior:{
-                status:{},
-                img:{},
-                statusDescription:{}
-            },
-            cleaning:{
-                lastCleaning:{},
-                status:{},
-                statusPolished:{}
-
-            },
-
-        },
-
-        documentation:{
-            invoices:{
-                imgDocs:{}
-            },
-            notes:{
-                workshopInterventions:{},
-                extras:{},
-                invoiceServices:{},
-                maintenanceBook:{}
-            }
-        }
-    }
 
 }, {timestamps: true})
+
+module.exports = model("User", UserSchema);
