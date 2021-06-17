@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-const carSchema =new mongoose.Schema({
+const carSchema =new mongoose.Schema([{
         staticFeatures:{
             brand:{type: String, required:true},
             model:{type: String, required:true},
@@ -26,7 +26,7 @@ const carSchema =new mongoose.Schema({
                 dueDate:{type:Date},
                 company:{type: String},
             },
-            picture:{},
+            picture:{type: String},
             engine:{
                 status:{type: String},
                 img:{type: String},
@@ -96,9 +96,7 @@ const carSchema =new mongoose.Schema({
 
         },
         documentation:{
-            invoices:{
-                type: String
-            },
+            invoices:{type: String},
             notes:{
                 workshopInterventions:{type: String},
                 extras:{type: String},
@@ -106,5 +104,9 @@ const carSchema =new mongoose.Schema({
                 maintenanceBook:{type: String}
             }
         }
-})
-module.exports = mongoose.model("Car", carSchema);
+}])
+
+
+
+const Car = mongoose.model("Car", carSchema);
+module.exports= Car
