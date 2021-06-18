@@ -8,10 +8,11 @@ export const CarStatusContainer = () => {
     return (
         <DivColumn>
             <H2>Estado general</H2>
-            {textData.CarInfo[0].carStatus.map((status, n)=>
+            {textData.CarInfo[0].carStatus.map((car, index)=>
                 <CarStatus
-                key={n}
-                status ={status}/>)}
+                key = {index}
+                name = {car.name} 
+                status = {car.status}/>)}
             
         </DivColumn>
     )
