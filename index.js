@@ -1,39 +1,44 @@
 const express =require ("express");
-const pool =require("./config")
-const app= express();
+const {dbConnection} = require('./config');
 const cors= require("cors");
-const path = require('path')
-const port = process.env.PORT || 5000 ; 
 
-// global middleware
-app.use(express.urlencoded({extended:false}));
+const app= express();
+
+const path = require('path');
+require('dotenv').config; 
+
+const User = require("./models/User")
+const Car = require("./models/Car")
+
+//connection to DB
+dbConnection();
+
+app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-
-// Allow cors policies
 app.use(cors())
 
+const port = process.env.PORT || 5000 
 
-app.get("/api", (req,res)=>{
-    res.send ("hey, how are you!")
+/* app.get("/user/:id", async(req,res)=>{
+    const userId =req.params.id
+    const user = await User.findById(id).exec()
+    res.status(200).json(user)
 });
 
-app.get("/countries", (req,res)=>{
-    pool.getConnection (function (err, connection){
-        if (err) console.error(err);
-        connection.query("SELECT * FROM country", (err,results) =>{
-            if(err){
-                res.status(500).send("Server error, could not fetch countries")
-            }else{
-                res.json (results)
-            }
-        })
+app.get("/users", async(req,res)=>{
+    const users =await User.find({}).lean().exec()
+    res.status(200).json(users)
+});
 
-        connection.release();
-        if (err) console.error(err)
-    })
-    
-}); 
- 
+app.post("/user", async()=>{
+    const userToCreate = req.body.user
+    const user = await User.create(userToCreate)
+    res.status(201).json(user.toJSON())
+}); */
+
+//routes
+
+app.use('/api/users', require('./routes/users'))
 
 
 app.listen(port,(err)=>{

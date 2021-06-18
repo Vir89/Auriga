@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CardAlertContainer from '../atoms/CardAlertContainer'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { IoAlertCircleSharp, IoDocumentText } from "react-icons/io5"; 
@@ -8,6 +8,11 @@ import H3 from '../atoms/H3'
 import Span from '../atoms/Span'
 import Button from '../atoms/Button';
 import DivColumn from '../atoms/DivColumn';
+import { ApiContext } from '../../context/ApiContext';
+
+
+
+
 
 const icons={
     danger: <DivColumn danger span><Span> <IoAlertCircleSharp/></Span></DivColumn>,
@@ -17,6 +22,14 @@ const icons={
 }
 
 export const Alert2 = ({alert}) => {
+
+    const context = useContext(ApiContext);
+    console.log(context.user)
+
+
+
+
+
     return (
         
             <CardAlertContainer>
@@ -24,7 +37,8 @@ export const Alert2 = ({alert}) => {
                 
 
                 {icons[alert.type]}  
-                <DivColumn spaceArround center padding>
+                <DivColumn center padding>
+                    
                      <H3 secondary >{alert.fechaCaducidad}</H3>
                     <H3>{alert.name}</H3>
                     <Button >Mas Info</Button>

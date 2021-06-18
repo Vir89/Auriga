@@ -1,0 +1,258 @@
+{
+    "personalDetails":{
+        "firstName":"Sergio",
+        "lastName":"Abcd decf",
+        "email":"s.caballero1993@gmail.com",
+        "IDcard":"47777600A",
+        "birthDate":"1990-10-01",
+        "nacionality":"española",
+        "phoneNumber":620000000,
+        "password":"abcdef", 
+        "address":{ 
+            "street":"Calle A",
+            "postalCode":28035,
+            "city":"Madrid",
+            "country":"España"
+        }, 
+        "jobAddress":{
+            "street":"Calle Y",
+            "postalCode":28035,
+            "city":"Madrid",
+            "country":"Spain"
+        },
+        "workshop":{
+            "proximity":{
+                "street":"Calle E",
+                "postalCode":28035,
+                "city":"Madrid",
+                "phoneNumber":666000000,
+                "price":150
+            },
+            "oficial":{
+                "street":"Calle B",
+                "postalCode":28035,
+                "city":"Madrid",
+                "phoneNumber":666000000,
+                "price":100
+            },
+            "multiBrand":{
+                "street":"Calle C",
+                "postalCode":28035,
+                "city":"Madrid",
+                "phoneNumber":666000000,
+                "price":200
+            }
+        }
+   },
+   "cars":[
+       {
+        "staticFeatures":{
+            "brand":"Seat",
+            "model":"Leon",
+            "colour":"Rojo",
+            "horsePower":150,
+            "dataSheet":"ficha tecnica",
+            "Image":"https://tcdn.gotrive.com/dms/images/attachments/000/005/065/regular/trive_seat_leon-fr_color-rojo-desire_lights-led_lower-grill-sensor_roof-panoramic.png?1602774114",
+            "fuel":"Diesel",
+            "carRegistration":"1550KPR",
+            "circulationPermit":"Permiso de circulación"
+        },
+        "variableFeatures":{
+            "currentValue":15000,
+            "kM":12050,
+            "tires":{
+                "pressure":"Ok",
+                "marca":"Kenwood",
+                "modelo":"B",
+                "thickness":"ok"
+            },
+            "insurance":{
+                "coverage":"todo",
+                "dueDate":"2021-10-31",
+                "company":"Mafre"
+            },
+            "picture":"foto",
+            "engine":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "lights":{
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "headlightTransparency":{
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "sheetMetal":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "painting":{
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "wiperWasher":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "brakePad":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "brakeFluid":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "waterLevel":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "coolant":{
+                "status":"warning",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "ralenti":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "interior":{
+                "status":"warning",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "cleaning":{
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+
+            }
+
+        },
+        "documentation":{
+            "invoices":"img",
+            "notes":{
+                "workshopInterventions":"IMG",
+                "extras":"IMG",
+                "invoiceServices":"IMG",
+                "maintenanceBook":"IMG"
+            }
+        }
+    },
+   {
+        "staticFeatures":{
+            "brand":"Renault",
+            "model":"Megane",
+            "colour":"Blanco",
+            "horsePower":130,
+            "dataSheet":"ficha tecnica",
+            "Image":"https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_jato%2Fimagenes%2FMarca_Modelo_Carroceria_Pintura%2Fg%2FRENAULT_MEGANE_HA_QPA%24QNC_F.png&size=700",
+            "fuel":"Gasolina",
+            "carRegistration":"1550KRK",
+            "circulationPermit":"Permiso de circulación"
+        },
+        "variableFeatures":{
+            "currentValue":10000,
+            "kM":10000,
+            "tires":{
+                "pressure":"Ok",
+                "marca":"Michelin",
+                "modelo":"B",
+                "thickness":"ok"
+            },
+            "insurance":{
+                "coverage":"todo",
+                "dueDate":"2021-07-31",
+                "company":"Allianz"
+            },
+            "picture":"foto",
+            "engine":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "lights":{
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "headlightTransparency":{
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "sheetMetal":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "painting":{
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "wiperWasher":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "brakePad":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "brakeFluid":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "waterLevel":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "coolant":{
+                "status":"warning",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "ralenti":{
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "interior":{
+                "status":"warning",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            "cleaning":{
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+
+            }
+
+        },
+        "documentation":{
+            "invoices":"img",
+            "notes":{
+                "workshopInterventions":"IMG",
+                "extras":"IMG",
+                "invoiceServices":"IMG",
+                "maintenanceBook":"IMG"
+            }
+        }
+    }]
+}
