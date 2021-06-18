@@ -1,24 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
+import fetchData from "../utils/fetchData"
 
+export const ApiContext = React.createContext();
 
-export const MyContext = React.createContext();
+const APIProvider = (props) => {
 
-const MyAPIProvider = ({children}) => {
+  //states to store data coming from various APIs
+  const [user, setUser] = useState({});
+  const [usersLoaded, setUsersLoaded] = useState(false);
 
-  const [state, setState] = useState({});
-
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setState("itemsfetch");
-    setLoading(false);
+    
+      fetchData('http://localhost:5000/api/users', setUser, setUsersLoaded);
+      
   }, [])
+  
 
- 
-    return (
-      <MyContext.Provider value={{ state, setState, loading, setLoading }}>
-        {children}
-      </MyContext.Provider>
-    ); 
-}
-export default MyAPIProvider; 
+  return (
+      <ApiContext.Provider value={{ user: user, usersLoaded:usersLoaded }} >
+          { props.children }
+      </ApiContext.Provider>
+  )
+};
+
+export default APIProvider;

@@ -10,7 +10,7 @@ router.post('/',
 );
 
 //Get info of user by id
-router.get('/:id',
+router.get('/',
 //authentication first then display info
     userController.getUserInfo
 );

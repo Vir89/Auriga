@@ -1,4 +1,4 @@
-const mongoose= require('mongoose');
+/* const mongoose= require('mongoose');
 
 const carSchema =new mongoose.Schema([{
         staticFeatures:{
@@ -108,5 +108,4 @@ const carSchema =new mongoose.Schema([{
 
 
 
-const Car = mongoose.model("Car", carSchema);
-module.exports= Car
+module.exports = mongoose.model("Car", carSchema); */

@@ -4,16 +4,16 @@ import Theme from "./styles/theme";
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import GlobalStyles from './styles/GlobalStyles';
-import MyAPIProvider from './context/ApiContext'
+import APIProvider from './context/ApiContext'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <MyAPIProvider>
+    <APIProvider>
     <Theme>
         <App /> 
     </Theme>
-    </MyAPIProvider>
+    </APIProvider>
     <GlobalStyles />
     </BrowserRouter>
   </React.StrictMode>,
