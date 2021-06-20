@@ -22,7 +22,7 @@ export const CarStatusContainer = () => {
                 <CarStatus
                 key = {index}
                 name = {status.name} 
-                status = {status.status}/>)})
+                status = {status.status}/>)}
             
         </DivColumn>
     )
