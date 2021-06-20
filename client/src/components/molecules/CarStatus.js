@@ -32,6 +32,9 @@ const icons={
  
 export const CarStatus = (props) => {
 
+ 
+ 
+
     const [modalIsOpen, setIsOpen] = React.useState(false);
     
     function openModal() {
@@ -49,6 +52,7 @@ export const CarStatus = (props) => {
         <DivAlert >
             
             <H3 onClick={openModal}>{props.name}</H3>
+            {/* <H3>"{context.user.user[0].car[0].variableFeatures.generalStatus}"</H3> */}
            
             {icons[props.status]} 
 
