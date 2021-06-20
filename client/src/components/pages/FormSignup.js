@@ -4,7 +4,6 @@ import validate from './validateInfo';
 import {useForm} from './useForm';
 import './Form.css';
 
-
 const FormSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
@@ -68,12 +67,17 @@ const FormSignup = ({ submitForm }) => {
         <button className='form-input-btn' type='submit'>
           Entrar
         </button>
+        <span className='form-input-loginGoogle'>
+          Login with Google <a href='/logingoogle'>Here</a>
+        </span>
         <span className='form-input-login'>
           ¿Ya tienes cuenta con nosotros? Login <a href='/login'>Aquí</a>
         </span>
       </form>
     </div>
-  );
+
+);
 };
+
 
 export default FormSignup;
