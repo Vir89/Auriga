@@ -6,8 +6,11 @@ export const ApiContext = React.createContext();
 const APIProvider = (props) => {
 
   //states to store data coming from various APIs
-  const [user, setUser] = useState({});
+  const [users, setUser] = useState({});
   const [usersLoaded, setUsersLoaded] = useState(false);
+
+  const {user} =users
+  console.log(user)
 
 
   useEffect(() => {

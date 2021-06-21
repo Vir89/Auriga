@@ -72,72 +72,96 @@
                 "company":"Mafre"
             },
             "picture":"foto",
-            "engine":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "lights":{
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "headlightTransparency":{
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "sheetMetal":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "painting":{
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "wiperWasher":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "brakePad":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "brakeFluid":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "waterLevel":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "coolant":{
-                "status":"warning",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "ralenti":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "interior":{
-                "status":"warning",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
             "cleaning":{
+                "lastCleaning":"2021/10/01",
+                "cleaningType":"Completa"
+            },
+            "generalStatus":[
+                {
+                "name":"Motor",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Luces",
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Transparencia de Luces",
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Chapa",
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Pintura",
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Limpiaparabrisas",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                    "name":"Cristal",
+                    "status":"ko",
+                    "img":"foto",
+                    "statusDescription":"descripcion estado"
+                   },
+            {
+                "name":"Pastilla de freno",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Líquido de frenos",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Agua del limpiaparabrisas",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Liquido refrigerante",
+                "status":"warning",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Motor ralentí",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Interior",
+                "status":"warning",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Limpieza",
                 "status":"ko",
                 "img":"foto",
                 "statusDescription":"descripcion estado"
 
-            }
+            }]
 
         },
         "documentation":{
@@ -177,72 +201,96 @@
                 "company":"Allianz"
             },
             "picture":"foto",
-            "engine":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "lights":{
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "headlightTransparency":{
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "sheetMetal":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "painting":{
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "wiperWasher":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "brakePad":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "brakeFluid":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "waterLevel":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "coolant":{
-                "status":"warning",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "ralenti":{
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            "interior":{
-                "status":"warning",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
             "cleaning":{
+                "lastCleaning":"2021/10/01",
+                "cleaningType":"Completa"
+            },
+            "generalStatus":[
+                {
+                "name":"Motor",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Luces",
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Transparencia de Luces",
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Chapa",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Pintura",
+                "status":"ko",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                "name":"Limpiaparabrisas",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+                },
+                {
+                    "name":"Cristal",
+                    "status":"ok",
+                    "img":"foto",
+                    "statusDescription":"descripcion estado"
+                   },
+            {
+                "name":"Pastilla de freno",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Líquido de frenos",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Agua del limpiaparabrisas",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Liquido refrigerante",
+                "status":"warning",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Motor ralentí",
+                "status":"ok",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Interior",
+                "status":"warning",
+                "img":"foto",
+                "statusDescription":"descripcion estado"
+            },
+            {
+                "name":"Limpieza",
                 "status":"ko",
                 "img":"foto",
                 "statusDescription":"descripcion estado"
 
-            }
+            }]
 
         },
         "documentation":{

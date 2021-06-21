@@ -73,73 +73,17 @@ const userSchema = new mongoose.Schema({
                 company:{type: String},
             },
             picture:{type: String},
-            engine:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            lights:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            headlightTransparency:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            sheetMetal:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            painting:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            wiperWasher:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            brakePad:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            brakeFluid:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            waterLevel:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            coolant:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            ralenti:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
-            interior:{
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-            },
             cleaning:{
+                lastCleaning:{type:Date},
+                cleaningType:{type: String},
+            },
+            generalStatus:[
+                {
+                name:{type: String},
                 status:{type: String},
                 img:{type: String},
                 statusDescription:{type: String}
-
-            },
-
+                }]
         },
         documentation:{
             invoices:{type: String},
