@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, Fragment} from 'react'
 import { IconContext } from 'react-icons';
 import { NavBarDiv } from '../molecules/NavBarDiv';
 import { NavMenuLinks } from '../molecules/NavMenuLinks';
@@ -10,12 +10,12 @@ function Navbar() {
         setSidebar(!sidebar)
     };
     return (
-        <>
+        <Fragment>
         <IconContext.Provider value={{color: '#fff'}}>
          <NavBarDiv showSidebar={showSidebar}/>
          <NavMenuLinks showSidebar={showSidebar} sidebar={sidebar}/>
          </IconContext.Provider> 
-        </>
+        </Fragment>
     )
 }
 
