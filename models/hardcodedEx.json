@@ -71,6 +71,29 @@
                 "dueDate":"2021-10-31",
                 "company":"Mafre"
             },
+            
+            "alerts":[
+                {
+                    "name":" Caducidad de ITV",
+                    "dueDate":"2021-09-01",
+                    "type":"documentacion"
+                 },
+                 {
+                    "name":"Vencimiento de Seguro",
+                    "dueDate":"2021-10-31",
+                    "type":"documentacion"
+                 },
+                 {
+                    "name":"Mantenimiento",
+                    "dueDate":"2021-12-05",
+                    "type":"Mantenimiento"
+                 },
+                 {
+                    "name":"Limpieza",
+                    "dueDate":"2021-07-05",
+                    "type":"Aviso"
+                 }
+            ],
             "picture":"foto",
             "cleaning":{
                 "lastCleaning":"2021/10/01",
@@ -200,6 +223,28 @@
                 "dueDate":"2021-07-31",
                 "company":"Allianz"
             },
+            "alerts":[
+                {
+                    "name":" Caducidad de ITV",
+                    "dueDate":"2021-10-01",
+                    "type":"documentacion"
+                 },
+                 {
+                    "name":"Vencimiento de Seguro",
+                    "dueDate":"2021-09-31",
+                    "description":"documentacion"
+                 },
+                 {
+                    "name":"Mantenimiento",
+                    "dueDate":"2021-11-05",
+                    "description":"Mantenimiento"
+                 },
+                 {
+                    "name":"Limpieza",
+                    "dueDate":"2021-07-05",
+                    "description":"Aviso"
+                 }
+            ],
             "picture":"foto",
             "cleaning":{
                 "lastCleaning":"2021/10/01",

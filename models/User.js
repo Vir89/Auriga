@@ -72,6 +72,12 @@ const userSchema = new mongoose.Schema({
                 dueDate:{type:Date},
                 company:{type: String},
             },
+            alerts:[
+                {name:{type: String},
+                dueDate:{type:Date},
+                type:{type: String}
+                 }
+            ],
             picture:{type: String},
             cleaning:{
                 lastCleaning:{type:Date},
