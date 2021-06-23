@@ -3,25 +3,17 @@ import { DivAlert } from '../atoms/DivAlert'
 import H3 from '../atoms/H3'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import Span from '../atoms/Span';
-import Modal from 'react-modal';
 import '../../App.css'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
 
-const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      transition: 'opacity 10000ms ease-in-out',
-      maxWidth: '80%',
-      
-    },
-    
-  };
 
-  Modal.setAppElement('#root');
 
 const icons={
     ko: <Span danger><RiCheckboxBlankCircleFill/></Span>,
@@ -35,39 +27,30 @@ export const CarStatus = (props) => {
  
  
 
-    const [modalIsOpen, setIsOpen] = React.useState(false);
-    
-    function openModal() {
-        setIsOpen(true);
-      }
-    
-    
-    function closeModal() {
-        setIsOpen(false);
-      }
-
-
 
     return (
-        <DivAlert >
-            
-            <H3 onClick={openModal}>{props.name}</H3>
-            {/* <H3>"{context.user.user[0].car[0].variableFeatures.generalStatus}"</H3> */}
-           
-            {icons[props.status]} 
+      <Accordion allowZeroExpanded>
+      <AccordionItem>
+          <AccordionItemHeading>
+              <AccordionItemButton>
+                  What harsh truths do you prefer to ignore?
+              </AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
 
-            <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            style={customStyles}
-            contentLabel="Example Modal"
-            >
-                <h2>{props.name}</h2>
-            
-                <p>Descripción</p>
-        
-            </Modal>
+              <DivAlert >
 
-        </DivAlert>
+                  <H3>{props.name}</H3>
+                 {/* <H3>"{context.user.user[0].car[0].variableFeatures.generalStatus}"</H3> */}
+
+                  {icons[props.status]} 
+
+
+
+              </DivAlert>
+          </AccordionItemPanel>
+      </AccordionItem>
+
+      </Accordion>
     )
 }
