@@ -60,18 +60,232 @@
         "variableFeatures":{
             "currentValue":15000,
             "kM":12050,
-            "tires":{
-                "pressure":"Ok",
-                "marca":"Kenwood",
-                "modelo":"B",
-                "thickness":"ok"
+            "status":{
+                "administration":[{
+                    "insurance":{
+                        "coverage":"todo",
+                        "dueDate":"2021-10-31",
+                        "company":"Mafre"
+                    },
+                    "itv":{
+                        "name":"Itv",
+                        "dueDate":"2021-10-10",
+                        "type":"administration",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    "maintancePlan":{
+                        "name":"Próximo manteniento",
+                        "dueDate":"2021-10-15",
+                        "type":"administration",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    "registrationTax":{
+                        "name":"Impuesto de matriculación",
+                        "dueDate":"2021-09-15",
+                        "type":"administration",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    "fines":[{
+                        "name":"Exceso de velocidad",
+                        "dueDate":"2021-01-15",
+                        "type":"administration",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado",
+                        "amount":600
+                    }]
+                }],
+                "exterior":[
+
+                    {
+                        "name":"Chapa",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    {
+                        "name":"Pintura",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    {
+                        "name":"Vidrios",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    {
+                        "name":"Luces e indicadores",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    {
+                        "name":"Escobillas limpiaparabrisas",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    }
+        
+                ],
+                "tires":[
+                    {
+                        "name":"Dibujo de Neumáticos",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Integridad de Neumáticos",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Presión neumáticos",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Llantas",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Pastilla de frenos",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    }
+            ],
+                "engine":[
+                    {
+                        "name":"Aspecto motor parado",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Nivel de aceite",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"warning",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Nivel de refrigerante",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Nivel líquido parabrisas",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Aspecto motor ralentí",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    }
+                ],
+                "interior":[
+                    {
+                        "name":"Daños en el interior",
+                        "dueDate":"",
+                        "type":"interior",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Estado de limpieza",
+                        "dueDate":"",
+                        "type":"interior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Necesidad de limpieza integral",
+                        "dueDate":"2021/06/10",
+                        "type":"interior",
+                        "status":true,
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    }
+                ],
+                "driving":[
+                    {
+                        "name":"Dinámica",
+                        "dueDate":"",
+                        "type":"conduccion",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"dirección en mal estado"
+                    },
+                    {
+                        "name":"Motor",
+                        "dueDate":"2021/06/10",
+                        "type":"conduccion",
+                        "status":"warning",
+                        "img":"foto",
+                        "statusDescription":"Sonido excesivo"
+                    }
+                ],
+                "other":[
+                    {
+                        "name":"Aviso genérico",
+                        "dueDate":"2021/06/10",
+                        "type":"conduccion",
+                        "status":false,
+                        "img":"foto",
+                        "statusDescription":"ningun aviso"
+                    }
+                ]
+
             },
-            "insurance":{
-                "coverage":"todo",
-                "dueDate":"2021-10-31",
-                "company":"Mafre"
-            },
-            
+        
             "alerts":[
                 {
                     "name":" Caducidad de ITV",
@@ -98,94 +312,8 @@
             "cleaning":{
                 "lastCleaning":"2021/10/01",
                 "cleaningType":"Completa"
-            },
-            "generalStatus":[
-                {
-                "name":"Motor",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Luces",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Transparencia de Luces",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Chapa",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Pintura",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Limpiaparabrisas",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                    "name":"Cristal",
-                    "status":"ko",
-                    "img":"foto",
-                    "statusDescription":"descripcion estado"
-                   },
-            {
-                "name":"Pastilla de freno",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Líquido de frenos",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Agua del limpiaparabrisas",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Liquido refrigerante",
-                "status":"warning",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Motor ralentí",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Interior",
-                "status":"warning",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Limpieza",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-
-            }]
-
+            }
+            
         },
         "documentation":{
             "invoices":"img",
@@ -212,130 +340,259 @@
         "variableFeatures":{
             "currentValue":10000,
             "kM":10000,
-            "tires":{
-                "pressure":"Ok",
-                "marca":"Michelin",
-                "modelo":"B",
-                "thickness":"ok"
+            "status":{
+                "administration":[{
+                    "insurance":{
+                        "coverage":"todo",
+                        "dueDate":"2021-10-31",
+                        "company":"Mafre"
+                    },
+                    "itv":{
+                        "name":"Itv",
+                        "dueDate":"2021-10-10",
+                        "type":"administration",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    "maintancePlan":{
+                        "name":"Próximo manteniento",
+                        "dueDate":"2021-10-15",
+                        "type":"administration",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    "registrationTax":{
+                        "name":"Impuesto de matriculación",
+                        "dueDate":"2021-09-15",
+                        "type":"administration",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    "fines":[{
+                        "name":"Exceso de velocidad",
+                        "dueDate":"2021-01-15",
+                        "type":"administration",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado",
+                        "amount":600
+                    }]
+                }],
+                "exterior":[
+
+                    {
+                        "name":"Chapa",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    {
+                        "name":"Pintura",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    {
+                        "name":"Vidrios",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    {
+                        "name":"Luces e indicadores",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    },
+                    {
+                        "name":"Escobillas limpiaparabrisas",
+                        "dueDate":"",
+                        "type":"exterior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion estado" 
+                    }
+        
+                ],
+                "tires":[
+                    {
+                        "name":"Dibujo de Neumáticos",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Integridad de Neumáticos",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Presión neumáticos",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Llantas",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Pastilla de frenos",
+                        "dueDate":"",
+                        "type":"tires",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    }
+            ],
+                "engine":[
+                    {
+                        "name":"Aspecto motor parado",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Nivel de aceite",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"warning",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Nivel de refrigerante",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Nivel líquido parabrisas",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Aspecto motor ralentí",
+                        "dueDate":"",
+                        "type":"engine",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    }
+                ],
+                "interior":[
+                    {
+                        "name":"Daños en el interior",
+                        "dueDate":"",
+                        "type":"interior",
+                        "status":"ok",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Estado de limpieza",
+                        "dueDate":"",
+                        "type":"interior",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    },
+                    {
+                        "name":"Necesidad de limpieza integral",
+                        "dueDate":"2021/06/10",
+                        "type":"interior",
+                        "status":true,
+                        "img":"foto",
+                        "statusDescription":"descripcion"
+                    }
+                ],
+                "driving":[
+                    {
+                        "name":"Dinámica",
+                        "dueDate":"",
+                        "type":"conduccion",
+                        "status":"ko",
+                        "img":"foto",
+                        "statusDescription":"dirección en mal estado"
+                    },
+                    {
+                        "name":"Motor",
+                        "dueDate":"2021/06/10",
+                        "type":"conduccion",
+                        "status":"warning",
+                        "img":"foto",
+                        "statusDescription":"Sonido excesivo"
+                    }
+                ],
+                "other":[
+                    {
+                        "name":"Aviso genérico",
+                        "dueDate":"2021/06/10",
+                        "type":"conduccion",
+                        "status":false,
+                        "img":"foto",
+                        "statusDescription":"ningun aviso"
+                    }
+                ]
+
             },
-            "insurance":{
-                "coverage":"todo",
-                "dueDate":"2021-07-31",
-                "company":"Allianz"
-            },
+        
             "alerts":[
                 {
                     "name":" Caducidad de ITV",
-                    "dueDate":"2021-10-01",
+                    "dueDate":"2021-09-01",
                     "type":"documentacion"
                  },
                  {
                     "name":"Vencimiento de Seguro",
-                    "dueDate":"2021-09-31",
-                    "description":"documentacion"
+                    "dueDate":"2021-10-31",
+                    "type":"documentacion"
                  },
                  {
                     "name":"Mantenimiento",
-                    "dueDate":"2021-11-05",
-                    "description":"Mantenimiento"
+                    "dueDate":"2021-12-05",
+                    "type":"Mantenimiento"
                  },
                  {
                     "name":"Limpieza",
                     "dueDate":"2021-07-05",
-                    "description":"Aviso"
+                    "type":"Aviso"
                  }
             ],
             "picture":"foto",
             "cleaning":{
                 "lastCleaning":"2021/10/01",
                 "cleaningType":"Completa"
-            },
-            "generalStatus":[
-                {
-                "name":"Motor",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Luces",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Transparencia de Luces",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Chapa",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Pintura",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                "name":"Limpiaparabrisas",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-                },
-                {
-                    "name":"Cristal",
-                    "status":"ok",
-                    "img":"foto",
-                    "statusDescription":"descripcion estado"
-                   },
-            {
-                "name":"Pastilla de freno",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Líquido de frenos",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Agua del limpiaparabrisas",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Liquido refrigerante",
-                "status":"warning",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Motor ralentí",
-                "status":"ok",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Interior",
-                "status":"warning",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-            },
-            {
-                "name":"Limpieza",
-                "status":"ko",
-                "img":"foto",
-                "statusDescription":"descripcion estado"
-
-            }]
+            }
 
         },
         "documentation":{
