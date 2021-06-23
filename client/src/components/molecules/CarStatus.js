@@ -25,18 +25,26 @@ const icons={
 export const CarStatus = (props) => {
 
  
- 
+    /* <Accordion allowZeroExpanded>
+    <AccordionItem>
+        <AccordionItemHeading>
+            <AccordionItemButton>
+                {props.name}
+            </AccordionItemButton>
+        </AccordionItemHeading>
+        <AccordionItemPanel>
+
+            <DivAlert 
+
+            </DivAlert>
+        </AccordionItemPanel>
+    </AccordionItem>
+
+    </Accordion> */
 
 
     return (
-      <Accordion allowZeroExpanded>
-      <AccordionItem>
-          <AccordionItemHeading>
-              <AccordionItemButton>
-                  What harsh truths do you prefer to ignore?
-              </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel>
+      
 
               <DivAlert >
 
@@ -48,9 +56,6 @@ export const CarStatus = (props) => {
 
 
               </DivAlert>
-          </AccordionItemPanel>
-      </AccordionItem>
-
-      </Accordion>
+        
     )
 }
