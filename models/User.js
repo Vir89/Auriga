@@ -61,17 +61,103 @@ const userSchema = new mongoose.Schema({
         variableFeatures:{
             currentValue:{type: Number},
             kM:{type: Number},
-            tires:{
-                pressure:{type: String},
-                marca:{type: String},
-                modelo:{type: String},
-                thickness:{type: String},
+            status:{
+                administration:[{
+                    insurance:{
+                        coverage:{type: String},
+                        dueDate:{type:Date},
+                        company:{type: String}
+                    },
+                    itv:{
+                        name:{type: String},
+                        dueDate:{type:Date},
+                        type:{type: String},
+                        status:{type: String},
+                        img:{type: String},
+                        statusDescription:{type: String},
+                    },
+                    maintancePlan:{
+                        name:{type: String},
+                        dueDate:{type:Date},
+                        type:{type: String},
+                        status:{type: String},
+                        img:{type: String},
+                        statusDescription:{type: String},
+                    },
+                    registrationTax:{
+                        name:{type: String},
+                        dueDate:{type:Date},
+                        type:{type: String},
+                        status:{type: String},
+                        img:{type: String},
+                        statusDescription:{type: String},
+                    },
+                    fines:[{
+                        name:{type: String},
+                        date:{type:Date},
+                        type:{type: String},
+                        status:{type: String},
+                        img:{type: String},
+                        statusDescription:{type: String},
+                        amount:{type: Number}
+                    }]
+                }],
+                exterior:[{
+                    name:{type: String},
+                    dueDate:{type:Date},
+                    type:{type: String},
+                    status:{type: String},
+                    img:{type: String},
+                    statusDescription:{type: String},
+                }],
+                tires:[{
+                    name:{type: String},
+                    dueDate:{type:Date},
+                    type:{type: String},
+                    status:{type: String},
+                    img:{type: String},
+                    statusDescription:{type: String},
+                    pressure:{type: String},
+                    marca:{type: String},
+                    modelo:{type: String},
+                    thickness:{type: String},
+                }],
+                engine:[{
+                    name:{type: String},
+                    dueDate:{type:Date},
+                    type:{type: String},
+                    status:{type: String},
+                    img:{type: String},
+                    statusDescription:{type: String},
+                }],
+                interior:[{
+                    name:{type: String},
+                    dueDate:{type:Date},
+                    type:{type: String},
+                    status:{type: String},
+                    img:{type: String},
+                    statusDescription:{type: String},
+                }],
+                driving:[{
+                    name:{type: String},
+                    dueDate:{type:Date},
+                    type:{type: String},
+                    status:{type: String},
+                    img:{type: String},
+                    statusDescription:{type: String},
+                }],
+                other:[{
+                    name:{type: String},
+                    dueDate:{type:Date},
+                    type:{type: String},
+                    status:{type: String},
+                    img:{type: String},
+                    statusDescription:{type: String},
+                }],
+
             },
-            insurance:{
-                coverage:{type: String},
-                dueDate:{type:Date},
-                company:{type: String},
-            },
+            
+        
             alerts:[
                 {name:{type: String},
                 dueDate:{type:Date},
@@ -82,14 +168,8 @@ const userSchema = new mongoose.Schema({
             cleaning:{
                 lastCleaning:{type:Date},
                 cleaningType:{type: String},
-            },
-            generalStatus:[
-                {
-                name:{type: String},
-                status:{type: String},
-                img:{type: String},
-                statusDescription:{type: String}
-                }]
+            }
+           
         },
         documentation:{
             invoices:{type: String},
