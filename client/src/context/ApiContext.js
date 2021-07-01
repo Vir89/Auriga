@@ -10,7 +10,6 @@ const APIProvider = (props) => {
   const [usersLoaded, setUsersLoaded] = useState(false);
 
   const {user} =users
-  console.log(user)
 
 
   useEffect(() => {

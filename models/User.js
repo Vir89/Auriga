@@ -62,7 +62,7 @@ const userSchema = new mongoose.Schema({
             currentValue:{type: Number},
             kM:{type: Number},
             status:{
-                administration:[{
+                administration:{
                     insurance:{
                         coverage:{type: String},
                         dueDate:{type:Date},
@@ -101,7 +101,7 @@ const userSchema = new mongoose.Schema({
                         statusDescription:{type: String},
                         amount:{type: Number}
                     }]
-                }],
+                },
                 exterior:[{
                     name:{type: String},
                     dueDate:{type:Date},
