@@ -80,9 +80,10 @@
                                 "statusDescription": "descripcion estado"
                             },
                             "maintancePlan": {
-                                "title": "Próximo manteniento",
+                                "title": "Mantenimiento",
+                                "alert": "Próxima revisión",
                                 "dueDate": "2021-10-15",
-                                "type": "administration",
+                                "type": "repair",
                                 "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
@@ -347,15 +348,15 @@
                         {
                             "insurance": {
                                 "title":"Seguro",
-                                "alert": "Fecha próxima de caducidad",
-                                "type":"document",
+                                "alert": "Fecha de vencimiento próxima",
+                                "type":"administration",
                                 "coverage": "todo",
                                 "dueDate": "2021-10-31",
                                 "company": "Mafre"
                             },
                             "itv": {
                                 "name": "Itv",
-                                "alert": "Fecha próxima de caducidad",
+                                "alert": "Fecha de vencimiento próxima",
                                 "dueDate": "2021-10-10",
                                 "type": "administration",
                                 "status": "ko",
@@ -363,9 +364,10 @@
                                 "statusDescription": "descripcion estado"
                             },
                             "maintancePlan": {
-                                "name": "Próximo manteniento",
+                                "name": "Mantenimiento",
+                                "alert": "Próxima revisión",
                                 "dueDate": "2021-10-15",
-                                "type": "administration",
+                                "type": "repair",
                                 "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
