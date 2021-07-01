@@ -50,6 +50,7 @@ export const AlertsContainer = () => {
     useEffect(() => {
        
        alertsLoaded && setAlert(sortListByDate(alerts))
+       console.log(alerts)
       
        
        
