@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import DivColumn from '../atoms/DivColumn'
+import Div  from '../atoms/Div'
 import H2 from '../atoms/H2'
 import { CarStatus } from '../molecules/CarStatus'
 import { ApiContext } from '../../context/ApiContext';
@@ -19,8 +19,27 @@ export const CarStatusContainer = () => {
     /* console.log(context.user[0].cars[0].variableFeatures.generalStatus) */
    
     return (
-        <DivColumn>   
+        <Div column>   
             <H2>Estado general</H2>
+
+            {/* <Accordion allowZeroExpanded>
+                <AccordionItem>
+                    <AccordionItemHeading>
+                         <AccordionItemButton>
+                                Documentacion
+                        </AccordionItemButton>
+                    </AccordionItemHeading>
+                 <AccordionItemPanel>
+
+           
+                {context.user[0].cars[0].variableFeatures.status.documentation.map((status, index)=>
+                    <CarStatus
+                    key = {index}
+                    title = {status.title} 
+                    status = {status.status}/>)}
+                </AccordionItemPanel>
+            </AccordionItem>
+            </Accordion>  */}
 
             <Accordion allowZeroExpanded>
                 <AccordionItem>
@@ -138,6 +157,6 @@ export const CarStatusContainer = () => {
 
         
             
-        </DivColumn>
+        </Div>
     )
 }

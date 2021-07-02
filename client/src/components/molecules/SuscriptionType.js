@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
-import { textData } from '../../data/textData'
-import DivRow from '../atoms/DivRow'
+import Div from '../atoms/Div'
 import H3 from "../atoms/H3"
 import H2 from "../atoms/H2"
-import DivColumn from '../atoms/DivColumn'
 import {ApiContext} from '../../context/ApiContext';
 
 
@@ -27,13 +25,13 @@ const SuscriptionType = (props) => {
 
 
     return (
-            <DivRow spaceBet>
+            <Div row spaceBet>
                 <H2>Tipo de Suscripción mi.Auriga:</H2>
                 <button onClick={handleButtonSuscription}>suscripcion</button>
 
                 <H3>mi.Auriga Estándar</H3>
                 
-            </DivRow >  
+            </Div>  
         
     )
 }

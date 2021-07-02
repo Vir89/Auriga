@@ -1,16 +1,9 @@
 import React from 'react'
-import { DivAlert } from '../atoms/DivAlert'
+import Div from '../atoms/Div'
 import H3 from '../atoms/H3'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import Span from '../atoms/Span';
-import '../../App.css'
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from 'react-accessible-accordion';
+import '../../App.css';
 import 'react-accessible-accordion/dist/fancy-example.css';
 
 
@@ -24,38 +17,13 @@ const icons={
  
 export const CarStatus = (props) => {
 
- 
-    /* <Accordion allowZeroExpanded>
-    <AccordionItem>
-        <AccordionItemHeading>
-            <AccordionItemButton>
-                {props.name}
-            </AccordionItemButton>
-        </AccordionItemHeading>
-        <AccordionItemPanel>
-
-            <DivAlert 
-
-            </DivAlert>
-        </AccordionItemPanel>
-    </AccordionItem>
-
-    </Accordion> */
-
 
     return (
-      
 
-              <DivAlert >
-
+              <Div alert >
                   <H3>{props.title}</H3>
-                 {/* <H3>"{context.user.user[0].car[0].variableFeatures.generalStatus}"</H3> */}
-
                   {icons[props.status]} 
-
-
-
-              </DivAlert>
+              </Div>
         
     )
 }
