@@ -46,13 +46,8 @@ const Home = (props) => {
             
         </PageContainer>
 
-
-
     )
     
     }
-
-}
-
 export default Home;
 
