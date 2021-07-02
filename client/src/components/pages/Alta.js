@@ -4,7 +4,7 @@ import FormSignup from './FormSignup';
 import FormSuccess from './FormSuccess';
 import useForm from './useForm';
 import validateInfo from './validateInfo';
-import Login from './Login';
+//import Login from './Login';
 import SSOLogin from './SSOLogin';
 
 
@@ -20,7 +20,7 @@ export const Alta = () => {
                 <FormSignup/>
                 <FormSuccess/>
                 <validateInfo/>
-                <Login/>
+                
             
             
         </Form>

@@ -1,20 +1,50 @@
 import React, {Fragment} from 'react';
+//import React, {useEffect} from 'react';
 import Navbar from './components/organisms/Navbar';
-import { Switch, Route} from 'react-router-dom'
-import Home from './components/pages/Home';
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
+//import { useDispatch, useSelector } from 'react-redux';
+//import { history } from '../_helpers';
+//import { alertActions } from '../_actions';
+//import {PrivateRoute} from '../_components';
+import { Home } from './components/pages/Home';
 import {Alta} from './components/pages/Alta';
 import { Profile } from './components/pages/Profile';
 import { Car } from './components/pages/Car';
 import fetchData from "./utils/fetchData"
-import Login from './components/pages/Login';
+import  {Login} from './components/pages/Login';
 import SSOLogin from './components/pages/SSOLogin';
+
+
+{/*function App() {
+  const alert = useSelector(state => state.alert);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    history.listen((location, action) => {
+
+      dispatch(alertActions.clear());
+
+    });
+  }, []);
+*/}
+
 import MoreTypeSuscription from './components/molecules/MoreTypeSuscription';
+
 
   
 const App = (props) => {
   return (
-    <div>
-      <Navbar />           
+
+
+  //  {alert.message &&
+    //  <div className={'alert ${alert.type}'}>{alert.message}
+     // </div>
+    //}
+
+    <Fragment>           
+    
+          <Navbar />          
+
           <Switch>
             <Route exact path='/'  render={props => <Home {...props} /> }/>
           </Switch>
@@ -45,11 +75,15 @@ const App = (props) => {
           <Switch>
             <Route path='/cerrar-sesion' />
           </Switch>
-    </div>
+
+    </Fragment>
+
   );
 
   
 };
+
+//}
 
 
 
