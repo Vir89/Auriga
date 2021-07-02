@@ -10,7 +10,7 @@ import {ApiContext} from '../../context/ApiContext';
 const SuscriptionType = (props) => {
     console.log(props);
 
-    const handleButtonSuscription = (props) => {
+    const handleButtonSuscription = () => {
         console.log(props.history);
         props.history.push({
             pathname: "/suscripciones"
