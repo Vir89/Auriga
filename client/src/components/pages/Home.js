@@ -1,17 +1,22 @@
 import React, {useContext} from 'react';
 import MainContainer from "../atoms/MainContainer"
 import PageContainer from '../atoms/PageContainer';
+import SuscriptionContainer from '../organisms/SuscriptionContainer';
 import { AlertsContainer } from '../organisms/AlertsContainer';
-import { HomeMainContent } from '../organisms/HomeMainContent';
-import { ApiContext } from '../../context/ApiContext';
+import HomeMainContent from '../organisms/HomeMainContent';
+import {ApiContext} from '../../context/ApiContext';
 
-export const Home = () => {
+const Home = () => {
     const context = useContext(ApiContext);
     return (
         <PageContainer>
             
             <MainContainer>
-                {context.usersLoaded&& <HomeMainContent/>}
+                {context.usersLoaded&&<HomeMainContent/>}
+            </MainContainer>
+
+            <MainContainer>
+                {context.usersLoaded&&<SuscriptionContainer/>}
             </MainContainer>
 
             <MainContainer>
@@ -21,3 +26,4 @@ export const Home = () => {
         </PageContainer>
     )
 }
+export default Home;

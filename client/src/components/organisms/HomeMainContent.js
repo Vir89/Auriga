@@ -4,7 +4,7 @@ import DivColumn from '../atoms/DivColumn'
 import { BodyContainer } from '../molecules/BodyContainer'
 import { HeaderContainer } from '../molecules/HeaderContainer'
 
-export const HomeMainContent = () => {
+const HomeMainContent = () => {
     return (
         <DivColumn>
             <HeaderContainer/>
@@ -13,3 +13,4 @@ export const HomeMainContent = () => {
         </DivColumn>
     )
 }
+export default HomeMainContent;
