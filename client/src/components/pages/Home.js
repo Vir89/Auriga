@@ -46,8 +46,6 @@ const Home = (props) => {
             
         </PageContainer>
 
-
-
     )
     
     }
