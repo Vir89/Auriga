@@ -45,7 +45,6 @@ const App = (props) => {
           <Switch>
             <Route path='/cerrar-sesion' />
           </Switch>
-        {/*<button onClick={console.log(props)}>hh</button>*/}
     </div>
   );
 

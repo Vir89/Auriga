@@ -7,10 +7,10 @@ import DivColumn from '../atoms/DivColumn'
 import SuscriptionType from '../molecules/SuscriptionType'
 
 
-const SuscriptionContainer = () => {
+const SuscriptionContainer = (props) => {
     return (
         < DivColumn>
-            <SuscriptionType/>
+            <SuscriptionType {...props}/>
 
         </DivColumn>
         

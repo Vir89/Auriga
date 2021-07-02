@@ -6,7 +6,7 @@ import { AlertsContainer } from '../organisms/AlertsContainer';
 import HomeMainContent from '../organisms/HomeMainContent';
 import {ApiContext} from '../../context/ApiContext';
 
-const Home = () => {
+const Home = (props) => {
     const context = useContext(ApiContext);
     return (
         <PageContainer>
@@ -16,7 +16,7 @@ const Home = () => {
             </MainContainer>
 
             <MainContainer>
-                {context.usersLoaded&&<SuscriptionContainer/>}
+                {context.usersLoaded&&<SuscriptionContainer {...props}/>}
             </MainContainer>
 
             <MainContainer>
