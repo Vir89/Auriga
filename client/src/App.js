@@ -1,43 +1,76 @@
 import React, {Fragment} from 'react';
+//import React, {useEffect} from 'react';
 import Navbar from './components/organisms/Navbar';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import Home from './components/pages/Home';
 import Alta from './components/pages/Alta';
 import Profile from './components/pages/Profile';
 import Car from './components/pages/Car';
 import Login from './components/pages/Login';
+//import { useDispatch, useSelector } from 'react-redux';
+//import { history } from '../_helpers';
+//import { alertActions } from '../_actions';
+//import {PrivateRoute} from '../_components';
+
+
+import fetchData from "./utils/fetchData"
+
 import SSOLogin from './components/pages/SSOLogin';
 
 
+{/*function App() {
+  const alert = useSelector(state => state.alert);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    history.listen((location, action) => {
+
+      dispatch(alertActions.clear());
+
+    });
+  }, []);
+*/}
+
+import MoreTypeSuscription from './components/molecules/MoreTypeSuscription';
+
+
   
-const App = () => {
+const App = (props) => {
   return (
+
+
+  //  {alert.message &&
+    //  <div className={'alert ${alert.type}'}>{alert.message}
+     // </div>
+    //}
+
     <Fragment>           
-        <Router>        
+    
           <Navbar />          
+
           <Switch>
-            <Route exact path='/' component={Home}/>
+            <Route exact path='/'  render={props => <Home {...props} /> }/>
           </Switch>
           <Switch>
-            <Route path='/registro' component={Alta}/>
+            <Route path='/registro'  render={props => <Alta {...props} /> }/>
           </Switch>   
           <Switch>
-            <Route path='/login' component={Login}/>
+            <Route path='/login'  render={props => <Login {...props} /> }/>
           </Switch>   
           <Switch>
-            <Route path='/logingoogle' component={SSOLogin}/>
+            <Route path='/logingoogle'  render={props => <SSOLogin {...props} /> }/>
           </Switch>   
           <Switch>
-            <Route path='/area-coches' component={Car}/>
+            <Route path='/area-coches'  render={props => <Car {...props} /> }/>
           </Switch>
           <Switch>
-            <Route path='/area-personal' component={Profile}/>
+            <Route path='/area-personal' render={props => <Profile {...props} /> }/>
           </Switch>
           <Switch>
             <Route path='/mensajes' />
           </Switch>
           <Switch>
-            <Route path='/suscripciones' />
+            <Route path='/suscripciones' render={props => <MoreTypeSuscription {...props} /> }/>
           </Switch>
           <Switch>
             <Route path='/contacto' />
@@ -45,12 +78,15 @@ const App = () => {
           <Switch>
             <Route path='/cerrar-sesion' />
           </Switch>
-        </Router>       
+
     </Fragment>
+
   );
 
   
 };
+
+//}
 
 
 

@@ -9,10 +9,10 @@ ReactDOM.render(
   <React.StrictMode>
     <APIProvider>
     <Theme>
-        <App /> 
+        <App />     
+        <GlobalStyles />
     </Theme>
     </APIProvider>
-    <GlobalStyles />
   </React.StrictMode>,
   document.getElementById('root')
 );
