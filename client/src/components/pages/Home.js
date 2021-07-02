@@ -1,13 +1,31 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import MainContainer from "../atoms/MainContainer"
 import PageContainer from '../atoms/PageContainer';
 import { AlertsContainer } from '../organisms/AlertsContainer';
 import { HomeMainContent } from '../organisms/HomeMainContent';
 import { ApiContext } from '../../context/ApiContext';
+import { Link } from 'react-router-dom';
+//import { userActions } from '../_actions';
+
 
 export const Home = () => {
     const context = useContext(ApiContext);
+    //const users = useSelector(state => state.users);
+    //onst user = useSelector(state => state.authentication.user);
+   // const dispatch = useDispatch();
+
+   // useEffect (() => {
+     //   dispatch(userActions.getAll());
+    //}, []);
+
+  //  function handleDeleteUser(id) {
+    //    dispatch(userActions.delete(id));
+
+    //}
+    
+
     return (
+        
         <PageContainer>
             
             <MainContainer>
@@ -17,7 +35,13 @@ export const Home = () => {
             <MainContainer>
                 {context.usersLoaded&&<AlertsContainer/>}
             </MainContainer>
+
+
             
         </PageContainer>
+
+
+
     )
-}
+    
+    }
