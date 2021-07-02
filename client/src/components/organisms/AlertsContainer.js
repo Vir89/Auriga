@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react'
 import {newArrayFromState} from '../../utils/newArrayFromState'
-import DivColumn from '../atoms/DivColumn'
+import Div from '../atoms/Div'
 import H2 from '../atoms/H2'
-import { Alert2 } from '../molecules/Alert2'
+import Alert from '../molecules/Alert'
 import { ApiContext } from '../../context/ApiContext';
 import { sortListByDate } from '../../utils/sortListByDate'
 
@@ -61,15 +61,15 @@ export const AlertsContainer = () => {
 
 
     return (
-        <DivColumn>
+        <Div column>
             <H2>Avisos pendientes</H2>
 
            
            {alerts.map((alert, n)=>
-                <Alert2
+                <Alert
                 key={n}
                 alert ={alert}/>)}
             
-        </DivColumn>
+        </Div>
     )
 }

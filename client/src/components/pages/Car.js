@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import MainContainer from '../atoms/MainContainer'
-import PageContainer from '../atoms/PageContainer'
+import Section from '../atoms/Section'
+import Main from '../atoms/Main'
 import { CarStatusContainer } from '../organisms/CarStatusContainer'
 import { ApiContext } from '../../context/ApiContext';
 
@@ -8,16 +8,16 @@ import { ApiContext } from '../../context/ApiContext';
 const Car = () => {
     const context = useContext(ApiContext);
     return (
-        <PageContainer>
-            <MainContainer>
+        <Main>
+            <Section>
                 {context.usersLoaded&&
                 <CarStatusContainer/>}
 
-            </MainContainer>
+            </Section>
         
             
             
-        </PageContainer>
+        </Main>
     )
 }
 

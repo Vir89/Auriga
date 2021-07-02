@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import MainContainer from '../atoms/MainContainer'
-import PageContainer from '../atoms/PageContainer'
+import Section from '../atoms/Section'
+import Main from '../atoms/Main'
 import { ProfileBodyContainer } from '../organisms/ProfileBodyContainer'
 import { ApiContext } from '../../context/ApiContext';
 
@@ -10,18 +10,18 @@ const Profile = () => {
     const context = useContext(ApiContext);
 
     return (
-        <PageContainer>
-            <MainContainer>
+        <Main>
+            <Section>
 
                 {context.usersLoaded&&
                 <ProfileBodyContainer/>}
                 
 
-            </MainContainer>
+            </Section>
         
             
             
-        </PageContainer>
+        </Main>
     )
 }
 

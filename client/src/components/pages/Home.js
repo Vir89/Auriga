@@ -1,9 +1,8 @@
 import React, {useContext, useEffect} from 'react';
-import MainContainer from "../atoms/MainContainer"
-import PageContainer from '../atoms/PageContainer';
+import Section from "../atoms/Section"
+import Main from '../atoms/Main';
 import SuscriptionContainer from '../organisms/SuscriptionContainer';
 import { AlertsContainer } from '../organisms/AlertsContainer';
-import { Link } from 'react-router-dom';
 //import { userActions } from '../_actions';
 import HomeMainContent from '../organisms/HomeMainContent';
 import {ApiContext} from '../../context/ApiContext';
@@ -28,23 +27,23 @@ const Home = (props) => {
 
     return (
         
-        <PageContainer>
+        <Main>
             
-            <MainContainer>
+            <Section>
                 {context.usersLoaded&&<HomeMainContent/>}
-            </MainContainer>
+            </Section>
 
-            <MainContainer>
+            <Section>
                 {context.usersLoaded&&<SuscriptionContainer {...props}/>}
-            </MainContainer>
+            </Section>
 
-            <MainContainer>
+            <Section>
                 {context.usersLoaded&&<AlertsContainer/>}
-            </MainContainer>
+            </Section>
 
-
+ 
             
-        </PageContainer>
+        </Main>
 
     )
     

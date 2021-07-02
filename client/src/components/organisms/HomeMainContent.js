@@ -1,16 +1,16 @@
 import React from 'react'
 
-import DivColumn from '../atoms/DivColumn'
+import Div from '../atoms/Div'
 import { BodyContainer } from '../molecules/BodyContainer'
 import { HeaderContainer } from '../molecules/HeaderContainer'
 
 const HomeMainContent = () => {
     return (
-        <DivColumn>
+        <Div column>
             <HeaderContainer/>
             <BodyContainer/>
             
-        </DivColumn>
+        </Div>
     )
 }
 export default HomeMainContent;

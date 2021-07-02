@@ -9,7 +9,7 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
-import MainContainer from "../atoms/MainContainer"
+import Section from "../atoms/Section"
 import {ApiContext} from '../../context/ApiContext';
 
 
@@ -25,7 +25,7 @@ const MoreTypeSuscription = (props) => {
 
 
     return (
-        <MainContainer>
+        <Section>
       <Accordion allowZeroExpanded>
       <AccordionItem>
           <AccordionItemHeading>
@@ -89,7 +89,7 @@ const MoreTypeSuscription = (props) => {
       </AccordionItem>
 
       </Accordion>
-      </MainContainer>
+      </Section>
     )
 }
 export default MoreTypeSuscription;

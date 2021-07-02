@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainContainer = styled.div `
+const Section = styled.section `
     width: 95%;
     margin:20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -9,4 +9,4 @@ const MainContainer = styled.div `
     background-color:${props => props.theme.colors.white};
 `
 
-export default MainContainer;
+export default Section;
