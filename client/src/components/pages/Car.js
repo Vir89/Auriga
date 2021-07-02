@@ -5,7 +5,7 @@ import { CarStatusContainer } from '../organisms/CarStatusContainer'
 import { ApiContext } from '../../context/ApiContext';
 
 
-export const Car = () => {
+const Car = () => {
     const context = useContext(ApiContext);
     return (
         <PageContainer>
@@ -20,3 +20,5 @@ export const Car = () => {
         </PageContainer>
     )
 }
+
+export default Car

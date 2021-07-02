@@ -9,7 +9,7 @@ import SSOLogin from './SSOLogin';
 
 
 
-export const Alta = () => {
+const Alta = () => {
     return (
         <Form>
 
@@ -26,3 +26,5 @@ export const Alta = () => {
         </Form>
     )
 }
+
+export default Alta

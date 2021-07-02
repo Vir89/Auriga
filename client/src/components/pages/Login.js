@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 //import { userActions } from '../_actions';
 
-function Login() {
+const Login =()=> {
     const [inputs, setInputs] = useState({
         username: '',
         password: ''
@@ -20,12 +20,12 @@ function Login() {
     //    dispatch(userActions.logout()); 
     //}, []);
 
-    function handleChange(e) {
+    const handleChange=(e)=> {
         const { name, value } = e.target;
         setInputs(inputs => ({ ...inputs, [name]: value }));
     }
 
-    function handleSubmit(e) {
+    const handleSubmit=(e)=> {
         e.preventDefault();
 
         setSubmitted(true);
@@ -66,4 +66,4 @@ function Login() {
     );
 }
 
-export { Login };
+export default Login;

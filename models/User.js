@@ -62,14 +62,18 @@ const userSchema = new mongoose.Schema({
             currentValue:{type: Number},
             kM:{type: Number},
             status:{
-                administration:[{
+                administration:{
                     insurance:{
+                        title:{type: String},
+                        alert: {type: String},
                         coverage:{type: String},
                         dueDate:{type:Date},
+                        type:{type: String},
                         company:{type: String}
                     },
                     itv:{
-                        name:{type: String},
+                        title:{type: String},
+                        alert: {type: String},
                         dueDate:{type:Date},
                         type:{type: String},
                         status:{type: String},
@@ -77,7 +81,8 @@ const userSchema = new mongoose.Schema({
                         statusDescription:{type: String},
                     },
                     maintancePlan:{
-                        name:{type: String},
+                        title:{type: String},
+                        alert: {type: String},
                         dueDate:{type:Date},
                         type:{type: String},
                         status:{type: String},
@@ -85,7 +90,7 @@ const userSchema = new mongoose.Schema({
                         statusDescription:{type: String},
                     },
                     registrationTax:{
-                        name:{type: String},
+                        title:{type: String},
                         dueDate:{type:Date},
                         type:{type: String},
                         status:{type: String},
@@ -93,7 +98,7 @@ const userSchema = new mongoose.Schema({
                         statusDescription:{type: String},
                     },
                     fines:[{
-                        name:{type: String},
+                        title:{type: String},
                         date:{type:Date},
                         type:{type: String},
                         status:{type: String},
@@ -101,9 +106,9 @@ const userSchema = new mongoose.Schema({
                         statusDescription:{type: String},
                         amount:{type: Number}
                     }]
-                }],
+                },
                 exterior:[{
-                    name:{type: String},
+                    title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
                     status:{type: String},
@@ -111,7 +116,7 @@ const userSchema = new mongoose.Schema({
                     statusDescription:{type: String},
                 }],
                 tires:[{
-                    name:{type: String},
+                    title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
                     status:{type: String},
@@ -123,7 +128,7 @@ const userSchema = new mongoose.Schema({
                     thickness:{type: String},
                 }],
                 engine:[{
-                    name:{type: String},
+                    title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
                     status:{type: String},
@@ -131,7 +136,8 @@ const userSchema = new mongoose.Schema({
                     statusDescription:{type: String},
                 }],
                 interior:[{
-                    name:{type: String},
+                    title:{type: String},
+                    alert:{type:String},
                     dueDate:{type:Date},
                     type:{type: String},
                     status:{type: String},
@@ -139,7 +145,7 @@ const userSchema = new mongoose.Schema({
                     statusDescription:{type: String},
                 }],
                 driving:[{
-                    name:{type: String},
+                    title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
                     status:{type: String},
@@ -147,7 +153,7 @@ const userSchema = new mongoose.Schema({
                     statusDescription:{type: String},
                 }],
                 other:[{
-                    name:{type: String},
+                    title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
                     status:{type: String},
@@ -157,13 +163,6 @@ const userSchema = new mongoose.Schema({
 
             },
             
-        
-            alerts:[
-                {name:{type: String},
-                dueDate:{type:Date},
-                type:{type: String}
-                 }
-            ],
             picture:{type: String},
             cleaning:{
                 lastCleaning:{type:Date},

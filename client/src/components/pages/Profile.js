@@ -5,13 +5,10 @@ import { ProfileBodyContainer } from '../organisms/ProfileBodyContainer'
 import { ApiContext } from '../../context/ApiContext';
 
 
-export const Profile = () => {
-
-    
-
-
+const Profile = () => {
 
     const context = useContext(ApiContext);
+
     return (
         <PageContainer>
             <MainContainer>
@@ -27,3 +24,5 @@ export const Profile = () => {
         </PageContainer>
     )
 }
+
+export default Profile

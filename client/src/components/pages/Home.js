@@ -3,16 +3,14 @@ import MainContainer from "../atoms/MainContainer"
 import PageContainer from '../atoms/PageContainer';
 import SuscriptionContainer from '../organisms/SuscriptionContainer';
 import { AlertsContainer } from '../organisms/AlertsContainer';
-
-
 import { Link } from 'react-router-dom';
 //import { userActions } from '../_actions';
-
 import HomeMainContent from '../organisms/HomeMainContent';
 import {ApiContext} from '../../context/ApiContext';
 
 
 const Home = (props) => {
+
     const context = useContext(ApiContext);
     //const users = useSelector(state => state.users);
     //onst user = useSelector(state => state.authentication.user);
@@ -55,4 +53,6 @@ const Home = (props) => {
     }
 
 }
+
 export default Home;
+
