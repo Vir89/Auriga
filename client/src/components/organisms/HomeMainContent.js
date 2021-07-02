@@ -13,3 +13,5 @@ export const HomeMainContent = () => {
         </DivColumn>
     )
 }
+
+export default HomeMainContent

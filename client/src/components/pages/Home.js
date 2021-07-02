@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import MainContainer from "../atoms/MainContainer"
 import PageContainer from '../atoms/PageContainer';
 import { AlertsContainer } from '../organisms/AlertsContainer';
-import { HomeMainContent } from '../organisms/HomeMainContent';
+import HomeMainContent from '../organisms/HomeMainContent';
 import { ApiContext } from '../../context/ApiContext';
 
 const Home = () => {
