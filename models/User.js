@@ -137,6 +137,7 @@ const userSchema = new mongoose.Schema({
                 }],
                 interior:[{
                     title:{type: String},
+                    alert:{type:String},
                     dueDate:{type:Date},
                     type:{type: String},
                     status:{type: String},

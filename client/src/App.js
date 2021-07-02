@@ -1,11 +1,10 @@
 import React, {Fragment} from 'react';
 import Navbar from './components/organisms/Navbar';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import { Home } from './components/pages/Home';
-import {Alta} from './components/pages/Alta';
-import { Profile } from './components/pages/Profile';
-import { Car } from './components/pages/Car';
-import fetchData from "./utils/fetchData"
+import Home from './components/pages/Home';
+import Alta from './components/pages/Alta';
+import Profile from './components/pages/Profile';
+import Car from './components/pages/Car';
 import Login from './components/pages/Login';
 import SSOLogin from './components/pages/SSOLogin';
 

@@ -21,7 +21,7 @@ export const AlertsContainer = () => {
         )
     
         newArrayFromState(
-            context.user[0].cars[0].variableFeatures.status.interior[2],
+            context.user[0].cars[0].variableFeatures.status.interior[1],
             setAlert, 
         )
 
@@ -64,12 +64,8 @@ export const AlertsContainer = () => {
         <DivColumn>
             <H2>Avisos pendientes</H2>
 
-           {/*  {context.user[0].cars[0].variableFeatures.alerts.map((alert, n)=>
-                <Alert
-                key={n}
-                alert ={alert}/>)}
-             */}
-            {context.user[0].cars[0].variableFeatures.alerts.map((alert, n)=>
+           
+           {alerts.map((alert, n)=>
                 <Alert2
                 key={n}
                 alert ={alert}/>)}

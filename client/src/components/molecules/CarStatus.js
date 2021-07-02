@@ -48,7 +48,7 @@ export const CarStatus = (props) => {
 
               <DivAlert >
 
-                  <H3>{props.name}</H3>
+                  <H3>{props.title}</H3>
                  {/* <H3>"{context.user.user[0].car[0].variableFeatures.generalStatus}"</H3> */}
 
                   {icons[props.status]} 

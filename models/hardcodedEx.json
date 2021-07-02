@@ -65,7 +65,7 @@
 
                                 "title":"Seguro",
                                 "alert": "Fecha próxima de caducidad",
-                                "type":"document",
+                                "type":"administration",
                                 "coverage": "todo",
                                 "dueDate": "2021-10-31",
                                 "company": "Mafre"
@@ -169,7 +169,7 @@
                         {
                         
                             "title": "Integridad de Neumáticos",
-                            "dueDate": "",
+                            "dueDate": "2021-06-15",
                             "type": "tires",
                             "status": "ok",
                             "img": "foto",
@@ -252,17 +252,20 @@
                     ],
                     "interior": [
                         {
-                          
+                        
                             "title": "Daños en el interior",
+                            "alert": "Cita para próxima limpieza",
                             "dueDate": "",
                             "type": "interior",
                             "status": "ok",
                             "img": "foto",
                             "statusDescription": "descripcion"
+
                         },
                         {
                             
                             "title": "Estado de limpieza",
+                            "alert": "Cita para próxima limpieza",
                             "dueDate": "",
                             "type": "interior",
                             "status": "ko",
@@ -272,6 +275,7 @@
                         {
                             
                             "title": "Necesidad de limpieza integral",
+                            "alert": "Cita para próxima limpieza",
                             "dueDate": "2021-06-09T22:00:00.000Z",
                             "type": "interior",
                             "status": "true",
@@ -355,7 +359,7 @@
                                 "company": "Mafre"
                             },
                             "itv": {
-                                "name": "Itv",
+                                "title": "Itv",
                                 "alert": "Fecha de vencimiento próxima",
                                 "dueDate": "2021-10-10",
                                 "type": "administration",
@@ -364,7 +368,7 @@
                                 "statusDescription": "descripcion estado"
                             },
                             "maintancePlan": {
-                                "name": "Mantenimiento",
+                                "title": "Mantenimiento",
                                 "alert": "Próxima revisión",
                                 "dueDate": "2021-10-15",
                                 "type": "repair",
@@ -373,7 +377,7 @@
                                 "statusDescription": "descripcion estado"
                             },
                             "registrationTax": {
-                                "name": "Impuesto de matriculación",
+                                "title": "Impuesto de matriculación",
                                 "dueDate": "2021-09-15",
                                 "type": "administration",
                                 "status": "ko",
@@ -384,7 +388,7 @@
                             "fines": [
                                 {
                                  
-                                    "name": "Exceso de velocidad",
+                                    "title": "Exceso de velocidad",
                                     "type": "administration",
                                     "status": "ko",
                                     "img": "foto",
@@ -396,7 +400,7 @@
                     "exterior": [
                         {
                             
-                            "name": "Chapa",
+                            "title": "Chapa",
                             "dueDate": "",
                             "type": "exterior",
                             "status": "ko",
@@ -405,7 +409,7 @@
                         },
                         {
                             
-                            "name": "Pintura",
+                            "title": "Pintura",
                             "dueDate": "",
                             "type": "exterior",
                             "status": "ko",
@@ -414,7 +418,7 @@
                         },
                         {
                            
-                            "name": "Vidrios",
+                            "title": "Vidrios",
                             "dueDate": "",
                             "type": "exterior",
                             "status": "ko",
@@ -423,7 +427,7 @@
                         },
                         {
                             
-                            "name": "Luces e indicadores",
+                            "title": "Luces e indicadores",
                             "dueDate": "",
                             "type": "exterior",
                             "status": "ko",
@@ -432,7 +436,7 @@
                         },
                         {
                             
-                            "name": "Escobillas limpiaparabrisas",
+                            "title": "Escobillas limpiaparabrisas",
                             "dueDate": "",
                             "type": "exterior",
                             "status": "ko",
@@ -443,7 +447,7 @@
                     "tires": [
                         {
                            
-                            "name": "Dibujo de Neumáticos",
+                            "title": "Dibujo de Neumáticos",
                             "dueDate": "",
                             "type": "tires",
                             "status": "ok",
@@ -452,7 +456,7 @@
                         },
                         {
                         
-                            "name": "Integridad de Neumáticos",
+                            "title": "Integridad de Neumáticos",
                             "dueDate": "",
                             "type": "tires",
                             "status": "ok",
@@ -461,7 +465,7 @@
                         },
                         {
                             
-                            "name": "Presión neumáticos",
+                            "title": "Presión neumáticos",
                             "dueDate": "",
                             "type": "tires",
                             "status": "ok",
@@ -470,7 +474,7 @@
                         },
                         {
                            
-                            "name": "Llantas",
+                            "title": "Llantas",
                             "dueDate": "",
                             "type": "tires",
                             "status": "ok",
@@ -479,7 +483,7 @@
                         },
                         {
                            
-                            "name": "Pastilla de frenos",
+                            "title": "Pastilla de frenos",
                             "dueDate": "",
                             "type": "tires",
                             "status": "ok",
@@ -490,7 +494,7 @@
                     "engine": [
                         {
                             
-                            "name": "Aspecto motor parado",
+                            "title": "Aspecto motor parado",
                             "dueDate": "",
                             "type": "engine",
                             "status": "ok",
@@ -499,7 +503,7 @@
                         },
                         {
                           
-                            "name": "Nivel de aceite",
+                            "title": "Nivel de aceite",
                             "dueDate": "",
                             "type": "engine",
                             "status": "warning",
@@ -508,7 +512,7 @@
                         },
                         {
                            
-                            "name": "Nivel de refrigerante",
+                            "title": "Nivel de refrigerante",
                             "dueDate": "",
                             "type": "engine",
                             "status": "ko",
@@ -517,7 +521,7 @@
                         },
                         {
                            
-                            "name": "Nivel líquido parabrisas",
+                            "title": "Nivel líquido parabrisas",
                             "dueDate": "",
                             "type": "engine",
                             "status": "ok",
@@ -526,7 +530,7 @@
                         },
                         {
                            
-                            "name": "Aspecto motor ralentí",
+                            "title": "Aspecto motor ralentí",
                             "dueDate": "",
                             "type": "engine",
                             "status": "ok",
@@ -537,8 +541,9 @@
                     "interior": [
                         {
                            
-                            "name": "Daños en el interior",
+                            "title": "Daños en el interior",
                             "dueDate": "",
+                            "alert":"",
                             "type": "interior",
                             "status": "ok",
                             "img": "foto",
@@ -546,8 +551,9 @@
                         },
                         {
                         
-                            "name": "Estado de limpieza",
-                            "dueDate": "",
+                            "title": "Estado de limpieza",
+                            "dueDate": "2021-06-09",
+                            "alert": "Cita para próxima limpieza",
                             "type": "interior",
                             "status": "ko",
                             "img": "foto",
@@ -555,8 +561,9 @@
                         },
                         {
                            
-                            "name": "Necesidad de limpieza integral",
-                            "dueDate": "2021-06-09T22:00:00.000Z",
+                            "title": "Necesidad de limpieza integral",
+                            "dueDate": "2021-06-09",
+                            "alert":"",
                             "type": "interior",
                             "status": "true",
                             "img": "foto",
@@ -566,7 +573,7 @@
                     "driving": [
                         {
                           
-                            "name": "Dinámica",
+                            "title": "Dinámica",
                             "dueDate": "",
                             "type": "conduccion",
                             "status": "ko",
@@ -575,7 +582,7 @@
                         },
                         {
                           
-                            "name": "Motor",
+                            "title": "Motor",
                             "dueDate": "2021-06-09T22:00:00.000Z",
                             "type": "conduccion",
                             "status": "warning",
@@ -586,7 +593,7 @@
                     "other": [
                         {
                             
-                            "name": "Aviso genérico",
+                            "title": "Aviso genérico",
                             "dueDate": "2021-06-09T22:00:00.000Z",
                             "type": "conduccion",
                             "status": "false",

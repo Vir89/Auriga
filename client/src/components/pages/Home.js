@@ -5,7 +5,7 @@ import { AlertsContainer } from '../organisms/AlertsContainer';
 import { HomeMainContent } from '../organisms/HomeMainContent';
 import { ApiContext } from '../../context/ApiContext';
 
-export const Home = () => {
+const Home = () => {
     const context = useContext(ApiContext);
     return (
         <PageContainer>
@@ -21,3 +21,5 @@ export const Home = () => {
         </PageContainer>
     )
 }
+
+export default Home

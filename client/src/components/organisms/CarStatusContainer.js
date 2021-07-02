@@ -35,7 +35,7 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.exterior.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    name = {status.name} 
+                    title = {status.title} 
                     status = {status.status}/>)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -54,7 +54,7 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.tires.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    name = {status.name} 
+                    title = {status.title} 
                     status = {status.status}/>)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -73,7 +73,7 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.engine.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    name = {status.name} 
+                    title = {status.title} 
                     status = {status.status}/>)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -92,7 +92,7 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.interior.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    name = {status.name} 
+                    title = {status.title} 
                     status = {status.status}/>)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -111,7 +111,7 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.driving.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    name = {status.name} 
+                    title = {status.title} 
                     status = {status.status}/>)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -130,7 +130,7 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.other.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    name = {status.name} 
+                    title = {status.title} 
                     status = {status.status}/>)}
                 </AccordionItemPanel>
             </AccordionItem>
