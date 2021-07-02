@@ -14,6 +14,7 @@ import fetchData from "./utils/fetchData"
 import  {Login} from './components/pages/Login';
 import SSOLogin from './components/pages/SSOLogin';
 
+
 {/*function App() {
   const alert = useSelector(state => state.alert);
   const dispatch = useDispatch();
@@ -27,10 +28,13 @@ import SSOLogin from './components/pages/SSOLogin';
   }, []);
 */}
 
+import MoreTypeSuscription from './components/molecules/MoreTypeSuscription';
+
 
   
-const App = () => {
+const App = (props) => {
   return (
+
 
   //  {alert.message &&
     //  <div className={'alert ${alert.type}'}>{alert.message}
@@ -40,29 +44,30 @@ const App = () => {
     <Fragment>           
     
           <Navbar />          
+
           <Switch>
-            <Route exact path='/' component={Home}/>
+            <Route exact path='/'  render={props => <Home {...props} /> }/>
           </Switch>
           <Switch>
-            <Route path='/registro' component={Alta}/>
+            <Route path='/registro'  render={props => <Alta {...props} /> }/>
           </Switch>   
           <Switch>
-            <Route path='/login' component={Login}/>
+            <Route path='/login'  render={props => <Login {...props} /> }/>
           </Switch>   
           <Switch>
-            <Route path='/logingoogle' component={SSOLogin}/>
+            <Route path='/logingoogle'  render={props => <SSOLogin {...props} /> }/>
           </Switch>   
           <Switch>
-            <Route path='/area-coches' component={Car}/>
+            <Route path='/area-coches'  render={props => <Car {...props} /> }/>
           </Switch>
           <Switch>
-            <Route path='/area-personal' component={Profile}/>
+            <Route path='/area-personal' render={props => <Profile {...props} /> }/>
           </Switch>
           <Switch>
             <Route path='/mensajes' />
           </Switch>
           <Switch>
-            <Route path='/suscripciones' />
+            <Route path='/suscripciones' render={props => <MoreTypeSuscription {...props} /> }/>
           </Switch>
           <Switch>
             <Route path='/contacto' />
@@ -70,7 +75,9 @@ const App = () => {
           <Switch>
             <Route path='/cerrar-sesion' />
           </Switch>
+
     </Fragment>
+
   );
 
   

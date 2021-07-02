@@ -11,10 +11,11 @@ ReactDOM.render(
     <BrowserRouter>
     <APIProvider>
     <Theme>
-        <App /> 
+        <App />     
+        <GlobalStyles />
+
     </Theme>
     </APIProvider>
-    <GlobalStyles />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
