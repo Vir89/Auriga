@@ -17,6 +17,11 @@ export const Div = styled.div `
         `}
     `}
 
+    ${props=>props.borderBottom && css`
+        border-bottom: 1px solid #333;
+    `}
+    
+
     ${props=>props.column && css`
         display: flex;
         flex-direction: column;

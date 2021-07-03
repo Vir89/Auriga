@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import CardAlertContainer from '../atoms/CardAlertContainer'
+import Card from '../atoms/Card'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { IoAlertCircleSharp, IoDocumentText } from "react-icons/io5"; 
 import { GiCarWheel } from "react-icons/gi";
@@ -32,7 +32,7 @@ const Alert = ({alert}) => {
 
     return (
         
-            <CardAlertContainer>
+            <Card alert>
 
                 {icons[alert.type]}  
                 <Div column center padding>
@@ -43,7 +43,7 @@ const Alert = ({alert}) => {
                     <Button >Mas Info</Button>
                 </Div>
                     
-            </CardAlertContainer>
+            </Card>
     )
 }
 

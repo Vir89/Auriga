@@ -5,7 +5,7 @@ import H2 from "../atoms/H2"
 import P from "../atoms/P"
 import Img from "../atoms/Img"
 
-export const HeaderContainer = () => {
+const HeaderContainer = () => {
 
   
     return (
@@ -20,3 +20,5 @@ export const HeaderContainer = () => {
         </Div>
     )
 }
+
+export default HeaderContainer

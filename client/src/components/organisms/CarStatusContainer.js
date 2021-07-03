@@ -13,7 +13,7 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css';
 
 
-export const CarStatusContainer = () => {
+const CarStatusContainer = () => {
 
     const context = useContext(ApiContext);
     /* console.log(context.user[0].cars[0].variableFeatures.generalStatus) */
@@ -160,3 +160,5 @@ export const CarStatusContainer = () => {
         </Div>
     )
 }
+
+export default CarStatusContainer

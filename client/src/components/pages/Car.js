@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import Section from '../atoms/Section'
 import Main from '../atoms/Main'
-import { CarStatusContainer } from '../organisms/CarStatusContainer'
+import CarStatusContainer from '../organisms/CarStatusContainer'
 import { ApiContext } from '../../context/ApiContext';
 
 
@@ -12,11 +12,7 @@ const Car = () => {
             <Section>
                 {context.usersLoaded&&
                 <CarStatusContainer/>}
-
             </Section>
-        
-            
-            
         </Main>
     )
 }
