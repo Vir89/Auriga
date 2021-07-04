@@ -66,8 +66,7 @@ const userSchema = new mongoose.Schema({
             currentValue:{type: Number},
             kM:{type: Number},
             status:{
-                administration:{
-                    insurance:{
+                administration:[{
                         title:{type: String},
                         alert: {type: String},
                         coverage:{type: String},
@@ -75,44 +74,12 @@ const userSchema = new mongoose.Schema({
                         type:{type: String},
                         company:{type: String},
                         status:{type: String},
-                        img:{type: String}
-                    },
-                    itv:{
-                        title:{type: String},
-                        alert: {type: String},
-                        dueDate:{type:Date},
-                        type:{type: String},
-                        status:{type: String},
                         img:{type: String},
                         statusDescription:{type: String},
-                    },
-                    maintancePlan:{
-                        title:{type: String},
-                        alert: {type: String},
-                        dueDate:{type:Date},
-                        type:{type: String},
-                        status:{type: String},
-                        img:{type: String},
-                        statusDescription:{type: String},
-                    },
-                    registrationTax:{
-                        title:{type: String},
-                        dueDate:{type:Date},
-                        type:{type: String},
-                        status:{type: String},
-                        img:{type: String},
-                        statusDescription:{type: String},
-                    },
-                    fines:[{
-                        title:{type: String},
-                        date:{type:Date},
-                        type:{type: String},
-                        status:{type: String},
-                        img:{type: String},
-                        statusDescription:{type: String},
+                        isOk:{type: Boolean},
+                        isSerious:{type: Boolean},
                         amount:{type: Number}
-                    }]
-                },
+                    }],
                 exterior:[{
                     title:{type: String},
                     dueDate:{type:Date},

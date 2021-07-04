@@ -5,6 +5,7 @@ const Span = styled.span `
     padding-right:5px;
     font-size: 20px;
     margin: 0px 5px 0px 5px;
+    
     ${props=>props.danger && css`
     color:${props=>props.theme.colors.danger};
     `}

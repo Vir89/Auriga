@@ -12,10 +12,12 @@ export const AlertsContainer = () => {
 
     const [alerts, setAlert]= useState([])
     const [alertsLoaded, setAlertsLoaded]=useState(false)
+    const [alertas, setAlertas]=useState([])
+
 
     useEffect(() => {
 
-        newArrayFromState(
+        /* newArrayFromState(
             context.user[0].cars[0].variableFeatures.status.administration.insurance,
             setAlert, 
         )
@@ -39,7 +41,14 @@ export const AlertsContainer = () => {
             context.user[0].cars[0].variableFeatures.status.tires[2],
             setAlert, 
         )
-        setAlertsLoaded(true)
+        setAlertsLoaded(true) */
+
+       /*  const notOKAdministration=context.user[0].cars[0].variableFeatures.status.administration */
+        const notOKExterior=context.user[0].cars[0].variableFeatures.status.exterior.filter(item=>item.isOk!=true)
+        /* const notOKInterior=context.user[0].cars[0].variableFeatures.status.interior,
+        const notOKtires=context.user[0].cars[0].variableFeatures.status.tires
+    */
+        setAlertas(notOKExterior)
         
         
         
@@ -65,7 +74,7 @@ export const AlertsContainer = () => {
             <H2>Avisos pendientes</H2>
 
            
-           {alerts.map((alert, n)=>
+           {alertas.map((alert, n)=>
                 <Alert
                 key={n}
                 alert ={alert}/>)}

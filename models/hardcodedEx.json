@@ -62,9 +62,9 @@
             },
             "variableFeatures": {
                 "status": {
-                    "administration": 
-                        {
-                            "insurance": {
+                    "administration":[ 
+                        
+                           {
 
                                 "title":"Seguro",
                                 "alert": "Fecha próxima de caducidad",
@@ -73,7 +73,7 @@
                                 "dueDate": "2021-07-31",
                                 "company": "Mafre"
                             },
-                            "itv": {
+                            {
                                 "title": "ITV",
                                 "alert": "Fecha próxima de caducidad",
                                 "dueDate": "2021-09-10",
@@ -82,7 +82,7 @@
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            "maintancePlan": {
+                            {
                                 "title": "Mantenimiento",
                                 "alert": "Próxima revisión",
                                 "dueDate": "2021-08-01",
@@ -91,7 +91,7 @@
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            "registrationTax": {
+                            {
                                 "title": "Impuesto de matriculación",
                                 "dueDate": "2021-09-15",
                                 "type": "administration",
@@ -100,17 +100,19 @@
                                 "statusDescription": "descripcion estado"
                             },
                         
-                            "fines": [
+                            [
                                 {
-                                    "title": "Exceso de velocidad",
+                                    "title": "Multa",
                                     "type": "administration",
                                     "status": "ko",
                                     "img": "foto",
                                     "statusDescription": "PAGADA",
-                                    "amount": 600
+                                    "amount": 600,
+                                    "isOk":true,
+                                    "isSerious":false
                                 }
                             ]
-                        },
+                        ],
                     
                     "exterior": [
                         {
@@ -392,10 +394,9 @@
             },
             "variableFeatures": {
                 "status": {
-                    "administration": 
-                        {
-                            "insurance": {
-
+                    "administration": [
+                        
+                            {
                                 "title":"Seguro",
                                 "alert": "Fecha próxima de caducidad",
                                 "type":"administration",
@@ -403,7 +404,7 @@
                                 "dueDate": "2021-10-31",
                                 "company": "Allianz"
                             },
-                            "itv": {
+                            {
                                 "title": "ITV",
                                 "alert": "Fecha próxima de caducidad",
                                 "dueDate": "2022-01-10",
@@ -411,34 +412,32 @@
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            "maintancePlan": {
+                            {
                                 "title": "Mantenimiento",
                                 "alert": "Próxima revisión",
                                 "dueDate": "2021-08-01",
                                 "type": "repair",
-                              
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            "registrationTax": {
+                            {
                                 "title": "Impuesto de matriculación",
                                 "dueDate": "2021-10-15",
                                 "type": "administration",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                        
-                            "fines": [
                                 {
-                                    "title": "Exceso de velocidad",
+                                    "title": "Multas",
                                     "type": "administration",
-                                    "status": "ok",
                                     "img": "foto",
-                                    "statusDescription": "PAGADA",
-                                    "amount": 600
+                                    "statusDescription": "Ninguna multa",
+                                    "amount": 600,
+                                    "isOk":true,
+                                    "isSerious":true
                                 }
-                            ]
-                        },
+                            
+                        ],
                     
                         "exterior": [
                             {

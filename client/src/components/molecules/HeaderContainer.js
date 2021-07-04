@@ -1,21 +1,25 @@
-import React from 'react'
-import { textData } from '../../data/textData'
+import React, {useContext} from 'react'
 import Div from '../atoms/Div'
 import H2 from "../atoms/H2"
 import P from "../atoms/P"
 import Img from "../atoms/Img"
+import { ApiContext } from '../../context/ApiContext';
+
+
+
 
 const HeaderContainer = () => {
+    const context = useContext(ApiContext);
 
   
     return (
         <Div column center>
             <Div img>
-            {/* https://static.wixstatic.com/media/d66462_7613e4ce7946499f8a9301f53af980fb~mv2.png/v1/fill/w_1157,h_665,al_c/d66462_7613e4ce7946499f8a9301f53af980fb~mv2.png */}
-                <Img src="https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_jato%2Fimagenes%2FMarca_Modelo_Carroceria_Pintura%2Fg%2FRENAULT_MEGANE_HA_QPA%24QNC_F.png&size=700" />
+            
+                <Img src={context.user[0].cars[0].staticFeatures.Image}/>
             </Div>
-            <H2>{textData.HomeProfileInfo[0].carModel}</H2>
-            <P>{textData.HomeProfileInfo[0].date} - {textData.HomeProfileInfo[0].totalKM} kms</P>
+            <H2>{context.user[0].cars[0].staticFeatures.brand} {context.user[0].cars[0].staticFeatures.model}</H2>
+            <P>{context.user[0].cars[0].staticFeatures.year} - {context.user[0].cars[0].variableFeatures.kM} kms</P>
 
         </Div>
     )
