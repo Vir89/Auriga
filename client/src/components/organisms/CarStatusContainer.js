@@ -13,7 +13,7 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css';
 
 
-export const CarStatusContainer = () => {
+const CarStatusContainer = () => {
 
     const context = useContext(ApiContext);
     /* console.log(context.user[0].cars[0].variableFeatures.generalStatus) */
@@ -22,24 +22,25 @@ export const CarStatusContainer = () => {
         <Div column>   
             <H2>Estado general</H2>
 
-            {/* <Accordion allowZeroExpanded>
+            <Accordion allowZeroExpanded>
                 <AccordionItem>
                     <AccordionItemHeading>
                          <AccordionItemButton>
-                                Documentacion
+                                Documentación
                         </AccordionItemButton>
                     </AccordionItemHeading>
                  <AccordionItemPanel>
 
            
-                {context.user[0].cars[0].variableFeatures.status.documentation.map((status, index)=>
+                {context.user[0].cars[0].variableFeatures.status.administration.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    title = {status.title} 
-                    status = {status.status}/>)}
+                    title = {status.title}
+                    dueDate = {status.dueDate}
+                   />)}
                 </AccordionItemPanel>
             </AccordionItem>
-            </Accordion>  */}
+            </Accordion> 
 
             <Accordion allowZeroExpanded>
                 <AccordionItem>
@@ -54,8 +55,10 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.exterior.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    title = {status.title} 
-                    status = {status.status}/>)}
+                    title = {status.title}
+                    isOk= {status.isOk}
+                    isSerious= {status.isSerious}
+                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
             </Accordion> 
@@ -73,8 +76,10 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.tires.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    title = {status.title} 
-                    status = {status.status}/>)}
+                    title = {status.title}
+                    isOk= {status.isOk}
+                    isSerious= {status.isSerious}
+                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
             </Accordion> 
@@ -92,8 +97,10 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.engine.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    title = {status.title} 
-                    status = {status.status}/>)}
+                    title = {status.title}
+                    isOk= {status.isOk}
+                    isSerious= {status.isSerious}
+                   />)}
                 </AccordionItemPanel>
             </AccordionItem>
             </Accordion> 
@@ -111,8 +118,10 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.interior.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    title = {status.title} 
-                    status = {status.status}/>)}
+                    title = {status.title}
+                    isOk= {status.isOk}
+                    isSerious= {status.isSerious}
+                   />)}
                 </AccordionItemPanel>
             </AccordionItem>
             </Accordion> 
@@ -130,8 +139,10 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.driving.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    title = {status.title} 
-                    status = {status.status}/>)}
+                    title = {status.title}
+                    isOk= {status.isOk}
+                    isSerious= {status.isSerious} 
+                   />)}
                 </AccordionItemPanel>
             </AccordionItem>
             </Accordion> 
@@ -149,8 +160,10 @@ export const CarStatusContainer = () => {
                 {context.user[0].cars[0].variableFeatures.status.other.map((status, index)=>
                     <CarStatus
                     key = {index}
-                    title = {status.title} 
-                    status = {status.status}/>)}
+                    title = {status.title}
+                    isOk= {status.isOk}
+                    isSerious= {status.isSerious} 
+                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
             </Accordion> 
@@ -160,3 +173,5 @@ export const CarStatusContainer = () => {
         </Div>
     )
 }
+
+export default CarStatusContainer

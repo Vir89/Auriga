@@ -9,7 +9,10 @@ const userSchema = new mongoose.Schema({
         birthDate:{ type:Date, trim:true },
         nacionality:{ type:String },
         phoneNumber:{ type: Number, required: true },
+        suscriptor:{ type: Boolean, required: true },
+        suscriptionPlan:{type: String},
         password:{ type: String, required: true, trim:true }, 
+        
         address:{ 
             street:{type: String, required:true},
             postalCode:{ type: Number, required:true },
@@ -49,8 +52,9 @@ const userSchema = new mongoose.Schema({
     cars:[{
         staticFeatures:{
             brand:{type: String, required:true},
+            year:{type: Number, required:true},
             model:{type: String, required:true},
-            colour:{type: String, required:true},
+            color:{type: String, required:true},
             horsePower:{type: Number, required:true},
             dataSheet:{type: String},
             Image:{type: String},
@@ -62,102 +66,78 @@ const userSchema = new mongoose.Schema({
             currentValue:{type: Number},
             kM:{type: Number},
             status:{
-                administration:{
-                    insurance:{
+                administration:[{
                         title:{type: String},
                         alert: {type: String},
                         coverage:{type: String},
                         dueDate:{type:Date},
                         type:{type: String},
-                        company:{type: String}
-                    },
-                    itv:{
-                        title:{type: String},
-                        alert: {type: String},
-                        dueDate:{type:Date},
-                        type:{type: String},
+                        company:{type: String},
                         status:{type: String},
                         img:{type: String},
                         statusDescription:{type: String},
-                    },
-                    maintancePlan:{
-                        title:{type: String},
-                        alert: {type: String},
-                        dueDate:{type:Date},
-                        type:{type: String},
-                        status:{type: String},
-                        img:{type: String},
-                        statusDescription:{type: String},
-                    },
-                    registrationTax:{
-                        title:{type: String},
-                        dueDate:{type:Date},
-                        type:{type: String},
-                        status:{type: String},
-                        img:{type: String},
-                        statusDescription:{type: String},
-                    },
-                    fines:[{
-                        title:{type: String},
-                        date:{type:Date},
-                        type:{type: String},
-                        status:{type: String},
-                        img:{type: String},
-                        statusDescription:{type: String},
+                        isOk:{type: Boolean},
+                        isSerious:{type: Boolean},
                         amount:{type: Number}
-                    }]
-                },
+                    }],
                 exterior:[{
                     title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
-                    status:{type: String},
+                    isSerious:{type: Boolean},
                     img:{type: String},
                     statusDescription:{type: String},
+                    isOk:{type: Boolean}
                 }],
                 tires:[{
                     title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
-                    status:{type: String},
+                    isSerious:{type: Boolean},
                     img:{type: String},
                     statusDescription:{type: String},
-                    pressure:{type: String},
+                    pressure:{type: Number},
                     marca:{type: String},
                     modelo:{type: String},
-                    thickness:{type: String},
+                    thickness:{type: Number},
+                    isOk:{type: Boolean}
                 }],
                 engine:[{
                     title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
-                    status:{type: String},
+                    isSerious:{type: Boolean},
                     img:{type: String},
                     statusDescription:{type: String},
+                    isOk:{type: Boolean}
                 }],
                 interior:[{
                     title:{type: String},
                     alert:{type:String},
                     dueDate:{type:Date},
                     type:{type: String},
-                    status:{type: String},
+                    isSerious:{type: Boolean},
                     img:{type: String},
                     statusDescription:{type: String},
+                    isOk:{type: Boolean}
                 }],
                 driving:[{
                     title:{type: String},
                     dueDate:{type:Date},
                     type:{type: String},
-                    status:{type: String},
+                    isSerious:{type: Boolean},
                     img:{type: String},
                     statusDescription:{type: String},
+                    isOk:{type: Boolean}
                 }],
                 other:[{
                     title:{type: String},
                     dueDate:{type:Date},
+                    isSerious:{type: Boolean},
                     type:{type: String},
                     status:{type: String},
                     img:{type: String},
+                    isOk:{type: Boolean},
                     statusDescription:{type: String},
                 }],
 
@@ -167,6 +147,8 @@ const userSchema = new mongoose.Schema({
             cleaning:{
                 lastCleaning:{type:Date},
                 cleaningType:{type: String},
+                
+
             }
            
         },

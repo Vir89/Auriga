@@ -21,9 +21,6 @@ const MoreTypeSuscription = (props) => {
 
     console.log(props);
 
- 
-
-
     return (
         <Section>
       <Accordion allowZeroExpanded>

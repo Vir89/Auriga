@@ -42,6 +42,8 @@
         "birthDate": "1990-10-01",
         "nacionality": "española",
         "phoneNumber": 620000000,
+        "suscriptor":true,
+        "suscriptionPlan":"basic",
         "password": "abcdef"
     },
     "cars": [
@@ -49,7 +51,8 @@
             "staticFeatures": {
                 "brand": "Seat",
                 "model": "Leon",
-                "colour": "Rojo",
+                "color": "Rojo",
+                "year":2019,
                 "horsePower": 150,
                 "dataSheet": "ficha tecnica",
                 "Image": "https://tcdn.gotrive.com/dms/images/attachments/000/005/065/regular/trive_seat_leon-fr_color-rojo-desire_lights-led_lower-grill-sensor_roof-panoramic.png?1602774114",
@@ -59,36 +62,36 @@
             },
             "variableFeatures": {
                 "status": {
-                    "administration": 
-                        {
-                            "insurance": {
+                    "administration":[ 
+                        
+                           {
 
                                 "title":"Seguro",
                                 "alert": "Fecha próxima de caducidad",
                                 "type":"administration",
                                 "coverage": "todo",
-                                "dueDate": "2021-10-31",
+                                "dueDate": "2021-07-31",
                                 "company": "Mafre"
                             },
-                            "itv": {
-                                "title": "Itv",
+                            {
+                                "title": "ITV",
                                 "alert": "Fecha próxima de caducidad",
-                                "dueDate": "2021-10-10",
+                                "dueDate": "2021-09-10",
                                 "type": "administration",
                                 "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            "maintancePlan": {
+                            {
                                 "title": "Mantenimiento",
                                 "alert": "Próxima revisión",
-                                "dueDate": "2021-10-15",
+                                "dueDate": "2021-08-01",
                                 "type": "repair",
                                 "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            "registrationTax": {
+                            {
                                 "title": "Impuesto de matriculación",
                                 "dueDate": "2021-09-15",
                                 "type": "administration",
@@ -97,110 +100,156 @@
                                 "statusDescription": "descripcion estado"
                             },
                         
-                            "fines": [
+                            [
                                 {
-                                   
-                                    "title": "Exceso de velocidad",
+                                    "title": "Multa",
                                     "type": "administration",
                                     "status": "ko",
                                     "img": "foto",
-                                    "statusDescription": "descripcion estado",
-                                    "amount": 600
+                                    "statusDescription": "PAGADA",
+                                    "amount": 600,
+                                    "isOk":true,
+                                    "isSerious":false
                                 }
                             ]
-                        },
+                        ],
                     
                     "exterior": [
                         {
-                            
                             "title": "Chapa",
                             "dueDate": "",
                             "type": "exterior",
-                            "status": "ko",
                             "img": "foto",
-                            "statusDescription": "descripcion estado"
+                            "statusDescription": "Rozadura en la parte trasera",
+                            "isOk":false,
+                            "isSerious":false
                         },
                         {
                             
                             "title": "Pintura",
                             "dueDate": "",
                             "type": "exterior",
-                            "status": "ko",
                             "img": "foto",
-                            "statusDescription": "descripcion estado"
+                            "statusDescription": "daño grave en la pintura",
+                            "isOk":false,
+                            "isSerious":true
                         },
                         {
                         
                             "title": "Vidrios",
                             "dueDate": "",
                             "type": "exterior",
-                            "status": "ko",
                             "img": "foto",
-                            "statusDescription": "descripcion estado"
+                            "statusDescription": "",
+                            "isOk":true,
+                            "isSerious":false
                         },
                         {
                             "title": "Luces e indicadores",
                             "dueDate": "",
                             "type": "exterior",
-                            "status": "ko",
                             "img": "foto",
-                            "statusDescription": "descripcion estado"
+                            "statusDescription": "Luz fundida",
+                            "isOk":false,
+                            "isSerious":false
                         },
                         {
                            
                             "title": "Escobillas limpiaparabrisas",
                             "dueDate": "",
                             "type": "exterior",
-                            "status": "ko",
                             "img": "foto",
-                            "statusDescription": "descripcion estado"
+                            "statusDescription": "Descripcion estado",
+                            "isOk":true,
+                            "isSerious":false
                         }
                     ],
                     "tires": [
                         {
                            
-                            "title": "Dibujo de Neumáticos",
+                            "title": "Dibujo del Neumático Del Izq",
                             "dueDate": "",
                             "type": "tires",
-                            "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "descripcion",
+                            "isOk":true,
+                            "isSerious":false,
+                            "thickness":4
+                        },
+                        {
+                           
+                            "title": "Dibujo del Neumático Del Dcho",
+                            "dueDate": "",
+                            "type": "tires",
+                            "img": "foto",
+                            "statusDescription": "descripcion",
+                            "isOk":true,
+                            "isSerious":false,
+                            "thickness":4
+                        },
+                        {
+                           
+                            "title": "Dibujo del Neumático Tras Izq",
+                            "dueDate": "",
+                            "type": "tires",
+                            "img": "foto",
+                            "statusDescription": "descripcion",
+                            "isOk":false,
+                            "isSerious":true,
+                            "thickness":1.5
+                        },
+                        {
+                           
+                            "title": "Dibujo del Neumático Tras Dcho",
+                            "dueDate": "",
+                            "type": "tires",                         
+                            "img": "foto",
+                            "statusDescription": "descripcion",
+                            "isOk":false,
+                            "isSerious":false,
+                            "thickness":2
                         },
                         {
                         
                             "title": "Integridad de Neumáticos",
-                            "dueDate": "2021-06-15",
+                            "dueDate": "",
                             "type": "tires",
-                            "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "pellizcos en rueda izquierda",
+                            "isOk":false,
+                            "isSerious":false
                         },
                         {
                           
                             "title": "Presión neumáticos",
                             "dueDate": "",
                             "type": "tires",
-                            "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "Presión baja",
+                            "pressure":1.8,
+                            "isOk":false,
+                            "isSerious":false
+                 
                         },
                         {
                             
                             "title": "Llantas",
                             "dueDate": "",
                             "type": "tires",
-                            "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "",
+                            "isOk":true,
+                            "isSerious":false
                         },
                         {
                          
                             "title": "Pastilla de frenos",
                             "dueDate": "",
                             "type": "tires",
-                            "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "",
+                            "isOk":true,
+                            "isSerious":false
                         }
                     ],
                     "engine": [
@@ -209,27 +258,31 @@
                             "title": "Aspecto motor parado",
                             "dueDate": "",
                             "type": "engine",
-                            "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "",
+                            "isOk":true,
+                            "isSerious":false
                         },
                         {
                            
                             "title": "Nivel de aceite",
                             "dueDate": "",
                             "type": "engine",
-                            "status": "warning",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "Nivel de aceite cercano a límite",
+                            "isOk":false,
+                            "isSerious":false
                         },
                         {
                          
                             "title": "Nivel de refrigerante",
                             "dueDate": "",
                             "type": "engine",
-                            "status": "ko",
+                
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "",
+                            "isOk":true,
+                            "isSerious":false
                         },
                         {
                             
@@ -238,7 +291,9 @@
                             "type": "engine",
                             "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "",
+                            "isOk":true,
+                            "isSerious":false
                         },
                         {
                             
@@ -247,41 +302,36 @@
                             "type": "engine",
                             "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
+                            "statusDescription": "",
+                            "isOk":true,
+                            "isSerious":false
                         }
                     ],
                     "interior": [
+
                         {
-                        
                             "title": "Daños en el interior",
                             "alert": "Cita para próxima limpieza",
                             "dueDate": "",
                             "type": "interior",
-                            "status": "ok",
                             "img": "foto",
-                            "statusDescription": "descripcion"
-
+                            "statusDescription": "Desprendimiento del retrovisor",
+                            "isOk":false,
+                            "isSerious":true
                         },
                         {
                             
                             "title": "Estado de limpieza",
-                            "alert": "Cita para próxima limpieza",
+                            "alert": "Estado de limpieza inadecuado",
                             "dueDate": "",
                             "type": "interior",
-                            "status": "ko",
                             "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
+                            "statusDescription": "Necesidad de limpieza integral",
+                            "isOk":false,
+                            "isSerious":true
                             
-                            "title": "Necesidad de limpieza integral",
-                            "alert": "Cita para próxima limpieza",
-                            "dueDate": "2021-06-09T22:00:00.000Z",
-                            "type": "interior",
-                            "status": "true",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
                         }
+                     
                     ],
                     "driving": [
                         {
@@ -291,7 +341,9 @@
                             "type": "conduccion",
                             "status": "ko",
                             "img": "foto",
-                            "statusDescription": "dirección en mal estado"
+                            "statusDescription": "Dirección en mal estado",
+                            "isOk":false,
+                            "isSerious":false
                         },
                         {
                            
@@ -300,24 +352,17 @@
                             "type": "conduccion",
                             "status": "warning",
                             "img": "foto",
-                            "statusDescription": "Sonido excesivo"
-                        }
-                    ],
-                    "other": [
-                        {
-                           
-                            "title": "Aviso genérico",
-                            "dueDate": "2021-06-09T22:00:00.000Z",
-                            "type": "conduccion",
-                            "status": "false",
-                            "img": "foto",
-                            "statusDescription": "ningun aviso"
+                            "statusDescription": "Potencia del vehículo inadecuada, vigilar para la próxima visita",
+                            "isOk":false,
+                            "isSerious":false
                         }
                     ]
+                   
                 },
                 "cleaning": {
-                    "lastCleaning": "2021-09-30T22:00:00.000Z",
+                    "lastCleaning": "2021-09-30",
                     "cleaningType": "Completa"
+                    
                 },
                 "currentValue": 15000,
                 "kM": 12050,
@@ -338,7 +383,8 @@
             "staticFeatures": {
                 "brand": "Renault",
                 "model": "Megane",
-                "colour": "Blanco",
+                "year":2015,
+                "color": "Blanco",
                 "horsePower": 130,
                 "dataSheet": "ficha tecnica",
                 "Image": "https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_jato%2Fimagenes%2FMarca_Modelo_Carroceria_Pintura%2Fg%2FRENAULT_MEGANE_HA_QPA%24QNC_F.png&size=700",
@@ -348,267 +394,301 @@
             },
             "variableFeatures": {
                 "status": {
-                    "administration": 
-                        {
-                            "insurance": {
+                    "administration": [
+                        
+                            {
                                 "title":"Seguro",
-                                "alert": "Fecha de vencimiento próxima",
+                                "alert": "Fecha próxima de caducidad",
                                 "type":"administration",
                                 "coverage": "todo",
                                 "dueDate": "2021-10-31",
-                                "company": "Mafre"
+                                "company": "Allianz"
                             },
-                            "itv": {
-                                "title": "Itv",
-                                "alert": "Fecha de vencimiento próxima",
-                                "dueDate": "2021-10-10",
+                            {
+                                "title": "ITV",
+                                "alert": "Fecha próxima de caducidad",
+                                "dueDate": "2022-01-10",
                                 "type": "administration",
-                                "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            "maintancePlan": {
+                            {
                                 "title": "Mantenimiento",
                                 "alert": "Próxima revisión",
-                                "dueDate": "2021-10-15",
+                                "dueDate": "2021-08-01",
                                 "type": "repair",
-                                "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            "registrationTax": {
+                            {
                                 "title": "Impuesto de matriculación",
-                                "dueDate": "2021-09-15",
+                                "dueDate": "2021-10-15",
                                 "type": "administration",
-                                "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                       
-                            "fines": [
                                 {
-                                 
-                                    "title": "Exceso de velocidad",
+                                    "title": "Multas",
                                     "type": "administration",
-                                    "status": "ko",
                                     "img": "foto",
-                                    "statusDescription": "descripcion estado",
-                                    "amount": 600
+                                    "statusDescription": "Ninguna multa",
+                                    "amount": 600,
+                                    "isOk":true,
+                                    "isSerious":true
                                 }
-                            ]
-                        },
-                    "exterior": [
-                        {
                             
-                            "title": "Chapa",
-                            "dueDate": "",
-                            "type": "exterior",
-                            "status": "ko",
-                            "img": "foto",
-                            "statusDescription": "descripcion estado"
-                        },
-                        {
+                        ],
+                    
+                        "exterior": [
+                            {
+                                "title": "Chapa",
+                                "dueDate": "",
+                                "type": "exterior",
+                                "img": "foto",
+                                "statusDescription": "Abolladura grave en la puerta delantera izquierda",
+                                "isOk":false,
+                                "isSerious":true
+                            },
+                            {
+                                
+                                "title": "Pintura",
+                                "dueDate": "",
+                                "type": "exterior",
+                                "img": "foto",
+                                "statusDescription": "Rozadura en la parte izquierda",
+                                "isOk":false,
+                                "isSerious":false
+                            },
+                            {
                             
-                            "title": "Pintura",
-                            "dueDate": "",
-                            "type": "exterior",
-                            "status": "ko",
-                            "img": "foto",
-                            "statusDescription": "descripcion estado"
-                        },
-                        {
-                           
-                            "title": "Vidrios",
-                            "dueDate": "",
-                            "type": "exterior",
-                            "status": "ko",
-                            "img": "foto",
-                            "statusDescription": "descripcion estado"
-                        },
-                        {
+                                "title": "Vidrios",
+                                "dueDate": "",
+                                "type": "exterior",
+                                "img": "foto",
+                                "statusDescription": "Luna de lantera picada",
+                                "isOk":false,
+                                "isSerious":false
+                            },
+                            {
+                                "title": "Luces e indicadores",
+                                "dueDate": "",
+                                "type": "exterior",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false
+                            },
+                            {
+                               
+                                "title": "Escobillas limpiaparabrisas",
+                                "dueDate": "",
+                                "type": "exterior",
+                                "img": "foto",
+                                "statusDescription": "Descripcion estado",
+                                "isOk":true,
+                                "isSerious":false
+                            }
+                        ],
+                        "tires": [
+                            {
+                               
+                                "title": "Dibujo del Neumático Del Izq",
+                                "dueDate": "",
+                                "type": "tires",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":false,
+                                "isSerious":false,
+                                "thickness":2.5
+                            },
+                            {
+                               
+                                "title": "Dibujo del Neumático Del Dcho",
+                                "dueDate": "",
+                                "type": "tires",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false,
+                                "thickness":4
+                            },
+                            {
+                               
+                                "title": "Dibujo del Neumático Tras Izq",
+                                "dueDate": "",
+                                "type": "tires",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":false,
+                                "isSerious":true,
+                                "thickness":1.5
+                            },
+                            {
+                               
+                                "title": "Dibujo del Neumático Tras Dcho",
+                                "dueDate": "",
+                                "type": "tires",                         
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false,
+                                "thickness":4
+                            },
+                            {
                             
-                            "title": "Luces e indicadores",
-                            "dueDate": "",
-                            "type": "exterior",
-                            "status": "ko",
-                            "img": "foto",
-                            "statusDescription": "descripcion estado"
-                        },
-                        {
-                            
-                            "title": "Escobillas limpiaparabrisas",
-                            "dueDate": "",
-                            "type": "exterior",
-                            "status": "ko",
-                            "img": "foto",
-                            "statusDescription": "descripcion estado"
-                        }
-                    ],
-                    "tires": [
-                        {
-                           
-                            "title": "Dibujo de Neumáticos",
-                            "dueDate": "",
-                            "type": "tires",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                        
-                            "title": "Integridad de Neumáticos",
-                            "dueDate": "",
-                            "type": "tires",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                            
-                            "title": "Presión neumáticos",
-                            "dueDate": "",
-                            "type": "tires",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                           
-                            "title": "Llantas",
-                            "dueDate": "",
-                            "type": "tires",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                           
-                            "title": "Pastilla de frenos",
-                            "dueDate": "",
-                            "type": "tires",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        }
-                    ],
-                    "engine": [
-                        {
-                            
-                            "title": "Aspecto motor parado",
-                            "dueDate": "",
-                            "type": "engine",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                          
-                            "title": "Nivel de aceite",
-                            "dueDate": "",
-                            "type": "engine",
-                            "status": "warning",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                           
-                            "title": "Nivel de refrigerante",
-                            "dueDate": "",
-                            "type": "engine",
-                            "status": "ko",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                           
-                            "title": "Nivel líquido parabrisas",
-                            "dueDate": "",
-                            "type": "engine",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                           
-                            "title": "Aspecto motor ralentí",
-                            "dueDate": "",
-                            "type": "engine",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        }
-                    ],
-                    "interior": [
-                        {
-                           
-                            "title": "Daños en el interior",
-                            "dueDate": "",
-                            "alert":"",
-                            "type": "interior",
-                            "status": "ok",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                        
-                            "title": "Estado de limpieza",
-                            "dueDate": "2021-06-09",
-                            "alert": "Cita para próxima limpieza",
-                            "type": "interior",
-                            "status": "ko",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        },
-                        {
-                           
-                            "title": "Necesidad de limpieza integral",
-                            "dueDate": "2021-06-09",
-                            "alert":"",
-                            "type": "interior",
-                            "status": "true",
-                            "img": "foto",
-                            "statusDescription": "descripcion"
-                        }
-                    ],
-                    "driving": [
-                        {
-                          
-                            "title": "Dinámica",
-                            "dueDate": "",
-                            "type": "conduccion",
-                            "status": "ko",
-                            "img": "foto",
-                            "statusDescription": "dirección en mal estado"
-                        },
-                        {
-                          
-                            "title": "Motor",
-                            "dueDate": "2021-06-09T22:00:00.000Z",
-                            "type": "conduccion",
-                            "status": "warning",
-                            "img": "foto",
-                            "statusDescription": "Sonido excesivo"
-                        }
-                    ],
-                    "other": [
-                        {
-                            
-                            "title": "Aviso genérico",
-                            "dueDate": "2021-06-09T22:00:00.000Z",
-                            "type": "conduccion",
-                            "status": "false",
-                            "img": "foto",
-                            "statusDescription": "ningun aviso"
-                        }
-                    ]
+                                "title": "Integridad de Neumáticos",
+                                "dueDate": "",
+                                "type": "tires",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false
+                            },
+                            {
+                              
+                                "title": "Presión neumáticos",
+                                "dueDate": "",
+                                "type": "tires",
+                                "img": "foto",
+                                "statusDescription": "Presión muy baja, riesgo de desgaste o pinchazo",
+                                "pressure":1.0,
+                                "isOk":false,
+                                "isSerious":true
+                     
+                            },
+                            {
+                                
+                                "title": "Llantas",
+                                "dueDate": "",
+                                "type": "tires",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":false,
+                                "isSerious":false
+                            },
+                            {
+                             
+                                "title": "Pastilla de frenos",
+                                "dueDate": "",
+                                "type": "tires",
+                                "img": "foto",
+                                "statusDescription": "Pastillas de freno con bajo grosor",
+                                "isOk":true,
+                                "isSerious":true
+                            }
+                        ],
+                        "engine": [
+                            {
+                                
+                                "title": "Aspecto motor parado",
+                                "dueDate": "",
+                                "type": "engine",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false
+                            },
+                            {
+                               
+                                "title": "Nivel de aceite",
+                                "dueDate": "",
+                                "type": "engine",
+                                "img": "foto",
+                                "statusDescription": "Nivel de aceite muy bajo, riesgo de daño al motor",
+                                "isOk":false,
+                                "isSerious":true
+                            },
+                            {
+                             
+                                "title": "Nivel de refrigerante",
+                                "dueDate": "",
+                                "type": "engine",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false
+                            },
+                            {
+                                
+                                "title": "Nivel líquido parabrisas",
+                                "dueDate": "",
+                                "type": "engine",
+                                "status": "ok",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false
+                            },
+                            {
+                                
+                                "title": "Aspecto motor ralentí",
+                                "dueDate": "",
+                                "type": "engine",
+                                "status": "ok",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false
+                            }
+                        ],
+                        "interior": [
+    
+                            {
+                                "title": "Daños en el interior",
+                                "alert": "Integridad de vehículo compremetida",
+                                "dueDate": "",
+                                "type": "interior",
+                                "img": "foto",
+                                "statusDescription": "Manchas en los asientos traseros",
+                                "isOk":false,
+                                "isSerious":false
+                            },
+                            {
+                                
+                                "title": "Estado de limpieza",
+                                "alert": "Estado de limpieza inadecuado",
+                                "dueDate": "",
+                                "type": "interior",
+                                "img": "foto",
+                                "statusDescription": "Necesidad de limpieza completa",
+                                "isOk":false,
+                                "isSerious":false
+                            }
+                         
+                        ],
+                        "driving": [
+                            {
+                             
+                                "title": "Dinámica",
+                                "dueDate": "",
+                                "type": "conduccion",
+                                "status": "ko",
+                                "img": "foto",
+                                "statusDescription": "",
+                                "isOk":true,
+                                "isSerious":false
+                            },
+                            {
+                               
+                                "title": "Motor",
+                                "dueDate": "2021-06-09",
+                                "type": "conduccion",
+                                "status": "warning",
+                                "img": "foto",
+                                "statusDescription": "Sonoridad excesiva, vigilar para la próxima visita",
+                                "isOk":false,
+                                "isSerious":false
+                            }
+                        ]
+                   
                 },
                 "cleaning": {
-                    "lastCleaning": "2021-09-30T22:00:00.000Z",
+                    "lastCleaning": "2021-09-30",
                     "cleaningType": "Completa"
+                    
                 },
-                "currentValue": 10000,
-                "kM": 10000,
-            
+                "currentValue": 15000,
+                "kM": 12050,
                 "picture": "foto"
             },
             "documentation": {
