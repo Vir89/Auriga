@@ -16,17 +16,18 @@ import dayjs from 'dayjs';
 
 
 const icons={
-    danger: <Div column danger span><Span> <IoAlertCircleSharp/></Span></Div>,
-    repair:<Div column danger span><Span> <FaWrench/></Span></Div>,
-    Aviso:<Div column warning span><Span> <RiCheckboxBlankCircleFill/></Span></Div>,
-    administration:<Div column warning span><Span> <IoDocumentText/></Span></Div>,
-    tires: <Div column warning span><Span> <GiCarWheel/></Span></Div>, 
-    exterior:<Div column success span><Span> <AiFillCar/></Span></Div>,
-    interior:<Div column success span><Span> <MdLocalCarWash/></Span></Div>,
-    engine:<Div column warning span><Span> <AiFillSetting/></Span></Div>
+    danger: <IoAlertCircleSharp/>,
+    repair: <FaWrench/>,
+    Aviso: <RiCheckboxBlankCircleFill/>,
+    administration:<IoDocumentText/>,
+    tires:  <GiCarWheel/>,
+    exterior:<AiFillCar/>,
+    interior:<MdLocalCarWash/>,
+    engine:<AiFillSetting/>
 }
 
-const Alert = ({alert}) => {
+const Alert = (props) => {
+    
 
 
 
@@ -34,12 +35,12 @@ const Alert = ({alert}) => {
         
             <Card alert>
 
-                {icons[alert.type]}  
+                <Div column success={props.status=="success"? true: false} warning={props.status=="warning"? true: false} danger={props.status=="danger"? true: false} span><Span>{icons[props.type]}</Span></Div>
                 <Div column center padding>
                     
-                    <H3 secondary>{dayjs(alert.dueDate).format('DD/MM/YYYY')}</H3>
-                    <H3>{alert.title}</H3>
-                    <P>{alert.alert}</P>
+                    <H3 secondary>{dayjs(props.dueDate).format('DD/MM/YYYY')}</H3>
+                    <H3>{props.title}</H3>
+                    <P>{props.alert}</P>
                     <Button >Mas Info</Button>
                 </Div>
                     

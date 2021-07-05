@@ -10,13 +10,30 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
   } from 'react-accessible-accordion';
+import CarAccordion from '../molecules/CarAccordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
+import { nanoid } from 'nanoid';
+import getColorAlertByStatus from '../../utils/getColorAlertByStatus';
+
 
 
 const CarStatusContainer = () => {
 
     const context = useContext(ApiContext);
     /* console.log(context.user[0].cars[0].variableFeatures.generalStatus) */
+
+    
+    const accordion={
+    administration:context.user[0].cars[0].variableFeatures.status.administration,
+    exterior:context.user[0].cars[0].variableFeatures.status.exterior,
+    tires:context.user[0].cars[0].variableFeatures.status.tires,
+    engine:context.user[0].cars[0].variableFeatures.status.engine,
+    interior:context.user[0].cars[0].variableFeatures.status.interior,
+    driving:context.user[0].cars[0].variableFeatures.status.driving,
+    other:context.user[0].cars[0].variableFeatures.status.other
+
+    }
+
    
     return (
         <Div column>   
@@ -32,15 +49,15 @@ const CarStatusContainer = () => {
                  <AccordionItemPanel>
 
            
-                {context.user[0].cars[0].variableFeatures.status.administration.map((status, index)=>
+                {accordion.administration.map((status)=>
                     <CarStatus
-                    key = {index}
+                    key={nanoid()}
                     title = {status.title}
                     dueDate = {status.dueDate}
                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
-            </Accordion> 
+            </Accordion>
 
             <Accordion allowZeroExpanded>
                 <AccordionItem>
@@ -52,12 +69,12 @@ const CarStatusContainer = () => {
                  <AccordionItemPanel>
 
            
-                {context.user[0].cars[0].variableFeatures.status.exterior.map((status, index)=>
+                {accordion.exterior.map((status)=>
                     <CarStatus
-                    key = {index}
+                    key={nanoid()}
                     title = {status.title}
-                    isOk= {status.isOk}
-                    isSerious= {status.isSerious}
+                    status={getColorAlertByStatus(status.isOk, status.isSerious)}
+                    
                     />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -73,12 +90,11 @@ const CarStatusContainer = () => {
                  <AccordionItemPanel>
 
            
-                {context.user[0].cars[0].variableFeatures.status.tires.map((status, index)=>
+                {accordion.tires.map((status)=>
                     <CarStatus
-                    key = {index}
+                    key={nanoid()}
                     title = {status.title}
-                    isOk= {status.isOk}
-                    isSerious= {status.isSerious}
+                    status={getColorAlertByStatus( status.isOk, status.isSerious )}
                     />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -94,12 +110,11 @@ const CarStatusContainer = () => {
                  <AccordionItemPanel>
 
            
-                {context.user[0].cars[0].variableFeatures.status.engine.map((status, index)=>
+                {accordion.engine.map((status)=>
                     <CarStatus
-                    key = {index}
+                    key={nanoid()}
                     title = {status.title}
-                    isOk= {status.isOk}
-                    isSerious= {status.isSerious}
+                    status={getColorAlertByStatus( status.isOk, status.isSerious )}
                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -115,12 +130,11 @@ const CarStatusContainer = () => {
                  <AccordionItemPanel>
 
            
-                {context.user[0].cars[0].variableFeatures.status.interior.map((status, index)=>
+                {accordion.interior.map((status)=>
                     <CarStatus
-                    key = {index}
+                    key={nanoid()}
                     title = {status.title}
-                    isOk= {status.isOk}
-                    isSerious= {status.isSerious}
+                    status={getColorAlertByStatus( status.isOk, status.isSerious )}
                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -136,12 +150,11 @@ const CarStatusContainer = () => {
                  <AccordionItemPanel>
 
            
-                {context.user[0].cars[0].variableFeatures.status.driving.map((status, index)=>
+                {accordion.driving.map((status)=>
                     <CarStatus
-                    key = {index}
+                    key={nanoid()}
                     title = {status.title}
-                    isOk= {status.isOk}
-                    isSerious= {status.isSerious} 
+                    status={getColorAlertByStatus( status.isOk, status.isSerious )}
                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -157,12 +170,11 @@ const CarStatusContainer = () => {
                  <AccordionItemPanel>
 
            
-                {context.user[0].cars[0].variableFeatures.status.other.map((status, index)=>
+                {accordion.other.map((status)=>
                     <CarStatus
-                    key = {index}
+                    key={nanoid()}
                     title = {status.title}
-                    isOk= {status.isOk}
-                    isSerious= {status.isSerious} 
+                    status={getColorAlertByStatus( status.isOk, status.isSerious )}
                     />)}
                 </AccordionItemPanel>
             </AccordionItem>

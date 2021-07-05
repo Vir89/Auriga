@@ -5,56 +5,59 @@ import H2 from '../atoms/H2'
 import Alert from '../molecules/Alert'
 import { ApiContext } from '../../context/ApiContext';
 import { sortListByDate } from '../../utils/sortListByDate'
+import {nanoid} from "nanoid"
+import getColorAlertByDays from '../../utils/getColorAlertByDays'
+import range from '../../data/range'
+import daysLeft from '../../utils/daysLeft'
+import getColorAlertByStatus from '../../utils/getColorAlertByStatus'
+
 
 export const AlertsContainer = () => {
 
     const context = useContext(ApiContext);
-
     const [alerts, setAlert]= useState([])
     const [alertsLoaded, setAlertsLoaded]=useState(false)
-    const [alertas, setAlertas]=useState([])
+    
 
 
     useEffect(() => {
 
-        /* newArrayFromState(
-            context.user[0].cars[0].variableFeatures.status.administration.insurance,
-            setAlert, 
-        )
+
     
         newArrayFromState(
-            context.user[0].cars[0].variableFeatures.status.interior[1],
+            context.user[0].cars[0].variableFeatures.status.interior.map(element=>element),
             setAlert, 
         )
-
         newArrayFromState(
-            context.user[0].cars[0].variableFeatures.status.administration.itv,
+            context.user[0].cars[0].variableFeatures.status.exterior.map(element=>element),
             setAlert, 
         )
-
         newArrayFromState(
-            context.user[0].cars[0].variableFeatures.status.administration.maintancePlan,
+            context.user[0].cars[0].variableFeatures.status.tires.map(element=>element),
             setAlert, 
         )
-
         newArrayFromState(
-            context.user[0].cars[0].variableFeatures.status.tires[2],
+            context.user[0].cars[0].variableFeatures.status.other.map(element=>element),
             setAlert, 
         )
-        setAlertsLoaded(true) */
+        newArrayFromState(
+            context.user[0].cars[0].variableFeatures.status.engine.map(element=>element),
+            setAlert, 
+        ) 
+       
 
-       /*  const notOKAdministration=context.user[0].cars[0].variableFeatures.status.administration */
+       /* const notOKAdministration=context.user[0].cars[0].variableFeatures.status.administration 
         const notOKExterior=context.user[0].cars[0].variableFeatures.status.exterior.filter(item=>item.isOk!=true)
-        /* const notOKInterior=context.user[0].cars[0].variableFeatures.status.interior,
+        const notOKInterior=context.user[0].cars[0].variableFeatures.status.interior,
         const notOKtires=context.user[0].cars[0].variableFeatures.status.tires
-    */
+    
         setAlertas(notOKExterior)
-        
+         */
         
         
        
-    },[context.userLoaded]);
-
+    },[context.userLoaded]); 
+/* 
 
     useEffect(() => {
        
@@ -64,7 +67,8 @@ export const AlertsContainer = () => {
        
        
     }, [alertsLoaded]);
-
+ */
+    console.log(alerts)
 
   
 
@@ -73,12 +77,31 @@ export const AlertsContainer = () => {
         <Div column>
             <H2>Avisos pendientes</H2>
 
-           
-           {alertas.map((alert, n)=>
+
+            {/* {context.user[0].cars[0].variableFeatures.status.administration.map(elem=>{
                 <Alert
-                key={n}
-                alert ={alert}/>)}
-            
+                key={nanoid()}
+                dueDate = {elem.dueDate}
+                title= {elem.title}
+                alert={elem.alert}
+                type={elem.type}
+                status={getColorAlertByDays( range[elem.title][elem.success], range[elem.title][elem.warning], daysLeft(elem.dueDate ))}/>
+
+            })}
+ */}
+            {alerts.map(item=>{
+                item.map(element=>{
+                <Alert
+                key={nanoid()}
+                dueDate = {element.dueDate}
+                title= {element.title}
+                alert={element.alert}
+                type={element.type}
+                status={getColorAlertByStatus( element.isOk, element.isSerious )}
+                />
+
+                })
+            })}
         </Div>
     )
 }

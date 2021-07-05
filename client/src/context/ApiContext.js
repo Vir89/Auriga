@@ -1,4 +1,5 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useRef} from 'react';
+import daysLeft from '../utils/daysLeft';
 import fetchData from "../utils/fetchData"
 
 export const ApiContext = React.createContext();
@@ -10,6 +11,8 @@ const APIProvider = (props) => {
   const [usersLoaded, setUsersLoaded] = useState(false);
 
   const {user} =users
+
+  
 
 
   useEffect(() => {

@@ -17,7 +17,7 @@ const icons={
 /* 
 const seguro={
     if (dueDateSeguro>3){
-        return success
+        return <Span success><RiCheckboxBlankCircleFill/></Span>,
     }else if(dueDateSeguro<3 && dueDateSeguro>2){
         return warning
 
