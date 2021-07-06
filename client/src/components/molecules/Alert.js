@@ -27,9 +27,6 @@ const icons={
 }
 
 const Alert = (props) => {
-    
-
-
 
     return (
         
@@ -38,7 +35,7 @@ const Alert = (props) => {
                 <Div column success={props.status=="success"? true: false} warning={props.status=="warning"? true: false} danger={props.status=="danger"? true: false} span><Span>{icons[props.type]}</Span></Div>
                 <Div column center padding>
                     
-                    <H3 secondary>{dayjs(props.dueDate).format('DD/MM/YYYY')}</H3>
+                   <H3 secondary>{props.dueDate && dayjs(props.dueDate).format('DD/MM/YYYY')}</H3> 
                     <H3>{props.title}</H3>
                     <P>{props.alert}</P>
                     <Button >Mas Info</Button>

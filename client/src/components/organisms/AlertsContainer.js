@@ -10,6 +10,7 @@ import getColorAlertByDays from '../../utils/getColorAlertByDays'
 import range from '../../data/range'
 import daysLeft from '../../utils/daysLeft'
 import getColorAlertByStatus from '../../utils/getColorAlertByStatus'
+import sortBySeverity from '../../utils/sortBySeverity'
 
 
 export const AlertsContainer = () => {
@@ -19,11 +20,8 @@ export const AlertsContainer = () => {
     const [alertsLoaded, setAlertsLoaded]=useState(false)
     
 
-
     useEffect(() => {
 
-
-    
         newArrayFromState(
             context.user[0].cars[0].variableFeatures.status.interior.map(element=>element),
             setAlert, 
@@ -44,16 +42,7 @@ export const AlertsContainer = () => {
             context.user[0].cars[0].variableFeatures.status.engine.map(element=>element),
             setAlert, 
         ) 
-       
-
-       /* const notOKAdministration=context.user[0].cars[0].variableFeatures.status.administration 
-        const notOKExterior=context.user[0].cars[0].variableFeatures.status.exterior.filter(item=>item.isOk!=true)
-        const notOKInterior=context.user[0].cars[0].variableFeatures.status.interior,
-        const notOKtires=context.user[0].cars[0].variableFeatures.status.tires
-    
-        setAlertas(notOKExterior)
-         */
-        
+        setAlertsLoaded(true)
         
        
     },[context.userLoaded]); 
@@ -89,19 +78,19 @@ export const AlertsContainer = () => {
 
             })}
  */}
-            {alerts.map(item=>{
-                item.map(element=>{
-                <Alert
-                key={nanoid()}
-                dueDate = {element.dueDate}
-                title= {element.title}
-                alert={element.alert}
-                type={element.type}
-                status={getColorAlertByStatus( element.isOk, element.isSerious )}
-                />
-
-                })
-            })}
+             {alertsLoaded && alerts.flat().sort((a,b)=>sortBySeverity(a.isOK, a.isSerious)-(sortBySeverity(b.isOK, b.isSerious))).map(element=>{
+                return (<Alert
+                    key = {nanoid()}
+                    dueDate = {element.dueDate}
+                    title =  {element.title}
+                    alert = {element.alert}
+                    type  = {element.type}
+                    status={getColorAlertByStatus(element.isOK, element.isSerious)}
+                />)
+             })}
+               
+                 
+                
         </Div>
     )
 }

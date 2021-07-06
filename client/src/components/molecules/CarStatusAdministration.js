@@ -14,51 +14,7 @@ const icons={
     warning:<Span warning><RiCheckboxBlankCircleFill/></Span>
    
 }
-/* 
-const seguro={
-    if (dueDateSeguro>3){
-        return <Span success><RiCheckboxBlankCircleFill/></Span>,
-    }else if(dueDateSeguro<3 && dueDateSeguro>2){
-        return warning
 
-    }else{
-        return danger
-    }
-    
-}
-const itv={
-    if (dueDateitv>2){
-        return success
-    }else if(dueDateitv<2 && dueDateitv>1){
-        return warning
-
-    }else{
-        return danger
-    }
-    
-}
-const mantenimiento={
-    if (dueDatemantenimiento>2){
-        return success
-    }else if(dueDatemantenimiento<2 && dueDatemantenimiento>1){
-        return warning
-
-    }else{
-        return danger
-    }
-    
-}
-const matriculacion={
-    if (dueDatematriculacion>2){
-        return success
-    }else if(dueDatematriculacion<2 && dueDatematriculacion>1){
-        return warning
-
-    }else{
-        return danger
-    }
-    
-} */
 
 const CarStatusAdministration = (props) => {
 

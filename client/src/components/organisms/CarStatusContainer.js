@@ -14,6 +14,7 @@ import CarAccordion from '../molecules/CarAccordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import { nanoid } from 'nanoid';
 import getColorAlertByStatus from '../../utils/getColorAlertByStatus';
+import getColorAlertByDays from '../../utils/getColorAlertByDays';
 
 
 
@@ -39,7 +40,7 @@ const CarStatusContainer = () => {
         <Div column>   
             <H2>Estado general</H2>
 
-            <Accordion allowZeroExpanded>
+           {/*  <Accordion allowZeroExpanded>
                 <AccordionItem>
                     <AccordionItemHeading>
                          <AccordionItemButton>
@@ -54,10 +55,11 @@ const CarStatusContainer = () => {
                     key={nanoid()}
                     title = {status.title}
                     dueDate = {status.dueDate}
+                    status={getColorAlertByDays( range[elem.title][elem.success], range[elem.title][elem.warning], daysLeft(elem.dueDate ))}
                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
-            </Accordion>
+            </Accordion> */}
 
             <Accordion allowZeroExpanded>
                 <AccordionItem>
