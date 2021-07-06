@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, {useState} from 'react'
 import Card from '../atoms/Card'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { IoAlertCircleSharp, IoDocumentText } from "react-icons/io5"; 
@@ -12,6 +12,7 @@ import Span from '../atoms/Span'
 import Button from '../atoms/Button';
 import Div from '../atoms/Div';
 import dayjs from 'dayjs';
+import Img from '../atoms/Img';
 
 
 
@@ -27,10 +28,16 @@ const icons={
 }
 
 const Alert = (props) => {
+    const [isDisplaying, setIsDisplaying] = useState(false)
+
+    const handleToggle =()=>{
+        setIsDisplaying(!isDisplaying)
+
+    }
 
     return (
         
-            <Card alert>
+            <Card alert onClick={handleToggle}>
 
                 <Div column success={props.status=="success"? true: false} warning={props.status=="warning"? true: false} danger={props.status=="danger"? true: false} span><Span>{icons[props.type]}</Span></Div>
                 <Div column center padding>
@@ -38,7 +45,11 @@ const Alert = (props) => {
                    <H3 secondary>{props.dueDate && dayjs(props.dueDate).format('DD/MM/YYYY')}</H3> 
                     <H3>{props.title}</H3>
                     <P>{props.alert}</P>
-                    <Button >Mas Info</Button>
+
+
+                    {isDisplaying && <P>{props.statusDescription}</P>}
+                    
+                    
                 </Div>
                     
             </Card>

@@ -1,5 +1,8 @@
+import getDaysLeft from "./getDaysLeft"
 
-const getColorAlertByDays =(rangeSuccess, rangeWarning, daysLeft)=>{
+
+const getColorAlertByDays =(rangeSuccess, rangeWarning, date)=>{
+    let daysLeft= getDaysLeft(date)
     if (daysLeft >= rangeSuccess) {
         return "success"
     } else if (daysLeft >= rangeWarning) {

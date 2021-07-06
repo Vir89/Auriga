@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef} from 'react';
-import daysLeft from '../utils/daysLeft';
 import fetchData from "../utils/fetchData"
 
 export const ApiContext = React.createContext();

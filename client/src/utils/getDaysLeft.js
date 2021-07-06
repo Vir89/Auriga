@@ -1,4 +1,4 @@
-const daysLeft = (date) => {
+const getDaysLeft = (date) => {
     const today = new Date()
     const dueDate = new Date(date) 
     const leftInTime = dueDate.getTime() - today.getTime();
@@ -8,4 +8,4 @@ const daysLeft = (date) => {
 }
 
 
-export default daysLeft
+export default getDaysLeft

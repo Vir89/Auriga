@@ -15,6 +15,9 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 import { nanoid } from 'nanoid';
 import getColorAlertByStatus from '../../utils/getColorAlertByStatus';
 import getColorAlertByDays from '../../utils/getColorAlertByDays';
+import range from '../../data/range';
+import getDaysLeft from '../../utils/getDaysLeft';
+
 
 
 
@@ -34,13 +37,13 @@ const CarStatusContainer = () => {
     other:context.user[0].cars[0].variableFeatures.status.other
 
     }
-
+    
    
     return (
         <Div column>   
             <H2>Estado general</H2>
 
-           {/*  <Accordion allowZeroExpanded>
+           <Accordion allowZeroExpanded>
                 <AccordionItem>
                     <AccordionItemHeading>
                          <AccordionItemButton>
@@ -50,16 +53,17 @@ const CarStatusContainer = () => {
                  <AccordionItemPanel>
 
            
-                {accordion.administration.map((status)=>
+                {/* {context.usersLoaded && accordion.administration.map((status)=>
                     <CarStatus
                     key={nanoid()}
                     title = {status.title}
                     dueDate = {status.dueDate}
-                    status={getColorAlertByDays( range[elem.title][elem.success], range[elem.title][elem.warning], daysLeft(elem.dueDate ))}
-                   />)}
+                    status={getColorAlertByDays( range[status.title][status.success], range[status.title][status.warning], status.dueDate)}  
+                   />)} */}
                 </AccordionItemPanel>
             </AccordionItem>
-            </Accordion> */}
+            </Accordion> 
+            
 
             <Accordion allowZeroExpanded>
                 <AccordionItem>

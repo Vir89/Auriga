@@ -8,7 +8,7 @@ import { sortListByDate } from '../../utils/sortListByDate'
 import {nanoid} from "nanoid"
 import getColorAlertByDays from '../../utils/getColorAlertByDays'
 import range from '../../data/range'
-import daysLeft from '../../utils/daysLeft'
+import getDaysLeft from '../../utils/getDaysLeft'
 import getColorAlertByStatus from '../../utils/getColorAlertByStatus'
 import sortBySeverity from '../../utils/sortBySeverity'
 
@@ -85,6 +85,8 @@ export const AlertsContainer = () => {
                     title =  {element.title}
                     alert = {element.alert}
                     type  = {element.type}
+                    statusDescription={element.statusDescription}
+                    img  = {element.img}
                     status={getColorAlertByStatus(element.isOK, element.isSerious)}
                 />)
              })}
