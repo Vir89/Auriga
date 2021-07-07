@@ -146,8 +146,7 @@ const userSchema = new mongoose.Schema({
             picture:{type: String},
             cleaning:{
                 lastCleaning:{type:Date},
-                cleaningType:{type: String},
-                
+                cleaningType:{type: String},  
 
             }
            

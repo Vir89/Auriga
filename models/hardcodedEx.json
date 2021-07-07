@@ -78,7 +78,6 @@
                                 "alert": "Fecha próxima de caducidad",
                                 "dueDate": "2021-09-10",
                                 "type": "administration",
-                                "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
@@ -87,7 +86,7 @@
                                 "alert": "Próxima revisión",
                                 "dueDate": "2021-08-01",
                                 "type": "repair",
-                                "status": "ko",
+                            
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
@@ -95,23 +94,22 @@
                                 "title": "Impuesto de matriculación",
                                 "dueDate": "2021-09-15",
                                 "type": "administration",
-                                "status": "ko",
+                           
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
                         
-                            [
-                                {
-                                    "title": "Multa",
-                                    "type": "administration",
-                                    "status": "ko",
-                                    "img": "foto",
-                                    "statusDescription": "PAGADA",
-                                    "amount": 600,
-                                    "isOk":true,
-                                    "isSerious":false
-                                }
-                            ]
+                            
+                            {
+                                "title": "Multa",
+                                "type": "administration",
+                                "img": "foto",
+                                "statusDescription": "PAGADA",
+                                "amount": 600,
+                                "isOk":true,
+                                "isSerious":false
+                            }
+                            
                         ],
                     
                     "exterior": [
@@ -288,7 +286,7 @@
                             "title": "Nivel líquido parabrisas",
                             "dueDate": "",
                             "type": "liquid",
-                            "status": "ok",
+                         
                             "img": "foto",
                             "statusDescription": "",
                             "isOk":true,
@@ -299,7 +297,7 @@
                             "title": "Aspecto motor ralentí",
                             "dueDate": "",
                             "type": "engine",
-                            "status": "ok",
+                      
                             "img": "foto",
                             "statusDescription": "",
                             "isOk":true,
@@ -610,7 +608,7 @@
                                 "title": "Nivel líquido parabrisas",
                                 "dueDate": "",
                                 "type": "liquid",
-                                "status": "ok",
+                          
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -621,7 +619,7 @@
                                 "title": "Aspecto motor ralentí",
                                 "dueDate": "",
                                 "type": "engine",
-                                "status": "ok",
+                               
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,

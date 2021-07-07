@@ -13,7 +13,8 @@ const theme = {
         warning:"#FFC107",
         success:"#66A76F",
         white: "#FFFFFF",
-        lightDanger: "#FF9187"
+        lightDanger: "#FF9187",
+        buttonSecondary: "#FAFAFA"
 
     },
     largeViewport : {

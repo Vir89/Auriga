@@ -3,7 +3,7 @@ import {newArrayFromState} from '../../utils/newArrayFromState'
 import Div from '../atoms/Div'
 import H2 from '../atoms/H2'
 import Alert from '../molecules/Alert'
-import { ApiContext } from '../../context/ApiContext';
+import {ApiContext} from '../../context/ApiContext';
 import { sortListByDate } from '../../utils/sortListByDate'
 import {nanoid} from "nanoid"
 import getColorAlertByDays from '../../utils/getColorAlertByDays'
@@ -20,7 +20,7 @@ export const AlertsContainer = () => {
     const [alertsLoaded, setAlertsLoaded]=useState(false)
     
 
-    useEffect(() => {
+    /* useEffect(() => {
 
         newArrayFromState(
             context.user[0].cars[0].variableFeatures.status.interior.map(element=>element),
@@ -46,43 +46,59 @@ export const AlertsContainer = () => {
             context.user[0].cars[0].variableFeatures.status.engine.map(element=>element),
             setAlert, 
         ) 
+        newArrayFromState(
+            context.user[0].cars[0].variableFeatures.status.administration.map(element=>element),
+            context.setCarStatus, 
+        ) 
         setAlertsLoaded(true)
-        
-       
-    },[context.userLoaded]); 
-/* 
-
-    useEffect(() => {
-       
-       alertsLoaded && setAlert(sortListByDate(alerts))
-       console.log(alerts)
-      
-       
-       
-    }, [alertsLoaded]);
+    },[context.usersLoaded]); 
  */
-    console.log(alerts)
 
-  
+
+
+
+
 
 
     return (
         <Div column>
             <H2>Avisos pendientes</H2>
 
+            {context.usersLoaded && context.carStatus.flat().sort((a,b)=>sortBySeverity(a.status)-(sortBySeverity(b.status))).map(elem=>{
+ 
+                return(
+                    <Alert
+                        key={nanoid()}
+                        dueDate = {elem.dueDate}
+                        title= {elem.title}
+                        alert={elem.alert}
+                        type={elem.type} 
+                        status={elem.status}  
+                    />
+                )
 
-            {/* {context.user[0].cars[0].variableFeatures.status.administration.map(elem=>{
-                <Alert
-                key={nanoid()}
-                dueDate = {elem.dueDate}
-                title= {elem.title}
-                alert={elem.alert}
-                type={elem.type}
-                status={getColorAlertByDays( range[elem.title][elem.success], range[elem.title][elem.warning], daysLeft(elem.dueDate ))}/>
+                })}
+        
+                
+                {/* {context.usersLoaded && context.user[0].cars[0].variableFeatures.status.administration.map(elem=>{
+                    const status= elem.title==="Multas" 
+                        ? getColorAlertByStatus(elem.isOK, elem.isSerious)
+                        : getColorAlertByDays( range[elem.title].success, range[elem.title].warning, elem.dueDate)
+                return(
+                
+                    <Alert
+                        key={nanoid()}
+                        dueDate = {elem.dueDate}
+                        title= {elem.title}
+                        alert={elem.alert}
+                        type={elem.type} 
+                        status={status}  
+                    />
+                )
 
-            })}
- */}
-             {alertsLoaded && alerts.flat().sort((a,b)=>sortBySeverity(a.isOK, a.isSerious)-(sortBySeverity(b.isOK, b.isSerious))).map(element=>{
+                })} */}
+ 
+             {/* {alertsLoaded && alerts.flat().sort((a,b)=>sortBySeverity(a.isOK, a.isSerious)-(sortBySeverity(b.isOK, b.isSerious))).map(element=>{
                 return (<Alert
                     key = {nanoid()}
                     dueDate = {element.dueDate}
@@ -93,7 +109,7 @@ export const AlertsContainer = () => {
                     img  = {element.img}
                     status={getColorAlertByStatus(element.isOK, element.isSerious)}
                 />)
-             })}
+             })} */}
                
                  
                 
