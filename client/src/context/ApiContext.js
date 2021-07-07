@@ -12,7 +12,8 @@ const APIProvider = (props) => {
   //states to store data coming from various APIs
   const [users, setUser] = useState({});
   const [usersLoaded, setUsersLoaded] = useState(false);
-  const [carStatus, setCarStatus]= useState([])
+  const [carStatus, setCarStatus]= useState([]);
+  const [carStatusLoaded, setCarStatusLoaded]= useState(false)
   const {user} =users
   const isInitialMount = useRef(true);
 
@@ -31,37 +32,37 @@ const APIProvider = (props) => {
             isInitialMount.current = false;
          } else {
 
-            users.user[0].cars[0].variableFeatures.status.interior.map(element=>element.status=getColorAlertByStatus(element.isOK, element.isSerious));
+            users.user[0].cars[0].variableFeatures.status.interior.map(element=>{element.status=getColorAlertByStatus(element.isOk, element.isSerious)});
             newArrayFromState(
                 users.user[0].cars[0].variableFeatures.status.interior.map(element=>element),
                 setCarStatus
             )
 
-            users.user[0].cars[0].variableFeatures.status.exterior.map(element=>element.status=getColorAlertByStatus(element.isOK, element.isSerious));
+            users.user[0].cars[0].variableFeatures.status.exterior.map(element=>element.status=getColorAlertByStatus(element.isOk, element.isSerious));
             newArrayFromState(
                 users.user[0].cars[0].variableFeatures.status.exterior.map(element=>element),
                 setCarStatus
             )
 
-            users.user[0].cars[0].variableFeatures.status.driving.map(element=>element.status=getColorAlertByStatus(element.isOK, element.isSerious))
+            users.user[0].cars[0].variableFeatures.status.driving.map(element=>element.status=getColorAlertByStatus(element.isOk, element.isSerious))
             newArrayFromState(
                 users.user[0].cars[0].variableFeatures.status.driving.map(element=>element),
                 setCarStatus
             )
 
-            users.user[0].cars[0].variableFeatures.status.tires.map(element=>element.status=getColorAlertByStatus(element.isOK, element.isSerious))
+            users.user[0].cars[0].variableFeatures.status.tires.map(element=>element.status=getColorAlertByStatus(element.isOk, element.isSerious))
             newArrayFromState(
                 users.user[0].cars[0].variableFeatures.status.tires.map(element=>element),
                 setCarStatus, 
             )
 
-            users.user[0].cars[0].variableFeatures.status.other.map(element=>element.status=getColorAlertByStatus(element.isOK, element.isSerious))
+            users.user[0].cars[0].variableFeatures.status.other.map(element=>element.status=getColorAlertByStatus(element.isOk, element.isSerious))
             newArrayFromState(
                 users.user[0].cars[0].variableFeatures.status.other.map(element=>element),
                 setCarStatus, 
             )
 
-            users.user[0].cars[0].variableFeatures.status.engine.map(element=>element.status=getColorAlertByStatus(element.isOK, element.isSerious))
+            users.user[0].cars[0].variableFeatures.status.engine.map(element=>element.status=getColorAlertByStatus(element.isOk, element.isSerious))
             newArrayFromState(
                 users.user[0].cars[0].variableFeatures.status.engine.map(element=>element),
                 setCarStatus, 
@@ -76,6 +77,7 @@ const APIProvider = (props) => {
                 users.user[0].cars[0].variableFeatures.status.administration.map(element=>element),
                 setCarStatus
             ) 
+            setCarStatusLoaded(true)
          }
        
         
@@ -87,7 +89,7 @@ const APIProvider = (props) => {
   
 
   return (
-      <ApiContext.Provider value={{ user: user, usersLoaded:usersLoaded, carStatus:carStatus}} >
+      <ApiContext.Provider value={{ user: user, usersLoaded:usersLoaded, carStatus:carStatus, carStatusLoaded:carStatusLoaded}} >
           { props.children }
       </ApiContext.Provider>
   )
