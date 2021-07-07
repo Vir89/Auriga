@@ -3,6 +3,7 @@ import range from '../data/range';
 import fetchData from "../utils/fetchData"
 import getColorAlertByDays from '../utils/getColorAlertByDays';
 import getColorAlertByStatus from '../utils/getColorAlertByStatus';
+import getColorAlertMantenimiento from '../utils/getColorAlertMantenimiento';
 import { newArrayFromState } from '../utils/newArrayFromState';
 
 export const ApiContext = React.createContext();
@@ -31,6 +32,9 @@ const APIProvider = (props) => {
         if (isInitialMount.current) {
             isInitialMount.current = false;
          } else {
+
+            const kmTotal=users.user[0].cars[0].variableFeatures.kM
+            const kmToMaintance=users.user[0].cars[0].variableFeatures.nextMaintenance
 
             users.user[0].cars[0].variableFeatures.status.interior.map(element=>{element.status=getColorAlertByStatus(element.isOk, element.isSerious)});
             newArrayFromState(
@@ -69,9 +73,15 @@ const APIProvider = (props) => {
             ) 
 
             users.user[0].cars[0].variableFeatures.status.administration.map(element=>{
-                element.title==="Multa" 
-                ? element.status = getColorAlertByStatus(element.isOK, element.isSerious)
-                : element.status = getColorAlertByDays( range[element.title].success, range[element.title].warning, element.dueDate)
+                if (element.title==="Multa"){
+                    return element.status = getColorAlertByStatus(element.isOK, element.isSerious)
+                 
+                } else if (element.title==="Mantenimiento"){
+                    return element.status = getColorAlertMantenimiento( element.dueDate, kmTotal, kmToMaintance)
+
+                }else{
+                    return element.status = getColorAlertByDays( range[element.title].success, range[element.title].warning, element.dueDate)
+                }
             }),
             newArrayFromState(
                 users.user[0].cars[0].variableFeatures.status.administration.map(element=>element),

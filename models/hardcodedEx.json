@@ -65,7 +65,6 @@
                     "administration":[ 
                         
                            {
-
                                 "title":"Seguro",
                                 "alert": "Fecha próxima de caducidad",
                                 "type":"administration",
@@ -86,7 +85,6 @@
                                 "alert": "Próxima revisión",
                                 "dueDate": "2021-08-01",
                                 "type": "repair",
-                            
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
@@ -359,7 +357,8 @@
                     
                 },
                 "currentValue": 15000,
-                "kM": 12050,
+                "kM": 58050,
+                "nextMaintenance":60000,
                 "picture": "foto"
             },
             "documentation": {
@@ -681,7 +680,8 @@
                     
                 },
                 "currentValue": 15000,
-                "kM": 12050,
+                "kM": 80000,
+                "nextMaintenance":90000,
                 "picture": "foto"
             },
             "documentation": {
