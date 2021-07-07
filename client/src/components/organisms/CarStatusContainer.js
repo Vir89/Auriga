@@ -10,7 +10,6 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
   } from 'react-accessible-accordion';
-import CarAccordion from '../molecules/CarAccordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import { nanoid } from 'nanoid';
 import getColorAlertByStatus from '../../utils/getColorAlertByStatus';

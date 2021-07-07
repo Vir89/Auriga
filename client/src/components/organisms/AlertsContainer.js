@@ -31,6 +31,10 @@ export const AlertsContainer = () => {
             setAlert, 
         )
         newArrayFromState(
+            context.user[0].cars[0].variableFeatures.status.driving.map(element=>element),
+            setAlert, 
+        )
+        newArrayFromState(
             context.user[0].cars[0].variableFeatures.status.tires.map(element=>element),
             setAlert, 
         )

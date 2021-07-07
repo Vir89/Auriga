@@ -267,7 +267,7 @@
                            
                             "title": "Nivel de aceite",
                             "dueDate": "",
-                            "type": "engine",
+                            "type": "oil",
                             "img": "foto",
                             "statusDescription": "Nivel de aceite cercano a límite",
                             "isOk":false,
@@ -277,8 +277,7 @@
                          
                             "title": "Nivel de refrigerante",
                             "dueDate": "",
-                            "type": "engine",
-                
+                            "type": "liquid",
                             "img": "foto",
                             "statusDescription": "",
                             "isOk":true,
@@ -288,7 +287,7 @@
                             
                             "title": "Nivel líquido parabrisas",
                             "dueDate": "",
-                            "type": "engine",
+                            "type": "liquid",
                             "status": "ok",
                             "img": "foto",
                             "statusDescription": "",
@@ -324,7 +323,7 @@
                             "title": "Estado de limpieza",
                             "alert": "Estado de limpieza inadecuado",
                             "dueDate": "",
-                            "type": "interior",
+                            "type": "cleaning",
                             "img": "foto",
                             "statusDescription": "Necesidad de limpieza integral",
                             "isOk":false,
@@ -336,10 +335,9 @@
                     "driving": [
                         {
                          
-                            "title": "Dinámica",
+                            "title": "Conducción Dinámica",
                             "dueDate": "",
-                            "type": "conduccion",
-                            "status": "ko",
+                            "type": "driving",
                             "img": "foto",
                             "statusDescription": "Dirección en mal estado",
                             "isOk":false,
@@ -347,10 +345,9 @@
                         },
                         {
                            
-                            "title": "Motor",
+                            "title": " Conducción Motor",
                             "dueDate": "2021-06-09",
-                            "type": "conduccion",
-                            "status": "warning",
+                            "type": "driving",
                             "img": "foto",
                             "statusDescription": "Potencia del vehículo inadecuada, vigilar para la próxima visita",
                             "isOk":false,
@@ -592,7 +589,7 @@
                                
                                 "title": "Nivel de aceite",
                                 "dueDate": "",
-                                "type": "engine",
+                                "type": "oil",
                                 "img": "foto",
                                 "statusDescription": "Nivel de aceite muy bajo, riesgo de daño al motor",
                                 "isOk":false,
@@ -602,7 +599,7 @@
                              
                                 "title": "Nivel de refrigerante",
                                 "dueDate": "",
-                                "type": "engine",
+                                "type": "liquid",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -612,7 +609,7 @@
                                 
                                 "title": "Nivel líquido parabrisas",
                                 "dueDate": "",
-                                "type": "engine",
+                                "type": "liquid",
                                 "status": "ok",
                                 "img": "foto",
                                 "statusDescription": "",
@@ -648,7 +645,7 @@
                                 "title": "Estado de limpieza",
                                 "alert": "Estado de limpieza inadecuado",
                                 "dueDate": "",
-                                "type": "interior",
+                                "type": "cleaning",
                                 "img": "foto",
                                 "statusDescription": "Necesidad de limpieza completa",
                                 "isOk":false,
@@ -661,8 +658,8 @@
                              
                                 "title": "Dinámica",
                                 "dueDate": "",
-                                "type": "conduccion",
-                                "status": "ko",
+                                "type": "driving",
+                            
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -672,8 +669,7 @@
                                
                                 "title": "Motor",
                                 "dueDate": "2021-06-09",
-                                "type": "conduccion",
-                                "status": "warning",
+                                "type": "driving",
                                 "img": "foto",
                                 "statusDescription": "Sonoridad excesiva, vigilar para la próxima visita",
                                 "isOk":false,
