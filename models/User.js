@@ -65,6 +65,7 @@ const userSchema = new mongoose.Schema({
         variableFeatures:{
             currentValue:{type: Number},
             kM:{type: Number},
+            nextMaintenance:{type: Number},
             status:{
                 administration:[{
                         title:{type: String},
@@ -78,7 +79,8 @@ const userSchema = new mongoose.Schema({
                         statusDescription:{type: String},
                         isOk:{type: Boolean},
                         isSerious:{type: Boolean},
-                        amount:{type: Number}
+                        amount:{type: Number},
+                        
                     }],
                 exterior:[{
                     title:{type: String},
@@ -146,8 +148,7 @@ const userSchema = new mongoose.Schema({
             picture:{type: String},
             cleaning:{
                 lastCleaning:{type:Date},
-                cleaningType:{type: String},
-                
+                cleaningType:{type: String},  
 
             }
            

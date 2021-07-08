@@ -1,6 +1,6 @@
-import { stateDateFormatConverter } from "./stateDateFormatConverter"
+/* import { stateDateFormatConverter } from "./stateDateFormatConverter" */
 export const newArrayFromState=(state, setState)=>{
     
-        setState(prevState =>[...prevState, stateDateFormatConverter(state)])
+        setState(prevState =>[...prevState, state /* stateDateFormatConverter(state) */])
      
 }

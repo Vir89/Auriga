@@ -63,9 +63,26 @@
             "variableFeatures": {
                 "status": {
                     "administration":[ 
+                        {
+                            "title": "Multa",
+                            "type": "administration",
+                            "img": "foto",
+                            "statusDescription": "PAGADA",
+                            "isOk":true,
+                            "isSerious":false,
+                            "amount": 600
+                            
+                        },
+                        {
+                            "title": "Mantenimiento",
+                            "alert": "Próxima revisión",
+                            "dueDate": "2021-08-01",
+                            "type": "repair",
+                            "img": "foto",
+                            "statusDescription": "descripcion estado"
+                        },
                         
                            {
-
                                 "title":"Seguro",
                                 "alert": "Fecha próxima de caducidad",
                                 "type":"administration",
@@ -78,40 +95,21 @@
                                 "alert": "Fecha próxima de caducidad",
                                 "dueDate": "2021-09-10",
                                 "type": "administration",
-                                "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            {
-                                "title": "Mantenimiento",
-                                "alert": "Próxima revisión",
-                                "dueDate": "2021-08-01",
-                                "type": "repair",
-                                "status": "ko",
-                                "img": "foto",
-                                "statusDescription": "descripcion estado"
-                            },
+                            
                             {
                                 "title": "Impuesto de matriculación",
                                 "dueDate": "2021-09-15",
                                 "type": "administration",
-                                "status": "ko",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
-                            },
+                            }
                         
-                            [
-                                {
-                                    "title": "Multa",
-                                    "type": "administration",
-                                    "status": "ko",
-                                    "img": "foto",
-                                    "statusDescription": "PAGADA",
-                                    "amount": 600,
-                                    "isOk":true,
-                                    "isSerious":false
-                                }
-                            ]
+                            
+                            
+                            
                         ],
                     
                     "exterior": [
@@ -267,7 +265,7 @@
                            
                             "title": "Nivel de aceite",
                             "dueDate": "",
-                            "type": "engine",
+                            "type": "oil",
                             "img": "foto",
                             "statusDescription": "Nivel de aceite cercano a límite",
                             "isOk":false,
@@ -277,8 +275,7 @@
                          
                             "title": "Nivel de refrigerante",
                             "dueDate": "",
-                            "type": "engine",
-                
+                            "type": "liquid",
                             "img": "foto",
                             "statusDescription": "",
                             "isOk":true,
@@ -288,8 +285,8 @@
                             
                             "title": "Nivel líquido parabrisas",
                             "dueDate": "",
-                            "type": "engine",
-                            "status": "ok",
+                            "type": "liquid",
+                         
                             "img": "foto",
                             "statusDescription": "",
                             "isOk":true,
@@ -300,7 +297,7 @@
                             "title": "Aspecto motor ralentí",
                             "dueDate": "",
                             "type": "engine",
-                            "status": "ok",
+                      
                             "img": "foto",
                             "statusDescription": "",
                             "isOk":true,
@@ -324,7 +321,7 @@
                             "title": "Estado de limpieza",
                             "alert": "Estado de limpieza inadecuado",
                             "dueDate": "",
-                            "type": "interior",
+                            "type": "cleaning",
                             "img": "foto",
                             "statusDescription": "Necesidad de limpieza integral",
                             "isOk":false,
@@ -336,10 +333,9 @@
                     "driving": [
                         {
                          
-                            "title": "Dinámica",
+                            "title": "Conducción Dinámica",
                             "dueDate": "",
-                            "type": "conduccion",
-                            "status": "ko",
+                            "type": "driving",
                             "img": "foto",
                             "statusDescription": "Dirección en mal estado",
                             "isOk":false,
@@ -347,10 +343,9 @@
                         },
                         {
                            
-                            "title": "Motor",
+                            "title": " Conducción Motor",
                             "dueDate": "2021-06-09",
-                            "type": "conduccion",
-                            "status": "warning",
+                            "type": "driving",
                             "img": "foto",
                             "statusDescription": "Potencia del vehículo inadecuada, vigilar para la próxima visita",
                             "isOk":false,
@@ -365,7 +360,8 @@
                     
                 },
                 "currentValue": 15000,
-                "kM": 12050,
+                "kM": 58050,
+                "nextMaintenance":60000,
                 "picture": "foto"
             },
             "documentation": {
@@ -428,13 +424,13 @@
                                 "statusDescription": "descripcion estado"
                             },
                                 {
-                                    "title": "Multas",
+                                    "title": "Multa",
                                     "type": "administration",
                                     "img": "foto",
                                     "statusDescription": "Ninguna multa",
                                     "amount": 600,
                                     "isOk":true,
-                                    "isSerious":true
+                                    "isSerious":false
                                 }
                             
                         ],
@@ -592,7 +588,7 @@
                                
                                 "title": "Nivel de aceite",
                                 "dueDate": "",
-                                "type": "engine",
+                                "type": "oil",
                                 "img": "foto",
                                 "statusDescription": "Nivel de aceite muy bajo, riesgo de daño al motor",
                                 "isOk":false,
@@ -602,7 +598,7 @@
                              
                                 "title": "Nivel de refrigerante",
                                 "dueDate": "",
-                                "type": "engine",
+                                "type": "liquid",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -612,8 +608,8 @@
                                 
                                 "title": "Nivel líquido parabrisas",
                                 "dueDate": "",
-                                "type": "engine",
-                                "status": "ok",
+                                "type": "liquid",
+                          
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -624,7 +620,7 @@
                                 "title": "Aspecto motor ralentí",
                                 "dueDate": "",
                                 "type": "engine",
-                                "status": "ok",
+                               
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -648,7 +644,7 @@
                                 "title": "Estado de limpieza",
                                 "alert": "Estado de limpieza inadecuado",
                                 "dueDate": "",
-                                "type": "interior",
+                                "type": "cleaning",
                                 "img": "foto",
                                 "statusDescription": "Necesidad de limpieza completa",
                                 "isOk":false,
@@ -661,8 +657,8 @@
                              
                                 "title": "Dinámica",
                                 "dueDate": "",
-                                "type": "conduccion",
-                                "status": "ko",
+                                "type": "driving",
+                            
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -672,8 +668,7 @@
                                
                                 "title": "Motor",
                                 "dueDate": "2021-06-09",
-                                "type": "conduccion",
-                                "status": "warning",
+                                "type": "driving",
                                 "img": "foto",
                                 "statusDescription": "Sonoridad excesiva, vigilar para la próxima visita",
                                 "isOk":false,
@@ -688,7 +683,8 @@
                     
                 },
                 "currentValue": 15000,
-                "kM": 12050,
+                "kM": 80000,
+                "nextMaintenance":90000,
                 "picture": "foto"
             },
             "documentation": {
