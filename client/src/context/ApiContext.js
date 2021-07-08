@@ -73,14 +73,20 @@ const APIProvider = (props) => {
             ) 
 
             users.user[0].cars[0].variableFeatures.status.administration.map(element=>{
+               
                 if (element.title==="Multa"){
-                    return element.status = getColorAlertByStatus(element.isOK, element.isSerious)
+                    
+                    element.status = getColorAlertByStatus(element.isOk, element.isSerious)
+        
+                   
                  
                 } else if (element.title==="Mantenimiento"){
-                    return element.status = getColorAlertMantenimiento( element.dueDate, kmTotal, kmToMaintance)
 
+                    element.status = getColorAlertMantenimiento( element.dueDate, kmTotal, kmToMaintance)
+                    
                 }else{
-                    return element.status = getColorAlertByDays( range[element.title].success, range[element.title].warning, element.dueDate)
+                    element.status = getColorAlertByDays( range[element.title].success, range[element.title].warning, element.dueDate)
+  
                 }
             }),
             newArrayFromState(
@@ -88,6 +94,7 @@ const APIProvider = (props) => {
                 setCarStatus
             ) 
             setCarStatusLoaded(true)
+            
          }
        
         

@@ -31,7 +31,7 @@ export const AlertsContainer = () => {
                         key={nanoid()}
                         dueDate = {elem.dueDate}
                         title= {elem.title}
-                        alert={elem.alert}
+                        description={elem.statusDescription}
                         type={elem.type} 
                         status={elem.status}  
                     />

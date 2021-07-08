@@ -10,7 +10,7 @@ import ProfileDataInput from '../molecules/ProfileDataInput'
 export const ProfileBodyContainer = () => {
 
     const context = useContext(ApiContext);
-    const [firstName,lastName,email,phoneNumber]=context.user[0].personalDetails
+    /* const [firstName,lastName,email,phoneNumber]=context.user[0].personalDetails
     const userDetails= [ firstName,lastName,email,phoneNumber]
 
     const details={
@@ -18,7 +18,7 @@ export const ProfileBodyContainer = () => {
         Apellidos:lastName,
         Email:email,
         Teléfono:phoneNumber
-    }
+    } */
     
     return (
         <Div column>

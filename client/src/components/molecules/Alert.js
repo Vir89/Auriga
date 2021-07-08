@@ -52,10 +52,10 @@ const Alert = (props) => {
                     
                   {/*  <H3 secondary>{props.dueDate && dayjs(props.dueDate).format('DD/MM/YYYY')}</H3> */} 
                     <H3>{props.title}</H3> 
-                    {/* <P>{props.alert}</P> */}
+                   
 
 
-                    {isDisplaying && (<P alertDescription>{props.statusDescription}</P>)}
+                    {isDisplaying && (<P alertDescription>{props.description}</P>)}
                     {isDisplaying && (<Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9lsmUsiO6xeqX88YLXk3_FsOiLMmV3WnYA&usqp=CAU"></Img>)}
                     
                     

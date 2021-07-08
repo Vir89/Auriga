@@ -63,6 +63,24 @@
             "variableFeatures": {
                 "status": {
                     "administration":[ 
+                        {
+                            "title": "Multa",
+                            "type": "administration",
+                            "img": "foto",
+                            "statusDescription": "PAGADA",
+                            "isOk":true,
+                            "isSerious":false,
+                            "amount": 600
+                            
+                        },
+                        {
+                            "title": "Mantenimiento",
+                            "alert": "Próxima revisión",
+                            "dueDate": "2021-08-01",
+                            "type": "repair",
+                            "img": "foto",
+                            "statusDescription": "descripcion estado"
+                        },
                         
                            {
                                 "title":"Seguro",
@@ -80,32 +98,17 @@
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
-                            {
-                                "title": "Mantenimiento",
-                                "alert": "Próxima revisión",
-                                "dueDate": "2021-08-01",
-                                "type": "repair",
-                                "img": "foto",
-                                "statusDescription": "descripcion estado"
-                            },
+                            
                             {
                                 "title": "Impuesto de matriculación",
                                 "dueDate": "2021-09-15",
                                 "type": "administration",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
-                            },
+                            }
                         
                             
-                            {
-                                "title": "Multa",
-                                "type": "administration",
-                                "img": "foto",
-                                "statusDescription": "PAGADA",
-                                "amount": 600,
-                                "isOk":true,
-                                "isSerious":false
-                            }
+                            
                             
                         ],
                     
@@ -421,13 +424,13 @@
                                 "statusDescription": "descripcion estado"
                             },
                                 {
-                                    "title": "Multas",
+                                    "title": "Multa",
                                     "type": "administration",
                                     "img": "foto",
                                     "statusDescription": "Ninguna multa",
                                     "amount": 600,
                                     "isOk":true,
-                                    "isSerious":true
+                                    "isSerious":false
                                 }
                             
                         ],
