@@ -14,7 +14,9 @@ const theme = {
         success:"#66A76F",
         white: "#FFFFFF",
         lightDanger: "#FF9187",
-        buttonSecondary: "#FAFAFA"
+        buttonSecondary: "#FAFAFA",
+        black: "#000000"
+
 
     },
     largeViewport : {
