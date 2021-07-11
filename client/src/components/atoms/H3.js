@@ -11,6 +11,9 @@ const H3 = styled.h3 `
     ${props=>props.secondary && css`
         color:${props => props.theme.colors.secondary} !important;
     `}
+    ${props=>props.black && css`
+        color:${props => props.theme.colors.black};
+    `}
 `
 
 export default H3;

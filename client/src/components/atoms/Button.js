@@ -8,6 +8,11 @@ const Button = styled.button `
         width: 360px;
         height:44px;
         border-radius:5px;
+
+        ${props=>props.mainSuscri && css`
+            width: 100%;
+            border-radius:10px;
+        `}
     `}
 
     ${props=>props.secondary && css`
@@ -21,6 +26,14 @@ const Button = styled.button `
         border-radius:5px;
     `}
 
+    /*${props=>props.mainSuscri && css`
+        border: none;
+        background-color:${props => props.theme.colors.primary};
+        color:${props => props.theme.colors.white};
+        width: 100%;
+        height:44px;
+        border-radius:10px;
+    `}*/
 
 
     

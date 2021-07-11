@@ -10,3 +10,164 @@
 .ReactModal__Overlay--before-close{
     opacity: 0;
 }
+
+/*NO BORRAR POR AHORA*/
+
+/*#courses-container {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  
+    padding: 10px;
+  }*/
+  
+  /*.course {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+    margin: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .15s;
+    
+  }
+    
+  .course-alt {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 2px 18px 0px rgb(17 17 17);
+    margin: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .15s;
+  }*/
+
+  /* CARD COURSES */
+/*.level-course {
+    display: flex;
+    flex-direction: row wrap;
+    width: 90%;
+    height: 100px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+  }*/
+
+
+
+  /*.saved-course {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 70px;
+  
+    font-family: "MonserratBold";
+  }*/
+
+  /*.line-through {
+    font-family: sans-serif !important;
+    text-decoration: d;
+  }*/
+
+
+  /*.button-course {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+  }*/
+
+  /*.btn-box{
+    background-color: #7289DA;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    color: #000;
+    transition: all 300ms;
+    padding: 10px;
+
+}
+
+.btn-boxus{
+  background-color: #7289DA;
+  border: 2px solid #FFFFFF;
+  border-radius: 15px;
+  color:yellow;
+  transition: all 300ms;
+  padding: 10px;
+
+}
+
+.btn-box:hover{
+    background-color: black;
+    color:white;
+    border: 2px solid black;;
+    box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%) ;
+    
+
+}*/
+
+/*.description-course-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px outset rgb(0 0 0 / 30%);
+  }*/
+
+  /*.list-description {
+    display: flex;
+    flex-flow: column wrap;
+  }*/
+
+  /*.description-info {
+    padding: 10px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    
+    
+  }*/
+
+  /*.logo-act {
+    padding-right: 10px;
+    padding-top: 25px;
+  }*/
+
+  /*.price-course {
+    display: flex;
+    width: 90%;
+    font-family: "MonserratBold";
+    font-size: 30px;
+    justify-content: left;
+  }*/
+
+  /*.element-description {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    margin: 10px;
+    font-size: 20px;
+    font-family: "MonserratItalic";
+    margin-bottom: 15px;
+    
+  }*/
+
+  /*@media (max-width: 869px){
+  #courses-container {
+      flex-flow: column wrap;
+      width: 90%;
+      align-items: center;
+  }
+}*/
+
+/*HASTA ACA NO BORRAR*/
