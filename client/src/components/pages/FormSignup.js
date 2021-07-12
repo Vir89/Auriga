@@ -1,13 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import validate from './validateInfo';
 import {useForm} from './useForm';
 import './Form.css';
+import GoogleLogin from 'react-google-login';
 
-const FormSignup = ({ submitForm }) => {
+const FormSignup = () => {
+
+  const [user, setUser] = useState({
+    username: '',
+    email: '',
+    password: ''
+  });
+
+
+  function addNewUser(username, email, password){
+    let newUser = {
+      username : username,
+      email : email, 
+      password : password
+    };
+    console.log(newUser);
+
+    localStorage.setItem('localUser', JSON.stringify(newUser));
+  }
+
+  function submitForm(username, email, password) {
+    addNewUser(username, email, password);
+    window.location = '/';
+  }
+
+
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
     validate
   );
+
+  //const answerGoogle = (answer) => {
+    //console.log(answer);
 
   return (
     <div className='form-content-right'>
@@ -64,14 +93,35 @@ const FormSignup = ({ submitForm }) => {
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
         <button className='form-input-btn' type='submit'>
-          Entrar
+          Registra aquí
         </button>
-        <span className='form-input-loginGoogle'>
+        {/*<span className='form-input-loginGoogle'>
           Login with Google <a href='/logingoogle'>Here</a>
-        </span>
+  </span>*/}
+
+  <br></br>
+
+    <div className="login">
+
         <span className='form-input-login'>
-          ¿Ya tienes cuenta con nosotros? Login <a href='/login'>Aquí</a>
+          ¿Ya tienes cuenta con nosotros? Haz click <a href='/login'>Aquí</a>
         </span>
+    </div>    
+    
+        <div className="autencticate">
+        <br / > < br / >
+        <GoogleLogin clientId = "600656666058-4vbo5ne30rqc84rb13e6mjkpgt384k7d.apps.googleusercontent.com"
+        buttonText = "Entra con Google"
+        //render={renderProps => (
+        // <button onClick={renderProps.onClick} disabled={renderProps.disabled}>This is my custom Google button</button>
+        //)}
+        //onSuccess = { answerGoogle }
+        //onFailure = { answerGoogle }
+        cookiePolicy = { 'single_host_origin' }
+        />
+
+        </div>
+
       </form>
     </div>
 

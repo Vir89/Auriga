@@ -24,6 +24,10 @@
     "faker": "^5.5.3",
     "mongoose": "^5.12.13",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "react-bootstrap-validation": "^0.1.11",
+    "react-google-login": "^5.2.2",
+    "react-modal": "^3.14.3",
+    "scheduler": "^0.14.0"
   }
 }
