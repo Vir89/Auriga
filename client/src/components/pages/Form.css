@@ -1,11 +1,13 @@
-/*
 
-{
+
+
     @media screen and (max-width: 360px) {
         .form-container {
             margin: 360px 640px;
         }
     }
+
+    /*
     .form-container {
         margin: 100px auto;
         width: 1000px;
