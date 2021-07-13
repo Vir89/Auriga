@@ -1,4 +1,4 @@
-const range ={
+const dueDateRange ={
     "ITV":{
         "success":60,
         "warning":30
@@ -23,10 +23,7 @@ const range ={
         "warning":30
 
     }
-    
-
-
 
 }
 
-export default range
+export default dueDateRange

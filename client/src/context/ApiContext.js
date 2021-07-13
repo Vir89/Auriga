@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useRef} from 'react';
-import range from '../data/range';
 import fetchData from "../utils/fetchData"
-import getColorAlertByDays from '../utils/getColorAlertByDays';
-import getColorAlertByStatus from '../utils/getColorAlertByStatus';
-import getColorAlertMantenimiento from '../utils/getColorAlertMantenimiento';
-import { newArrayFromState } from '../utils/newArrayFromState';
+import { setAnArrayOfElementsWithTheStatus } from '../utils/setAnArrayOfElementsWithTheStatus';
+
 
 export const ApiContext = React.createContext();
 
@@ -32,8 +29,18 @@ const APIProvider = (props) => {
         if (isInitialMount.current) {
             isInitialMount.current = false;
          } else {
-
             const kmTotal=users.user[0].cars[0].variableFeatures.kM
+            const kmToMaintance=users.user[0].cars[0].variableFeatures.nextMaintenance
+            console.log(carStatus)
+
+            setAnArrayOfElementsWithTheStatus(
+                users.user[0].cars[0].variableFeatures.status,
+                setCarStatus,
+                kmTotal,
+                kmToMaintance
+            )
+
+            /* const kmTotal=users.user[0].cars[0].variableFeatures.kM
             const kmToMaintance=users.user[0].cars[0].variableFeatures.nextMaintenance
 
             users.user[0].cars[0].variableFeatures.status.interior.map(element=>{element.status=getColorAlertByStatus(element.isOk, element.isSerious)});
@@ -92,7 +99,7 @@ const APIProvider = (props) => {
             newArrayFromState(
                 users.user[0].cars[0].variableFeatures.status.administration.map(element=>element),
                 setCarStatus
-            ) 
+            )  */
             setCarStatusLoaded(true)
             
          }

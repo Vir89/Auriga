@@ -12,12 +12,6 @@ import {
   } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import { nanoid } from 'nanoid';
-import getColorAlertByStatus from '../../utils/getColorAlertByStatus';
-import getColorAlertByDays from '../../utils/getColorAlertByDays';
-import range from '../../data/range';
-import getDaysLeft from '../../utils/getDaysLeft';
-
-
 
 
 const CarStatusContainer = () => {
@@ -27,13 +21,13 @@ const CarStatusContainer = () => {
 
     
     const accordion={
-    administration:context.carStatus[6],
-    exterior:context.carStatus[1],
-    tires:context.carStatus[3],
-    engine:context.carStatus[5],
-    interior:context.carStatus[0],
-    driving:context.carStatus[2],
-    other:context.carStatus[4],
+    administration:context.carStatus[0],
+    exterior:context.carStatus[2],
+    tires:context.carStatus[4],
+    engine:context.carStatus[3],
+    interior:context.carStatus[1],
+    driving:context.carStatus[5],
+    other:context.carStatus[6],
 
     }
     

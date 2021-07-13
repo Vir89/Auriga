@@ -14,7 +14,7 @@ export const CarStatus = (props) => {
 
               <Div alert >
                   <H3>{props.title}</H3>
-                  <Span success={props.status=="success"? true: false} warning={props.status=="warning"? true: false} danger={props.status=="danger"? true: false}><RiCheckboxBlankCircleFill/></Span>
+                  <Span success={props.status==="success"? true: false} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false}><RiCheckboxBlankCircleFill/></Span>
               </Div>
         
     )

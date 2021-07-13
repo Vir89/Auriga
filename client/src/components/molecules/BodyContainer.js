@@ -1,5 +1,4 @@
 import React, {useContext} from 'react'
-import { textData } from '../../data/textData'
 import H3 from "../atoms/H3"
 import Div from '../atoms/Div'
 import { ApiContext } from '../../context/ApiContext';

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import Section from "../atoms/Section"
 import Main from '../atoms/Main';
 import SuscriptionContainer from '../organisms/SuscriptionContainer';

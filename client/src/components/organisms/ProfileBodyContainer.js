@@ -5,23 +5,26 @@ import H3 from '../atoms/H3'
 import P from '../atoms/P'
 import { ApiContext } from '../../context/ApiContext';
 import ProfileDataInput from '../molecules/ProfileDataInput'
+import Editable from '../molecules/Editable'
 
 
 export const ProfileBodyContainer = () => {
 
     const context = useContext(ApiContext);
-    /* const [firstName,lastName,email,phoneNumber]=context.user[0].personalDetails
-    const userDetails= [ firstName,lastName,email,phoneNumber]
-
-    const details={
-        Nombre: firstName,
-        Apellidos:lastName,
-        Email:email,
-        Teléfono:phoneNumber
-    } */
-    
+    /* 
+    const [personalDetails, setPersonalDetails] = useState({
+        firstName="",
+        lastName="",
+        address="",
+        city="",
+        country="",
+        postalCode="",
+    })
+     */
     return (
         <Div column>
+
+            {/* {personalDetails.map(element=><Editable placeholder={`${input}..`}/>)} */}
 
             {/* <Div row><H2>Area Personal</H2></Div>
             {details.map((item, index)=>
