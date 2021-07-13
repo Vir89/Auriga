@@ -1,15 +1,12 @@
-import React, {useContext, useEffect, useState} from 'react'
-import {newArrayFromState} from '../../utils/newArrayFromState'
+import React, {useContext} from 'react'
+
 import Div from '../atoms/Div'
 import H2 from '../atoms/H2'
 import Alert from '../molecules/Alert'
 import {ApiContext} from '../../context/ApiContext';
-import { sortListByDate } from '../../utils/sortListByDate'
+
 import {nanoid} from "nanoid"
-import getColorAlertByDays from '../../utils/getColorAlertByDays'
-import range from '../../data/range'
-import getDaysLeft from '../../utils/getDaysLeft'
-import getColorAlertByStatus from '../../utils/getColorAlertByStatus'
+
 import sortBySeverity from '../../utils/sortBySeverity'
 
 

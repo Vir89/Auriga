@@ -12,9 +12,8 @@ import { FaThermometerEmpty } from "react-icons/fa";
 import P from '../atoms/P'
 import H3 from '../atoms/H3'
 import Span from '../atoms/Span'
-import Button from '../atoms/Button';
 import Div from '../atoms/Div';
-import dayjs from 'dayjs';
+import dayjs from 'dayjs'; 
 import Img from '../atoms/Img';
 
 
@@ -46,7 +45,7 @@ const Alert = (props) => {
         
             <Card alert onClick={handleToggle}>
 
-                <Div column success={props.status=="success"? true: false} warning={props.status=="warning"? true: false} danger={props.status=="danger"? true: false} span><Span>{icons[props.type]}</Span></Div>
+                <Div column success={props.status==="success"? true: false} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false} span><Span>{icons[props.type]}</Span></Div>
                 <Div column center padding>
                     
                     
@@ -54,7 +53,7 @@ const Alert = (props) => {
                     <H3>{props.title}</H3> 
                    
 
-
+                    {(isDisplaying && props.dueDate) && <P alertDescription> Fecha límite: {dayjs(props.dueDate).format('DD/MM/YYYY')}</P>}
                     {isDisplaying && (<P alertDescription>{props.description}</P>)}
                     {isDisplaying && (<Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9lsmUsiO6xeqX88YLXk3_FsOiLMmV3WnYA&usqp=CAU"></Img>)}
                     

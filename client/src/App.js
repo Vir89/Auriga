@@ -1,6 +1,6 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Navbar from './components/organisms/Navbar';
-import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './components/pages/Home';
 import Alta from './components/pages/Alta';
 import Profile from './components/pages/Profile';
@@ -42,10 +42,11 @@ const App = (props) => {
 
           <Switch>
             <Route exact path='/'  render={props => <Home {...props} /> }/>
+            <Route path='/area-coches'  render={props => <Car {...props} /> }/> 
             <Route path='/registro'  render={props => <Alta {...props} /> }/>
             <Route path='/login'  render={props => <Login {...props} /> }/>
             <Route path='/logingoogle'  render={props => <SSOLogin {...props} /> }/>
-            <Route path='/area-coches'  render={props => <Car {...props} /> }/>
+            
             <Route path='/area-personal' render={props => <Profile {...props} /> }/>
             <Route path='/mensajes' />
             <Route path='/suscripciones' render={props => <MoreTypeSuscription {...props} /> }/>
