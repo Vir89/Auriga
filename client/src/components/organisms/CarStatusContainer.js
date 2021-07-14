@@ -10,7 +10,8 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
   } from 'react-accessible-accordion';
-import 'react-accessible-accordion/dist/fancy-example.css';
+/* import 'react-accessible-accordion/dist/fancy-example.css'; */
+import '../../styles/accordion.css';
 import { nanoid } from 'nanoid';
 
 
