@@ -89,7 +89,7 @@
                         [ 
                             {
                                 "title": "Multa",
-                                "type": "administration",
+                                "type": "Administración",
                                 "img": "foto",
                                 "statusDescription": "PAGADA",
                                 "isOk":true,
@@ -101,7 +101,7 @@
                                 "title": "Mantenimiento",
                                 "alert": "Próxima revisión",
                                 "dueDate": "2021-08-01",
-                                "type": "repair",
+                                "type": "Administración",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
@@ -109,7 +109,7 @@
                             {
                                 "title":"Seguro",
                                 "alert": "Fecha próxima de caducidad",
-                                "type":"administration",
+                                "type":"Administración",
                                 "coverage": "todo",
                                 "dueDate": "2021-07-31",
                                 "company": "Mafre"
@@ -118,7 +118,7 @@
                                 "title": "ITV",
                                 "alert": "Fecha próxima de caducidad",
                                 "dueDate": "2021-09-10",
-                                "type": "administration",
+                                "type": "Administración",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
@@ -126,7 +126,7 @@
                             {
                                 "title": "Impuesto de matriculación",
                                 "dueDate": "2021-09-15",
-                                "type": "administration",
+                                "type": "Administración",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             }  
@@ -138,7 +138,7 @@
                             {
                                 "title": "Chapa",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "Rozadura en la parte trasera",
                                 "isOk":false,
@@ -148,7 +148,7 @@
                                 
                                 "title": "Pintura",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "daño grave en la pintura",
                                 "isOk":false,
@@ -158,7 +158,7 @@
                             
                                 "title": "Vidrios",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -167,7 +167,7 @@
                             {
                                 "title": "Luces e indicadores",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "Luz fundida",
                                 "isOk":false,
@@ -177,7 +177,7 @@
                             
                                 "title": "Escobillas limpiaparabrisas",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "Descripcion estado",
                                 "isOk":true,
@@ -191,7 +191,7 @@
                             
                                 "title": "Dibujo del Neumático Del Izq",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "descripcion",
                                 "isOk":true,
@@ -202,7 +202,7 @@
                             
                                 "title": "Dibujo del Neumático Del Dcho",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "descripcion",
                                 "isOk":true,
@@ -213,7 +213,7 @@
                             
                                 "title": "Dibujo del Neumático Tras Izq",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "descripcion",
                                 "isOk":false,
@@ -224,7 +224,7 @@
                             
                                 "title": "Dibujo del Neumático Tras Dcho",
                                 "dueDate": "",
-                                "type": "tires",                         
+                                "type": "Ruedas",                         
                                 "img": "foto",
                                 "statusDescription": "descripcion",
                                 "isOk":false,
@@ -235,7 +235,7 @@
                             
                                 "title": "Integridad de Neumáticos",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "pellizcos en rueda izquierda",
                                 "isOk":false,
@@ -245,7 +245,7 @@
                             
                                 "title": "Presión neumáticos",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "Presión baja",
                                 "pressure":1.8,
@@ -257,7 +257,7 @@
                                 
                                 "title": "Llantas",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -267,7 +267,7 @@
                             
                                 "title": "Pastilla de frenos",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -281,7 +281,7 @@
                                 
                                 "title": "Aspecto motor parado",
                                 "dueDate": "",
-                                "type": "engine",
+                                "type": "Motor",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -291,7 +291,7 @@
                             
                                 "title": "Nivel de aceite",
                                 "dueDate": "",
-                                "type": "oil",
+                                "type": "Motor",
                                 "img": "foto",
                                 "statusDescription": "Nivel de aceite cercano a límite",
                                 "isOk":false,
@@ -301,7 +301,7 @@
                             
                                 "title": "Nivel de refrigerante",
                                 "dueDate": "",
-                                "type": "liquid",
+                                "type": "Motor",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -311,7 +311,7 @@
                                 
                                 "title": "Nivel líquido parabrisas",
                                 "dueDate": "",
-                                "type": "liquid",
+                                "type": "Motor",
                             
                                 "img": "foto",
                                 "statusDescription": "",
@@ -322,7 +322,7 @@
                                 
                                 "title": "Aspecto motor ralentí",
                                 "dueDate": "",
-                                "type": "engine",
+                                "type": "Motor",
                         
                                 "img": "foto",
                                 "statusDescription": "",
@@ -338,7 +338,7 @@
                                 "title": "Daños en el interior",
                                 "alert": "Cita para próxima limpieza",
                                 "dueDate": "",
-                                "type": "interior",
+                                "type": "Interior",
                                 "img": "foto",
                                 "statusDescription": "Desprendimiento del retrovisor",
                                 "isOk":false,
@@ -349,7 +349,7 @@
                                 "title": "Estado de limpieza",
                                 "alert": "Estado de limpieza inadecuado",
                                 "dueDate": "",
-                                "type": "cleaning",
+                                "type": "Interior",
                                 "img": "foto",
                                 "statusDescription": "Necesidad de limpieza integral",
                                 "isOk":false,
@@ -365,7 +365,7 @@
                             
                                 "title": "Conducción Dinámica",
                                 "dueDate": "",
-                                "type": "driving",
+                                "type": "Conducción",
                                 "img": "foto",
                                 "statusDescription": "Dirección en mal estado",
                                 "isOk":false,
@@ -375,7 +375,7 @@
                             
                                 "title": " Conducción Motor",
                                 "dueDate": "2021-06-09",
-                                "type": "driving",
+                                "type": "Conducción",
                                 "img": "foto",
                                 "statusDescription": "Potencia del vehículo inadecuada, vigilar para la próxima visita",
                                 "isOk":false,
@@ -436,7 +436,7 @@
                             {
                                 "title":"Seguro",
                                 "alert": "Fecha próxima de caducidad",
-                                "type":"administration",
+                                "type":"Administración",
                                 "coverage": "todo",
                                 "dueDate": "2021-10-31",
                                 "company": "Allianz"
@@ -445,7 +445,7 @@
                                 "title": "ITV",
                                 "alert": "Fecha próxima de caducidad",
                                 "dueDate": "2022-01-10",
-                                "type": "administration",
+                                "type": "Administración",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
@@ -453,20 +453,20 @@
                                 "title": "Mantenimiento",
                                 "alert": "Próxima revisión",
                                 "dueDate": "2021-08-01",
-                                "type": "repair",
+                                "type": "Administración",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
                             {
                                 "title": "Impuesto de matriculación",
                                 "dueDate": "2021-10-15",
-                                "type": "administration",
+                                "type": "Administración",
                                 "img": "foto",
                                 "statusDescription": "descripcion estado"
                             },
                             {
                                 "title": "Multa",
-                                "type": "administration",
+                                "type": "Administración",
                                 "img": "foto",
                                 "statusDescription": "Ninguna multa",
                                 "amount": 600,
@@ -481,7 +481,7 @@
                             {
                                 "title": "Chapa",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "Abolladura grave en la puerta delantera izquierda",
                                 "isOk":false,
@@ -491,7 +491,7 @@
                                 
                                 "title": "Pintura",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "Rozadura en la parte izquierda",
                                 "isOk":false,
@@ -501,7 +501,7 @@
                             
                                 "title": "Vidrios",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "Luna de lantera picada",
                                 "isOk":false,
@@ -510,7 +510,7 @@
                             {
                                 "title": "Luces e indicadores",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -520,7 +520,7 @@
                                
                                 "title": "Escobillas limpiaparabrisas",
                                 "dueDate": "",
-                                "type": "exterior",
+                                "type": "Exterior",
                                 "img": "foto",
                                 "statusDescription": "Descripcion estado",
                                 "isOk":true,
@@ -534,7 +534,7 @@
                                
                                 "title": "Dibujo del Neumático Del Izq",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":false,
@@ -545,7 +545,7 @@
                                
                                 "title": "Dibujo del Neumático Del Dcho",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -556,7 +556,7 @@
                                
                                 "title": "Dibujo del Neumático Tras Izq",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":false,
@@ -567,7 +567,7 @@
                                
                                 "title": "Dibujo del Neumático Tras Dcho",
                                 "dueDate": "",
-                                "type": "tires",                         
+                                "type": "Ruedas",                         
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -578,7 +578,7 @@
                             
                                 "title": "Integridad de Neumáticos",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -588,7 +588,7 @@
                               
                                 "title": "Presión neumáticos",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "Presión muy baja, riesgo de desgaste o pinchazo",
                                 "pressure":1.0,
@@ -600,7 +600,7 @@
                                 
                                 "title": "Llantas",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":false,
@@ -610,7 +610,7 @@
                              
                                 "title": "Pastilla de frenos",
                                 "dueDate": "",
-                                "type": "tires",
+                                "type": "Ruedas",
                                 "img": "foto",
                                 "statusDescription": "Pastillas de freno con bajo grosor",
                                 "isOk":true,
@@ -624,7 +624,7 @@
                                 
                                 "title": "Aspecto motor parado",
                                 "dueDate": "",
-                                "type": "engine",
+                                "type": "Motor",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -634,7 +634,7 @@
                                
                                 "title": "Nivel de aceite",
                                 "dueDate": "",
-                                "type": "oil",
+                                "type": "Motor",
                                 "img": "foto",
                                 "statusDescription": "Nivel de aceite muy bajo, riesgo de daño al motor",
                                 "isOk":false,
@@ -644,7 +644,7 @@
                              
                                 "title": "Nivel de refrigerante",
                                 "dueDate": "",
-                                "type": "liquid",
+                                "type": "Motor",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -654,8 +654,7 @@
                                 
                                 "title": "Nivel líquido parabrisas",
                                 "dueDate": "",
-                                "type": "liquid",
-                          
+                                "type": "Motor",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -665,8 +664,7 @@
                                 
                                 "title": "Aspecto motor ralentí",
                                 "dueDate": "",
-                                "type": "engine",
-                               
+                                "type": "Motor",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -681,7 +679,7 @@
                                 "title": "Daños en el interior",
                                 "alert": "Integridad de vehículo compremetida",
                                 "dueDate": "",
-                                "type": "interior",
+                                "type": "Interior",
                                 "img": "foto",
                                 "statusDescription": "Manchas en los asientos traseros",
                                 "isOk":false,
@@ -692,7 +690,7 @@
                                 "title": "Estado de limpieza",
                                 "alert": "Estado de limpieza inadecuado",
                                 "dueDate": "",
-                                "type": "cleaning",
+                                "type": "Interior",
                                 "img": "foto",
                                 "statusDescription": "Necesidad de limpieza completa",
                                 "isOk":false,
@@ -707,8 +705,7 @@
                              
                                 "title": "Dinámica",
                                 "dueDate": "",
-                                "type": "driving",
-                            
+                                "type": "Conducción",
                                 "img": "foto",
                                 "statusDescription": "",
                                 "isOk":true,
@@ -718,7 +715,7 @@
                                
                                 "title": "Motor",
                                 "dueDate": "2021-06-09",
-                                "type": "driving",
+                                "type": "Conducción",
                                 "img": "foto",
                                 "statusDescription": "Sonoridad excesiva, vigilar para la próxima visita",
                                 "isOk":false,

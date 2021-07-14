@@ -15,23 +15,25 @@ import Span from '../atoms/Span'
 import Div from '../atoms/Div';
 import dayjs from 'dayjs'; 
 import Img from '../atoms/Img';
+import selectIcon from '../../utils/selectIcon';
 
-
-
-const icons={
+const icons = {
+    Administración:<IoDocumentText/>,
+    Ruedas:  <GiCarWheel/>,
+    Exterior:<AiFillCar/>,
+    Interior:<AiFillCar/>,
+    Motor:<AiFillSetting/>,
+    Conducción:<GiSteeringWheel/>,
+    Limpieza:<MdLocalCarWash/>,
     danger: <IoAlertCircleSharp/>,
     repair: <FaWrench/>,
     Aviso: <RiCheckboxBlankCircleFill/>,
-    administration:<IoDocumentText/>,
-    tires:  <GiCarWheel/>,
-    exterior:<AiFillCar/>,
-    interior:<AiFillCar/>,
-    cleaning:<MdLocalCarWash/>,
-    engine:<AiFillSetting/>,
-    driving:<GiSteeringWheel/>,
     oil:<FaOilCan/>,
     liquid:<FaThermometerEmpty/>
 }
+
+
+
 
 const Alert = (props) => {
     const [isDisplaying, setIsDisplaying] = useState(false)
@@ -45,18 +47,15 @@ const Alert = (props) => {
         
             <Card alert onClick={handleToggle}>
 
-                <Div column success={props.status==="success"? true: false} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false} span><Span>{icons[props.type]}</Span></Div>
+                <Div column span><Span success={props.status==="success"? true: false} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false}>{icons[selectIcon(props.title, props.type)] }</Span></Div>
                 <Div column center padding>
                     
-                    
                   {/*  <H3 secondary>{props.dueDate && dayjs(props.dueDate).format('DD/MM/YYYY')}</H3> */} 
-                    <H3>{props.title}</H3> 
-                   
-
+                    <H3>{props.type} / {props.title}</H3> 
+                
                     {(isDisplaying && props.dueDate) && <P alertDescription> Fecha límite: {dayjs(props.dueDate).format('DD/MM/YYYY')}</P>}
                     {isDisplaying && (<P alertDescription>{props.description}</P>)}
                     {isDisplaying && (<Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9lsmUsiO6xeqX88YLXk3_FsOiLMmV3WnYA&usqp=CAU"></Img>)}
-                    
                     
                 </Div>
                     
