@@ -12,11 +12,17 @@ import H3Cars from '../atoms/H3Cars';
 import H2Client from '../atoms/H2Client';
 import H2Auriga from '../atoms/H2Auriga';
 import DivNavBar from '../atoms/DivNavBar';
+import styled from 'styled-components';
 
+ const StyledLink = styled(Link)`
+  text-decoration: none;
+  margin: 1rem;
+  position: relative;
+  z-index: 90,
+`
 
 export const NavMenuLinks = (props) => {
 
-    
    
     return (
         <NavMenu  sidebar={props.sidebar}>               
@@ -28,17 +34,17 @@ export const NavMenuLinks = (props) => {
                 <AiIcons.AiOutlineClose onClick={props.showSidebar}/>
             </Link>
         </DivNavBar>
-                <LiItems>
+                {/* <LiItems>
                     <H2Client> Hola (Nombre del Cliente)</H2Client>
                     <H3Cars> Coches: (Marca-Modelo)<IoIcons.IoIosArrowDown /> </H3Cars>
-                </LiItems>
+                </LiItems> */}
                 {
                     SidebarData.map((item, index) => {
                         return (
                             <LiNavText key={index}  onClick={props.showSidebar}>
-                                <Link to={item.path}>                                                                                                                                   
+                                <StyledLink to={item.path}>                                                                                                                                   
                                    {item.icon} <SpanTitle>  {item.title} <IoIcons.IoIosArrowForward /></SpanTitle>
-                                </Link>
+                                </StyledLink>
                                 
                             </LiNavText>               
                         )

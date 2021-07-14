@@ -8,6 +8,7 @@ import Car from './components/pages/Car';
 import Login from './components/pages/Login';
 import MoreTypeSuscription from './components/molecules/MoreTypeSuscription';
 import SSOLogin from './components/pages/SSOLogin';
+import Slider from './components/organisms/Slider';
 //import { useDispatch, useSelector } from 'react-redux';
 //import { history } from '../_helpers';
 //import { alertActions } from '../_actions';
@@ -52,6 +53,7 @@ const App = (props) => {
             <Route path='/suscripciones' render={props => <MoreTypeSuscription {...props} /> }/>
             <Route path='/contacto' />
             <Route path='/cerrar-sesion' />
+            <Route path='/swiper' render={props => <Slider {...props} /> }/>
           </Switch>
 
     </Router>

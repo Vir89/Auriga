@@ -27,8 +27,7 @@ const Home = (props) => {
 
     return (
         
-        <Main>
-            
+        <Main>            
             <Section>
                 {context.usersLoaded&&<HomeMainContent/>}
             </Section>
@@ -39,10 +38,7 @@ const Home = (props) => {
 
             <Section>
                 {context.usersLoaded&&<AlertsContainer/>}
-            </Section>
-
- 
-            
+            </Section>            
         </Main>
 
     )
