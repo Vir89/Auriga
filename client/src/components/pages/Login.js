@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
 import Button from '../atoms/Button';
 import Div from '../atoms/Div';
 import H2 from '../atoms/H2';
@@ -8,6 +9,7 @@ import Input from '../atoms/Input';
 import Main from '../atoms/Main';
 import Section from '../atoms/Section';
 import './Form.css';
+
 
 const Login =()=> {
     const [inputs, setInputs] = useState({

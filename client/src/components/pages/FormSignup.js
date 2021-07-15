@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import {useForm} from './useForm';
 import './Form.css';
 import GoogleLogin from 'react-google-login';
+import validateInfo from './validateInfo';
 
 const FormSignup = () => {
 
@@ -33,15 +34,16 @@ const FormSignup = () => {
 
 
   const { handleChange, handleSubmit, values, errors } = useForm(
-    submitForm,
-    
+
+    submitForm, validateInfo
+
   );
 
   //const answerGoogle = (answer) => {
     //console.log(answer);
 
   return (
-    <div className='form-content'>
+    <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
         <h1> Auriga </h1>
         <div className='form-inputs'>
@@ -95,7 +97,9 @@ const FormSignup = () => {
         <button className='form-input-btn' type='submit'>
           Registra aquí
         </button>
-        
+        {/*<span className='form-input-loginGoogle'>
+          Login with Google <a href='/logingoogle'>Here</a>
+  </span>*/}
 
   <br></br>
 
@@ -107,7 +111,7 @@ const FormSignup = () => {
         </span>
     </div>    
     
-        <div className="autencticate-google">
+        <div className="autencticate">
         <br / > < br / >
         <GoogleLogin clientId = "600656666058-4vbo5ne30rqc84rb13e6mjkpgt384k7d.apps.googleusercontent.com"
         buttonText = "Entra con Google"
