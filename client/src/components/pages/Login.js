@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 import Button from '../atoms/Button';
 import Div from '../atoms/Div';
 import H2 from '../atoms/H2';
@@ -9,7 +8,7 @@ import Input from '../atoms/Input';
 import Main from '../atoms/Main';
 import Section from '../atoms/Section';
 import './Form.css';
-
+import GoogleIcon from '../atoms/GoogleIcon';
 
 const Login =()=> {
     const [inputs, setInputs] = useState({
@@ -56,7 +55,9 @@ const Login =()=> {
                             <label>Email</label>
                             <Input type="email" name="email" defaultValue={email} onChange={handleChange} className={'form-control' + (submitted && !email ? ' is-invalid' : '')} />
                             {submitted && !email &&
-                                <div className="invalid-feedback">Email es requerido</div>
+                                <div className="invalid-feedback">
+                                    Email es requerido
+                                </div>
                             }
                         </div>
                         <div className="form-group">
@@ -77,6 +78,18 @@ const Login =()=> {
                             <Div row>
                             <P>¿Aún no estas registrado?   </P>
                             <Link to="/registro" className="btn btn-link"> Registro</Link>
+                            </Div>
+                            <Div authSocialNetworks>
+                                <Div  googleBtn >
+                                    <Div googleIconWrapper>
+                                        <GoogleIcon src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
+                                    </Div>
+                                    <Div row center>
+                                        <P googleText>
+                                            <b>Sign in with google</b>
+                                        </P>
+                                    </Div>
+                                </Div>
                             </Div>
                             
                         </div>

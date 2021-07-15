@@ -70,16 +70,65 @@ export const Div = styled.div `
     ${props=>props.row && css`
         display: flex;
         flex-direction: row;
-        padding:10px;
+        
 
         ${props=>props.spaceBet && css`
             justify-content: space-between;
         `}
+        ${props=>props.center && css`
+            justify-content:center;
+           
+            
+        `}
     `}
 
+    ${props=>props.googleBtn && css`
+        
+        cursor: pointer;
+        margin-top: 5px;
+        width: 90%;
+        height: 42px;
+      
+        background-color: ${props => props.theme.colors.googleBlue};
+        border-radius: 2px;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+        transition: box-shadow .3s ease;
+        &:hover {
+        box-shadow: 0 0 6px ${props => props.theme.colors.googleBlue};
+        }
+        &:active {
+            background: ${props => props.theme.colors.hoverButton};
+        }
 
+        
+    `}
+
+    ${props=>props.authSocialNetworks && css`
+    
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        
+    `}
 
     
+
+
+    ${props=>props.googleIconWrapper && css`
+        position: absolute;
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: ${props => props.theme.colors.white};
+        
+    `}
+   
 `
 
 export default Div;

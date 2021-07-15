@@ -1,8 +1,12 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 const Img = styled.img `
      aspect-ratio: auto;
-        width: 250px;
+     width: 250px;
+
+     
+
+     
 
 
 `

@@ -5,7 +5,7 @@ const Button = styled.button `
         border: none;
         background-color:${props => props.theme.colors.primary};
         color:${props => props.theme.colors.white};
-        width: 360px;
+        width: 90%;
         height:44px;
         border-radius:5px;
 
