@@ -18,9 +18,10 @@ const HeaderContainer = () => {
             
                 <Img src={context.user[0].cars[0].staticFeatures.Image}/>
             </Div>
+            <Div column center>
             <H2>{context.user[0].cars[0].staticFeatures.brand} {context.user[0].cars[0].staticFeatures.model}</H2>
             <P>{context.user[0].cars[0].staticFeatures.year} - {context.user[0].cars[0].variableFeatures.kM} kms</P>
-
+            </Div>
         </Div>
     )
 }
