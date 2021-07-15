@@ -8,6 +8,7 @@ const Button = styled.button `
         width: 90%;
         height:44px;
         border-radius:5px;
+        margin: 8px;
 
         ${props=>props.mainSuscri && css`
             width: 100%;

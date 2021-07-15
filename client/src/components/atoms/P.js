@@ -16,7 +16,7 @@ const P = styled.p `
 
     ${props=>props.googleText && css`
         float: right;
-        margin: 11px 40px 0 0;
+        margin: 11px 89px 0 0;
         color: ${props => props.theme.colors.white};
         font-size: 14px;
         letter-spacing: 0.2px;

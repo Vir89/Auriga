@@ -88,7 +88,7 @@ export const Div = styled.div `
         margin-top: 5px;
         width: 90%;
         height: 42px;
-      
+        margin-left: -19px;
         background-color: ${props => props.theme.colors.googleBlue};
         border-radius: 2px;
         box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);

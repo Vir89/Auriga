@@ -84,11 +84,11 @@ const Login =()=> {
                                     <Div googleIconWrapper>
                                         <GoogleIcon src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
                                     </Div>
-                                    <Div row center>
+                                    
                                         <P googleText>
                                             <b>Sign in with google</b>
                                         </P>
-                                    </Div>
+                                    
                                 </Div>
                             </Div>
                             
