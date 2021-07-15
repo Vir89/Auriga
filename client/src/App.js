@@ -22,15 +22,15 @@ const App = (props) => {
 
             
             <Route path='/registro'  render={props => <FormSignup {...props} /> }/>
-            <Route path='/home'  render={props => <Home {...props} /> }/>
+            <Route exact path='/'  render={props => <Home {...props} /> }/>
             <Route path='/area-coches'  render={props => <Car {...props} /> }/>
             <Route path='/area-personal' render={props => <Profile {...props} /> }/>
             <Route path='/mensajes' />
             <Route path='/suscripciones' render={props => <MoreTypeSuscription {...props} /> }/>
             <Route path='/contacto' />
             <Route path='/cerrar-sesion' />
-            <Route exact path='/' render={props => <Login {...props} /> }/>
-            <Redirect from ="*" to= "/"/>
+            {/* <Route exact path='/' render={props => <Login {...props} /> }/> */}
+           
           </Switch>
 
     </Router>
