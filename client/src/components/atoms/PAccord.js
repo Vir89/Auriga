@@ -1,29 +1,22 @@
 import styled, {css} from "styled-components";
 
 
-const P = styled.p `
+const PAccord = styled.p `
     font-size: 1.1rem;
     padding-left:5px;
+    padding-top:10px;
+    padding-bottom:10px;
     font-weight: ${props => props.theme.textWeight.regular};
     color:${props => props.theme.colors.primary};
-
-    ${props=>props.alertDescription && css`
-        padding-top:15px;
-        padding-bottom:15px;
-
-        
-    `}
-
-    /* ${props=>!props.isDisplaying && css`
+    ${props=>!props.isDisplaying && css`
         display:none;
 
         
-    `} */
-
+    `} 
     
 
 
     
 `
 
-export default P
+export default PAccord

@@ -12,6 +12,7 @@ const NavMenu = styled.nav `
     ${props=>!props.sidebar && css`
     top: 0; 
     transition: 350ms;`}
+    z-index: 1;
 `
 
 export default NavMenu;

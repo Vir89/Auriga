@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 const Img = styled.img `
-   width: 156px; /*or your image's width*/
-    height: 100px; 
-    object-fit: cover;
+     aspect-ratio: auto;
+        width: 250px;
+
+
 `
 
 export default Img;
