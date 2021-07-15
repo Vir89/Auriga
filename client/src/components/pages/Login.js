@@ -9,7 +9,7 @@ import Main from '../atoms/Main';
 import Section from '../atoms/Section';
 import './Form.css';
 import GoogleIcon from '../atoms/GoogleIcon';
-
+import Ahref from '../atoms/Ahref'
 const Login =()=> {
     const [inputs, setInputs] = useState({
         email: '',
@@ -73,7 +73,7 @@ const Login =()=> {
                             }
                             <Button main>
                             
-                                Entrar
+                                <Ahref href="/home">Entrar</Ahref>
                             </Button>
                             <Div row>
                             <P>¿Aún no estas registrado?   </P>
@@ -83,13 +83,9 @@ const Login =()=> {
                                 <Div  googleBtn >
                                     <Div googleIconWrapper>
                                         <GoogleIcon src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
+                                    </Div>               
+                                        <Ahref google href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Sign in with google</Ahref>
                                     </Div>
-                                    
-                                        <P googleText>
-                                            <b>Sign in with google</b>
-                                        </P>
-                                    
-                                </Div>
                             </Div>
                             
                         </div>

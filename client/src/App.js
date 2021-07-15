@@ -21,9 +21,9 @@ const App = (props) => {
 
           <Switch>
 
-            
+            <Route exact path='/' render={props => <Login {...props} /> }/>
             <Route path='/registro'  render={props => <FormSignup {...props} /> }/>
-            <Route exact path='/'  render={props => <Home {...props} /> }/>
+            <Route path='/home'  render={props => <Home {...props} /> }/>
             <Route path='/area-coches'  render={props => <Car {...props} /> }/>
             <Route path='/area-personal' render={props => <Profile {...props} /> }/>
             <Route path='/mensajes' />
@@ -32,8 +32,6 @@ const App = (props) => {
             <Route path='/cerrar-sesion' />
 
             <Route exact path='/login' render={props => <Login {...props} /> }/>
-
-            <Route exact path='/slider' render={props => <Slider {...props} /> }/>
 
             {/*<Redirect from ="*" to= "/"/>*/}
 
