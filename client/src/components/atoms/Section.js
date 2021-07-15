@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 const Section = styled.section `
     margin: 20px 8px;
@@ -6,6 +6,11 @@ const Section = styled.section `
     padding: 5px 5px 5px 10px;
     border-radius: 5px;
     background-color:${props => props.theme.colors.white};
+
+    ${props=>props.form && css`
+        padding-left:5%;
+
+    `}
 `
 
 export default Section;

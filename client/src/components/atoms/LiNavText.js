@@ -8,6 +8,7 @@ const LiNavText = styled.li `
     height: 60px;
     margin-left: 10px;
     font-weight: ${props => props.theme.textWeight.regular};
+    z-index: 1;
    
 `
 

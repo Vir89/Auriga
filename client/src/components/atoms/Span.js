@@ -5,7 +5,7 @@ const Span = styled.span `
     justify-content: center;
     align-items: center;
     padding:10px;
-    font-size: 20px;
+    font-size: 25px;
     margin: 0px 5px 0px 5px;
     border-radius: 50px;
     
