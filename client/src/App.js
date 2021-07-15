@@ -8,6 +8,7 @@ import Profile from './components/pages/Profile';
 import Car from './components/pages/Car';
 import Login from './components/pages/Login';
 import MoreTypeSuscription from './components/molecules/MoreTypeSuscription';
+import Slider from './components/organisms/Slider';
 
 
 const App = (props) => {
@@ -29,7 +30,11 @@ const App = (props) => {
             <Route path='/suscripciones' render={props => <MoreTypeSuscription {...props} /> }/>
             <Route path='/contacto' />
             <Route path='/cerrar-sesion' />
+
             <Route exact path='/login' render={props => <Login {...props} /> }/>
+
+            <Route exact path='/slider' render={props => <Slider {...props} /> }/>
+
             {/*<Redirect from ="*" to= "/"/>*/}
 
           </Switch>

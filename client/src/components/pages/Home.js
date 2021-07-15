@@ -6,6 +6,7 @@ import { AlertsContainer } from '../organisms/AlertsContainer';
 //import { userActions } from '../_actions';
 import HomeMainContent from '../organisms/HomeMainContent';
 import {ApiContext} from '../../context/ApiContext';
+import Slider from '../organisms/Slider';
 
 
 const Home = (props) => {
@@ -29,7 +30,9 @@ const Home = (props) => {
         
         <Main>            
             <Section>
-                {context.usersLoaded&&<HomeMainContent/>}
+
+            <Slider/>
+                {/* {context.usersLoaded&&<HomeMainContent/>}
             </Section>
 
             <Section>
@@ -37,7 +40,7 @@ const Home = (props) => {
             </Section>
 
             <Section>
-                {context.usersLoaded&&<AlertsContainer/>}
+                {context.usersLoaded&&<AlertsContainer/>} */}
             </Section>            
         </Main>
 
