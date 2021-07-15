@@ -1,19 +1,41 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import Div from '../atoms/Div'
 import H2 from '../atoms/H2'
 import H3 from '../atoms/H3'
 import P from '../atoms/P'
 import { ApiContext } from '../../context/ApiContext';
+import ProfileDataInput from '../molecules/ProfileDataInput'
+import Editable from '../molecules/Editable'
 
 
 export const ProfileBodyContainer = () => {
 
     const context = useContext(ApiContext);
-    
+    /* 
+    const [personalDetails, setPersonalDetails] = useState({
+        firstName="",
+        lastName="",
+        address="",
+        city="",
+        country="",
+        postalCode="",
+    })
+     */
     return (
         <Div column>
 
-            <Div row><H2>Area Personal</H2></Div>
+            {/* {personalDetails.map(element=><Editable placeholder={`${input}..`}/>)} */}
+
+            {/* <Div row><H2>Area Personal</H2></Div>
+            {details.map((item, index)=>
+                    <ProfileDataInput
+                    key = {index}
+                    item = {item}
+                   />)}
+ */}
+        
+
+            {/* <Div row><H2>Area Personal</H2></Div>
             <Div column borderBottom >
                     <H3>Nombre</H3>
                     <P>{context.user[0].personalDetails.firstName}</P>
@@ -39,7 +61,7 @@ export const ProfileBodyContainer = () => {
                 < P>{context.user[0].personalDetails.phoneNumber}</P>
                
             </Div>
-
+ */}
             <Div column borderBottom>
                 
                 <H3>Dirección Principal</H3>

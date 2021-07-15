@@ -9,11 +9,14 @@ const theme = {
         tertiary : "#B2D9DB",
         quaternary : "#517B9A",
         quinary :"#F3FAEF",
-        danger: "#DC3545",
-        warning:"#FFC107",
-        success:"#66A76F",
+        danger: "#D5494C",
+        warning:"#EBA900",
+        success:"#2FB695",
         white: "#FFFFFF",
-        lightDanger: "#FF9187"
+        lightDanger: "#FF9187",
+        buttonSecondary: "#FAFAFA",
+        black: "#000000"
+
 
     },
     largeViewport : {

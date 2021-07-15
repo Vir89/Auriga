@@ -2,12 +2,11 @@ import styled, {css} from "styled-components";
 
 export const Div = styled.div `
     ${props=>props.alert && css`
-        width: 95%;
-        margin:5px;
+        width: 101%;
+        margin: 9px -2px;
         display:flex;
         flex-flow: row wrap;
         padding: 10px;
-        border-radius: 50px;
         align-items: center;
         justify-content: space-between;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -60,6 +59,15 @@ export const Div = styled.div `
         margin: 0;
         padding: 0;
     `}
+
+    ${props=>props.form && css`
+        background-color: "#1D4A7E";
+     `}
+
+    ${props=>props.socialMedia && css`
+        background-color: "#ffff";
+     `}
+    
 
     ${props=>props.row && css`
         display: flex;

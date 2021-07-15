@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import validate from './validateInfo';
 import {useForm} from './useForm';
@@ -30,9 +31,10 @@ const FormSignup = () => {
   }
 
 
+
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
-    validate
+    Validate
   );
 
   //const answerGoogle = (answer) => {
@@ -41,16 +43,14 @@ const FormSignup = () => {
   return (
     <div className='form-content'>
       <form onSubmit={handleSubmit} className='form' noValidate>
-        <h1>
-          ¡Quédate con nosotros hoy! ¿Y si te registras? 
-        </h1>
+        <h1> Auriga </h1>
         <div className='form-inputs'>
           <label className='form-label'>Nombre de usuario</label>
           <input
             className='form-input'
             type='text'
             name='username'
-            placeholder='Introduce tu nombre de usuario'
+            placeholder='Enter your username'
             value={values.username}
             onChange={handleChange}
           />
@@ -62,7 +62,7 @@ const FormSignup = () => {
             className='form-input'
             type='email'
             name='email'
-            placeholder='Introduce tu email'
+            placeholder='Enter your email'
             value={values.email}
             onChange={handleChange}
           />
@@ -74,19 +74,19 @@ const FormSignup = () => {
             className='form-input'
             type='password'
             name='password'
-            placeholder='Introduce tu contraseña'
+            placeholder='Enter your password'
             value={values.password}
             onChange={handleChange}
           />
           {errors.password && <p>{errors.password}</p>}
         </div>
         <div className='form-inputs'>
-          <label className='form-label'>Confirma Contraseña</label>
+          <label className='form-label'>Confirma la Contraseña</label>
           <input
             className='form-input'
             type='password'
             name='password2'
-            placeholder='Confirma tu contraseña'
+            placeholder='Confirm your password'
             value={values.password2}
             onChange={handleChange}
           />
@@ -103,6 +103,7 @@ const FormSignup = () => {
 
         <span className='form-input-login'>
           ¿Ya tienes cuenta con nosotros? Haz click <a href='/login'>Aquí</a>
+
         </span>
     </div>    
     
@@ -122,9 +123,7 @@ const FormSignup = () => {
 
       </form>
     </div>
-
-);
+  );
 };
-
 
 export default FormSignup;

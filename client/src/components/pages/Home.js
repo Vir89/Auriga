@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import Section from "../atoms/Section"
 import Main from '../atoms/Main';
 import SuscriptionContainer from '../organisms/SuscriptionContainer';
@@ -27,8 +27,7 @@ const Home = (props) => {
 
     return (
         
-        <Main>
-            
+        <Main>            
             <Section>
                 {context.usersLoaded&&<HomeMainContent/>}
             </Section>
@@ -39,10 +38,7 @@ const Home = (props) => {
 
             <Section>
                 {context.usersLoaded&&<AlertsContainer/>}
-            </Section>
-
- 
-            
+            </Section>            
         </Main>
 
     )
