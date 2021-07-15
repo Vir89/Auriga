@@ -30,8 +30,11 @@ const App = (props) => {
             <Route path='/suscripciones' render={props => <MoreTypeSuscription {...props} /> }/>
             <Route path='/contacto' />
             <Route path='/cerrar-sesion' />
-            <Route exact path='/' render={props => <Login {...props} /> }/>
+
+            <Route exact path='/login' render={props => <Login {...props} /> }/>
+
             <Route exact path='/slider' render={props => <Slider {...props} /> }/>
+
             {/*<Redirect from ="*" to= "/"/>*/}
 
           </Switch>
