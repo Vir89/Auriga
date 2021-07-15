@@ -29,7 +29,7 @@ const Home = (props) => {
     return (
         
         <Main>            
-            <Section>
+            <Section zindex>
 
             <Slider/>
                 {/* {context.usersLoaded&&<HomeMainContent/>}

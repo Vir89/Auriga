@@ -75,7 +75,7 @@ function Slider (props) {
            <Div column>
            <H2>Avisos pendientes</H2>
 
-           {context.carStatusLoaded && context.carStatus[0].flat().sort((a,b)=>sortBySeverity(a.status)-(sortBySeverity(b.status))).map(elem=>{
+           {context.carStatusLoaded && context.carStatus.flat().sort((a,b)=>sortBySeverity(a.status)-(sortBySeverity(b.status))).map(elem=>{
               console.log(elem);
               return ( 
                    elem.status!=="success" && 
