@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
-import validate from './validateInfo';
 import {useForm} from './useForm';
 import './Form.css';
 import GoogleLogin from 'react-google-login';
+import validateInfo from './validateInfo';
 
 const FormSignup = () => {
 
@@ -33,7 +33,7 @@ const FormSignup = () => {
 
 
   const { handleChange, handleSubmit, values, errors } = useForm(
-    submitForm
+    submitForm, validateInfo
   );
 
   //const answerGoogle = (answer) => {
