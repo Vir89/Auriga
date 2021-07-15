@@ -33,8 +33,7 @@ const FormSignup = () => {
 
 
   const { handleChange, handleSubmit, values, errors } = useForm(
-    submitForm,
-    Validate
+    submitForm
   );
 
   //const answerGoogle = (answer) => {

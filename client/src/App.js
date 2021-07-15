@@ -30,7 +30,7 @@ const App = (props) => {
             <Route path='/contacto' />
             <Route path='/cerrar-sesion' />
             <Route exact path='/' render={props => <Login {...props} /> }/>
-            <Redirect from ="*" to= "/"/>
+            {/*<Redirect from ="*" to= "/"/>*/}
           </Switch>
 
     </Router>
