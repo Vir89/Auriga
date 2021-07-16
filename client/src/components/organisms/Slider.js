@@ -18,9 +18,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css"
-
-
-
 // import Swiper core and required modules
 import SwiperCore, {
   Navigation
@@ -75,7 +72,7 @@ function Slider (props) {
            <Div column>
            <H2>Avisos pendientes</H2>
 
-           {context.carStatusLoaded && context.carStatus[0].flat().sort((a,b)=>sortBySeverity(a.status)-(sortBySeverity(b.status))).map(elem=>{
+           {context.carStatusLoaded && context.carStatus.flat().sort((a,b)=>sortBySeverity(a.status)-(sortBySeverity(b.status))).map(elem=>{
               console.log(elem);
               return ( 
                    elem.status!=="success" && 
