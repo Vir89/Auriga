@@ -1,13 +1,20 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import {ApiContext} from '../../context/ApiContext';
 import H3 from '../atoms/H3'
+import H1 from '../atoms/H1'
+import P from '../atoms/P'
 import Div from '../atoms/Div';
 import '../../App.css'
 import Button from '../atoms/Button';
 import H2 from "../atoms/H2"
 import Section from "../atoms/Section"
-import {TiTick} from "react-icons/ti";
-import {IoCalendarOutline} from "react-icons/io5"
+import {IoMdCheckmarkCircleOutline} from "react-icons/io";
+import {GiCheckMark} from "react-icons/gi"
+import {IoIosAdd} from "react-icons/io"
+import {VscCircleFilled} from "react-icons/vsc"
+
+
+
 
 
  
@@ -15,120 +22,110 @@ const MoreTypeSuscription = (props) => {
 
     const context = useContext(ApiContext);
 
-    console.log(props);
  
     let miauriga = "basic"/*context.user[0].personalDetails.suscriptionPlan*/;
 
 
+    const [isActive, setIsActive] = useState([
+        {
+          id: 0,
+          visible: false,
+          content: "Básico",
+          price: "10€",
+          quality: "Bueno",
+          frequency: "Trimestral"
+        },
+        {
+          id: 1,
+          visible: false,
+          content: "Estándar",
+          price: "14€",
+          quality: "Muy Bueno",
+          frequency: "Bimestral"
+
+        },
+        {
+          id: 2,
+          visible: false,
+          content: "Premium",
+          price: "22€",
+          quality: "Excelente",
+          frequency: "Mensual"
+
+        }
+      ]);
+
+
+    
+      const [activeId, setActiveId] = useState(undefined);
+    const clickHandler = (id) => {
+        const newIsActive = isActive;
+        newIsActive.forEach((el) => (el.visible = false));
+        newIsActive[id].visible = true;
+        setIsActive(newIsActive);
+        setActiveId(id);
+        console.log(id)
+      };
+
+
     return (
         <Section>
-            
-            <Div containerTypeServices /*id="courses-container"*/>
-                <Div suscriCard /*className={miauriga == "basic" ? "course-alt" : miauriga == "" ? "course" : "course"}*/>
-                    <Div levelSubscription /*className="level-course"*/>
-                        <H2>mi.Auriga Básico</H2>
-                    </Div>
 
+    <Div centerBodyLandingPage>
+        
+        <H1>Suscripciones</H1>
+        <Div descripFrequencyVisits>
+            <p>Selecciona el plan ideal para ti</p>
+        </Div>
+        <Div centerDescripLanding>
+        <ul>
+           <li><VscCircleFilled/> Todos los aspectos de tu coche bajo control</li>
+           <li><VscCircleFilled/> Elige según tus necesidades de limpieza</li>
+           <li><VscCircleFilled/> Cambia de plan o cancela cuando quieras</li>
+         </ul>
+         <Div centerButton>
+             <Button landButtonNoSuscrip onClick={() => clickHandler(isActive[1].id)}>No Tienes Plan Activado</Button>
+        </Div>
+         <Div centerButton effectSticky>
+             <Button landButton value="0" visible={isActive[0].visible} onClick={(event) => clickHandler(event.target.value)}>{isActive[0].content} {miauriga == "basic" ? <IoMdCheckmarkCircleOutline/> : miauriga == "" ? "" : ""}</Button>
+             <Button landButton value="1"visible={isActive[1].visible} onClick={(event) => clickHandler(event.target.value)}>{isActive[1].content} {miauriga == "estandar" ? <IoMdCheckmarkCircleOutline/> : miauriga == "" ? "" : ""}</Button>
+             <Button landButton value="2"visible={isActive[2].visible} onClick={(event) => clickHandler(event.target.value)}>{isActive[2].content} {miauriga == "premium" ? <IoMdCheckmarkCircleOutline/> : miauriga == "" ? "" : ""}</Button>
+        </Div>
+         <P paragraphLanding>Precio al mes</P>
+         <Div centerButton>
+             <Button landButton landButtonSec visibleNo={isActive[0].visible}>{isActive[0].price}</Button>
+             <Button landButton landButtonSec visibleNo={isActive[1].visible}>{isActive[1].price}</Button>
+             <Button landButton landButtonSec visibleNo={isActive[2].visible}>{isActive[2].price}</Button></Div>
 
+         <Div hr></Div>
 
-                    <Div  descripFrequency /*className="description-course-wrapper"*/>
-                        <Div listDescripSuscriCard /*className="list-description"*/>
-                            <Div descripFrequencyVisits /*className="element-description"*/>
-                                <p><IoCalendarOutline/> Visita cada trimestre (4 al año)</p>
-                            </Div>
-            
+         <P paragraphLanding>Visitas Auriga</P>
+         <Div centerButton>
+            <Button landButton visibleNo={isActive[0].visible} landButtonSec>{isActive[0].frequency}</Button>
+            <Button landButton visibleNo={isActive[1].visible} landButtonSec>{isActive[1].frequency}</Button>
+            <Button landButton visibleNo={isActive[2].visible} landButtonSec>{isActive[2].frequency}</Button></Div>
 
-                        </Div>
-                    </Div>
-                    <Button main mainSuscri type="button" /*class={ miauriga == "basico" ? "btn-box" : "btn-boxus"}*/>
-                        {miauriga == "basic" ? "Suscrito en este servicio" : miauriga == "" ? "Suscribirme" : "Cambiar de suscripción"}
-                    </Button>
+         <Div hr></Div>
 
+         <P paragraphLanding>Calidad de limpieza</P>
+         <Div centerButton>
+            <Button landButton landButtonSec visibleNo={isActive[0].visible}>{isActive[0].quality}</Button>
+            <Button landButton landButtonSec visibleNo={isActive[1].visible}>{isActive[1].quality}</Button>
+            <Button landButton landButtonSec visibleNo={isActive[2].visible}>{isActive[2].quality}</Button></Div>
 
-                    <Div listDescripSuscriCard /*className="list-description"*/>
-                        <Div listDescriptionInfo /*className="description-info"*/>
-                            <H3 black><TiTick/>Lavado Básico Plus(interior y exterior).<br/></H3>
-                            <H3 black><TiTick/>Mantenimiento.<br/></H3>
-                            <H3 black><TiTick/>Neumáticos y Revisión anual.<br/></H3>
-                            <H3 black><TiTick/>Reparaciones.<br/></H3>
-                            <H3 black><TiTick/>ITV.<br/></H3>
-                            <H3 black><TiTick/>Seguros y Multas.<br/></H3>
-                            <H3 black><TiTick/>Valor mercado ocasión.<br/></H3>
-                            <H3 black><TiTick/>Precio carburante.<br/></H3>
-                      </Div>
+         <Div hr></Div>
 
+         <P paragraphLanding>Gestion total de vehiculo</P>
+         <Div centerButton>
+            <Button landButton landButtonSec visibleNo={isActive[0].visible}><GiCheckMark/></Button>
+            <Button landButton landButtonSec visibleNo={isActive[1].visible}><GiCheckMark/></Button>
+            <Button landButton landButtonSec visibleNo={isActive[2].visible}><GiCheckMark/></Button></Div>
 
-                    </Div>
-                </Div>
-                <Div suscriCard/*className={miauriga == "estandar" ? "course-alt" : miauriga == "" ? "course" : "course"}*/>
-                    <Div levelSubscription /*className="level-course"*/>
-                        <H2>mi.Auriga Estándar</H2>
-                    </Div>
-                  
-                  
+         <Div hr></Div>
+        
 
-                    <Div descripFrequency /*className="description-course-wrapper"*/>
-                        <Div listDescripSuscriCard /*className="list-description"*/>
-                            <Div descripFrequencyVisits /*className="element-description"*/>
-                                <p><IoCalendarOutline/> Visita meses alternos (6 al año)</p>
-                            </Div>
-                        </Div>
-                    </Div>
-                    <Button main mainSuscri type="button" /*class={ miauriga == "estandar" ? "btn-box" : "btn-boxus"}*/>
-                        {miauriga == "estandar" ? "Suscrito en este servicio" : miauriga == "" ? "Suscribirme" : "Cambiar de suscripción"}
-                    </Button>
-
-
-                    <Div listDescripSuscriCard /*className="list-description"*/>
-                        <Div listDescriptionInfo /*className="description-info"*/>
-                            <H3 black><TiTick/>Lavado Básico Plus(interior y exterior).<br/></H3>
-                            <H3 black><TiTick/>Mantenimiento.<br/></H3>
-                            <H3 black><TiTick/>Neumáticos y Revisión anual.<br/></H3>
-                            <H3 black><TiTick/>Reparaciones.<br/></H3>
-                            <H3 black><TiTick/>ITV.<br/></H3>
-                            <H3 black><TiTick/>Seguros y Multas.<br/></H3>
-                            <H3 black><TiTick/>Valor mercado ocasión.<br/></H3>
-                            <H3 black><TiTick/>Precio carburante.<br/></H3>
-                        </Div>
-
-
-                    </Div>
-                </Div>
-                <Div suscriCard/*className={miauriga == "premium" ? "course-alt" : miauriga == "" ? "course" : "course"}*/>
-                    <Div levelSubscription /*className="level-course"*/>
-                        <H2>mi.Auriga Premium</H2>
-                    </Div>
-                  
-                  
-
-                    <Div descripFrequency /*className="description-course-wrapper"*/>
-                        <Div listDescripSuscriCard /*className="list-description"*/>
-                            <Div descripFrequencyVisits /*className="element-description"*/>
-                                <p><IoCalendarOutline/> Visita todos los meses (12 al año)</p>
-                            </Div>
-                        </Div>
-                    </Div>
-                    <Button main mainSuscri type="button" /*class={ miauriga == "premium" ? "btn-box" : "btn-boxus"}*/>
-                        {miauriga == "premium" ? "Suscrito en este servicio" : miauriga == "" ? "Suscribirme" : "Cambiar de suscripción"}
-                    </Button>
-
-
-                    <Div listDescripSuscriCard /*className="list-description"*/>
-                        <Div listDescriptionInfo /*className="description-info"*/>
-                            <H3 black><TiTick/>Lavado Básico Plus(interior y exterior).</H3>
-                            <H3 black><TiTick/>Mantenimiento.</H3>
-                            <H3 black><TiTick/>Neumáticos y Revisión anual.</H3>
-                            <H3 black><TiTick/>Reparaciones.<br/></H3>
-                            <H3 black><TiTick/>ITV.</H3>
-                            <H3 black><TiTick/>Seguros y Multas.</H3>
-                            <H3 black><TiTick/>Valor mercado ocasión.</H3>
-                            <H3 black><TiTick/>Precio carburante.</H3>
-                        </Div>
-                
-
-                    </Div>
-                </Div>
-            </Div>
+    </Div>
+  </Div>
 
         </Section>
     )

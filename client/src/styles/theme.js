@@ -17,7 +17,8 @@ const theme = {
         buttonSecondary: "#FAFAFA",
         black: "#000000",
         googleBlue: "#4285f4",
-        hoverButton: "#1669f2"
+        hoverButton: "#1669f2",
+        darkGray: "#828282"
 
 
     },

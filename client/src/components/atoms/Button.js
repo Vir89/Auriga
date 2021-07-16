@@ -10,32 +10,63 @@ const Button = styled.button `
         border-radius:5px;
         margin: 8px;
 
-        ${props=>props.mainSuscri && css`
-            width: 100%;
-            border-radius:10px;
+
+    `}
+
+    ${props=>props.landButton && css`
+            background-color: ${props => props.theme.colors.darkGray};
+            border: none;
+            border-radius: 10px;
+            color: ${props => props.theme.colors.white};
+            padding: 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 4px;
+            width: 35%;
+            font-weight: 700;
+            width: 360px;
+            
+
+
+        ${props=>props.landButtonSec && css`
+            background-color: ${props => props.theme.colors.white};
+            color: ${props => props.theme.colors.darkGray};
+
         `}
+
+        ${props=>props.visible && css`
+        background-color: ${props => props.theme.colors.primary};
+
+        `}
+        
+        ${props=>props.visibleNo && css`
+        color: ${props => props.theme.colors.primary};
+
+        `}
+
+
     `}
 
-    ${props=>props.secondary && css`
-        border: none;
-        border:1px solid rgba(164,159,143,0.19);
-        background-color:${props => props.theme.colors.buttonSecondary};
-        color:${props => props.theme.colors.primary};
-        box-shadow:4px 3px 8px -2px #1D4A7E;
-        width: 360px;
-        height:44px;
-        border-radius:5px;
+    ${props=>props.landButtonNoSuscrip && css`
+            background-color: ${props => props.theme.colors.primary};
+            border: none;
+            border-radius: 10px;
+            color: ${props => props.theme.colors.white};
+            padding: 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 4px;
+            width: 100%;
+            font-weight: 700;
+
+
+
+
     `}
-
-    /*${props=>props.mainSuscri && css`
-        border: none;
-        background-color:${props => props.theme.colors.primary};
-        color:${props => props.theme.colors.white};
-        width: 100%;
-        height:44px;
-        border-radius:10px;
-    `}*/
-
 
     
 
