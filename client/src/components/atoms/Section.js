@@ -11,6 +11,10 @@ const Section = styled.section `
         padding-left:5%;
 
     `}
+    ${props=>props.zindex && css`
+        z-index:0;
+
+    `}
 `
 
 export default Section;
