@@ -18,9 +18,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css"
-
-
-
 // import Swiper core and required modules
 import SwiperCore, {
   Navigation
