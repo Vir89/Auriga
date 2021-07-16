@@ -16,7 +16,7 @@ const Button = styled.button `
     ${props=>props.landButton && css`
             background-color: ${props => props.theme.colors.darkGray};
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             color: ${props => props.theme.colors.white};
             padding: 15px 15px;
             text-align: center;
@@ -26,8 +26,7 @@ const Button = styled.button `
             margin: 4px 4px;
             width: 35%;
             font-weight: 700;
-            width: 360px;
-            
+                        
 
 
         ${props=>props.landButtonSec && css`
@@ -52,7 +51,7 @@ const Button = styled.button `
     ${props=>props.landButtonNoSuscrip && css`
             background-color: ${props => props.theme.colors.primary};
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             color: ${props => props.theme.colors.white};
             padding: 15px 15px;
             text-align: center;
