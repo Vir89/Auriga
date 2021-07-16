@@ -24,7 +24,14 @@ const P = styled.p `
         
     `}
 
+    ${props=>props.paragraphLanding && css`
+        text-align: center;
+        font-size: 0.9rem;
+        padding-left:5px;
+        font-weight: ${props => props.theme.textWeight.regular};
+        color:${props => props.theme.colors.black};
 
+    `}
     
 
 
