@@ -18,13 +18,13 @@ const SuscriptionType = (props) => {
 
     const handleButtonSuscription = () => {
         console.log(props.history);
-        props.history.push({
+
+        //Cannot read property push of undefinded bug
+        /* props.history.push({
             pathname: "/suscripciones"
   
-          }) 
-
-    
-        }
+          })  */
+    }
     
         const context = useContext(ApiContext);
 
