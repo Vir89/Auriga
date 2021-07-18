@@ -50,7 +50,7 @@ const Alert = (props) => {
             <Card onClick={handleToggle} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false}>
 
                 <Div column span><Span success={props.status==="success"? true: false} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false}>{icons[selectIcon(props.title, props.type)] }</Span></Div>
-                <Div column center padding>
+                <Div column left padding>
                     
                   {/*  <H3 secondary>{props.dueDate && dayjs(props.dueDate).format('DD/MM/YYYY')}</H3> */} 
                     <H3>{props.type} / {props.title}</H3> 

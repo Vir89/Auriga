@@ -25,7 +25,12 @@ export const Div = styled.div `
         display: flex;
         flex-direction: column;
         padding:5px;
-        
+
+        ${props=>props.left && css`
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+        `}
         ${props=>props.center && css`
             align-items: center;
             justify-content: center;
