@@ -19,9 +19,9 @@ const APIProvider = (props) => {
   
     
     useEffect(() => {
-    
-        fetchData('http://localhost:5000/api/users', setUser, setUsersLoaded);
-        
+        if(JSON.parse(localStorage.getItem('user')).cars.length)
+            fetchData('http://localhost:5000/users', setUser, setUsersLoaded);
+
     }, [])
 
     useEffect(() => {

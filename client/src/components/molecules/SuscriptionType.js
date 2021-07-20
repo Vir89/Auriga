@@ -10,7 +10,6 @@ const SuscriptionType = (props) => {
 
     const handleButtonSuscription = () => {
 
-
         props.history.push({
             pathname: "/suscripciones"
   
