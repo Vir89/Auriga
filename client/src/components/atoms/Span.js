@@ -8,6 +8,10 @@ const Span = styled.span `
     font-size: 25px;
     margin: 0px 5px 0px 5px;
     border-radius: 50px;
+    color:${props=>props.theme.colors.white};
+    box-shadow: -1px 1px 1px 0px #000;
+   
+    
     
     ${props=>props.danger && css`
     background-color:${props=>props.theme.colors.danger};
