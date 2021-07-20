@@ -1,4 +1,4 @@
-
+import axios from "axios";
 import React, { useState } from 'react';
 
 import {useForm} from './useForm';
@@ -9,26 +9,34 @@ import validateInfo from './validateInfo';
 const FormSignup = () => {
 
   const [user, setUser] = useState({
-    username: '',
+    firstName: '',
+    lastName: '',
     email: '',
     password: ''
   });
 
+  function submitForm(firstName, lastName, email, password) {
 
-  function addNewUser(username, email, password){
     let newUser = {
-      username : username,
+      firstName : firstName,
+      lastName : lastName,
       email : email, 
       password : password
     };
-    console.log(newUser);
+    
+    axios.post("http://localhost:5000/register", newUser)
+    .then(function (response) {
+      // handle success
+      window.location = '/login';
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
 
-    localStorage.setItem('localUser', JSON.stringify(newUser));
-  }
+    });
 
-  function submitForm(username, email, password) {
-    addNewUser(username, email, password);
-    window.location = '/';
+    //localStorage.setItem('localUser', JSON.stringify(newUser));
+
   }
 
 
@@ -47,16 +55,28 @@ const FormSignup = () => {
       <form onSubmit={handleSubmit} className='form' noValidate>
         <h1> Auriga </h1>
         <div className='form-inputs'>
-          <label className='form-label'>Nombre de usuario</label>
+          <label className='form-label'>Nombre</label>
           <input
             className='form-input'
             type='text'
-            name='username'
-            placeholder='Enter your username'
-            value={values.username}
+            name='firstName'
+            placeholder='Enter your firstName'
+            value={values.firstName}
             onChange={handleChange}
           />
-          {errors.username && <p>{errors.username}</p>}
+          {errors.firstName && <p>{errors.firstName}</p>}
+        </div>
+        <div className='form-inputs'>
+          <label className='form-label'>Apellidos</label>
+          <input
+            className='form-input'
+            type='text'
+            name='lastName'
+            placeholder='Enter your lastname'
+            value={values.lastName}
+            onChange={handleChange}
+          />
+          {errors.lastName && <p>{errors.lastName}</p>}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Email</label>

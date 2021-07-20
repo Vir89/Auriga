@@ -29,7 +29,6 @@ const App = (props) => {
             <Route path='/mensajes' />
             <Route path='/suscripciones' render={props => <MoreTypeSuscription {...props} /> }/>
             <Route path='/contacto' />
-            <Route path='/cerrar-sesion' />
 
             <Route exact path='/login' render={props => <Login {...props} /> }/>
 

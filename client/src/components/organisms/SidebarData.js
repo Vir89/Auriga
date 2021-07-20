@@ -44,7 +44,7 @@ export const SidebarData = [
     },
     {
         title: 'Cerrar Sesión',
-        path: '/cerrar-sesion',
+        path: '/login',
         icon: <BsIcons.BsFillPersonDashFill/>,
         cName: 'nav-text',
     },

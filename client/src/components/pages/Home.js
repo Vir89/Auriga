@@ -32,7 +32,7 @@ const Home = (props) => {
             <Section zindex>
 
             <Slider/>
-                {/* {context.usersLoaded&&<HomeMainContent/>}
+                {context.usersLoaded&&<HomeMainContent/>}
             </Section>
 
             <Section>
@@ -40,7 +40,7 @@ const Home = (props) => {
             </Section>
 
             <Section>
-                {context.usersLoaded&&<AlertsContainer/>} */}
+                {context.usersLoaded&&<AlertsContainer/>}
             </Section>            
         </Main>
 

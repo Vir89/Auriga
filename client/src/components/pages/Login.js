@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import axios from "axios";
+import React, { useState, useEffect  } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from '../atoms/Button';
 import Div from '../atoms/Div';
@@ -9,7 +10,8 @@ import Main from '../atoms/Main';
 import Section from '../atoms/Section';
 import './Form.css';
 import GoogleIcon from '../atoms/GoogleIcon';
-import Ahref from '../atoms/Ahref'
+import Ahref from '../atoms/Ahref';
+import ButtonSpan from '../atoms/ButtonSpan';
 const Login =()=> {
     const [inputs, setInputs] = useState({
         email: '',
@@ -17,9 +19,13 @@ const Login =()=> {
     });
     const [submitted, setSubmitted] = useState(false);
     const [loggingStatus , setLoggingStatus ] = useState('');
-    const [loggedUser , setLoggedUser ] = useState({});
     const { email, password } = inputs;
-    const location = useLocation();
+
+    // reset login status
+    useEffect(() => { 
+        localStorage.removeItem('user');
+        localStorage.removeItem('token');
+    }, []);
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -32,15 +38,23 @@ const Login =()=> {
 
         if (email && password) {
             
-            let storedUser = JSON.parse(localStorage.getItem('localUser'));
+            let loginData = {
+                email : email, 
+                password : password
+              };
 
-            if(storedUser && storedUser.email === email && storedUser.password === password){
-                setLoggingStatus('OK');
-                setLoggedUser(storedUser);
+          
+              axios.post("http://localhost:5000/login", loginData)
+              .then(function (response) {
+                // handle success
+                localStorage.setItem('user', JSON.stringify(response.data.user));
+                localStorage.setItem('token', response.data.token);
                 window.location = '/home';
-            }else{
+              })
+              .catch(function (error) {
+                // handle error
                 setLoggingStatus('KO');
-            }
+              });
         }
     }
 
@@ -72,8 +86,7 @@ const Login =()=> {
                                 <div className="invalid-feedback">Email y/o contraseña no válido/s</div>
                             }
                             <Button main>
-                            
-                                <Ahref href="/home">Entrar</Ahref>
+                                <ButtonSpan>Entrar</ButtonSpan>
                             </Button>
                             <Div row>
                             <P>¿Aún no estas registrado?   </P>

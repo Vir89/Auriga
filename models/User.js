@@ -6,18 +6,18 @@ const userSchema = new mongoose.Schema({
         lastName:{type: String, required:true },
         email:{ type: String, required:true, unique:true, trim:true, lowercase: true, match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'], createIndexes: { unique: true } },
         IDcard:{ type:String, unique:true, trim:true },
-        birthDate:{ type:Date, trim:true },
-        nacionality:{ type:String },
-        phoneNumber:{ type: Number, required: true },
-        suscriptor:{ type: Boolean, required: true },
+        birthDate:{ type:Date},
+        nacionality:{ type:String},
+        phoneNumber:{ type: Number},
+        suscriptor:{ type: Boolean},
         suscriptionPlan:{type: String},
-        password:{ type: String, required: true, trim:true }, 
+        password:{ type: String, required:true, trim:true }, 
         
         address:{ 
-            street:{type: String, required:true},
-            postalCode:{ type: Number, required:true },
-            city:{ type: String, required:true },
-            country:{ type: String, required:true}
+            street:{type: String},
+            postalCode:{ type: Number},
+            city:{ type: String},
+            country:{ type: String}
         }, 
         jobAddress:{
             street:{ type: String},
@@ -51,15 +51,15 @@ const userSchema = new mongoose.Schema({
     },
     cars:[{
         staticFeatures:{
-            brand:{type: String, required:true},
-            year:{type: Number, required:true},
-            model:{type: String, required:true},
-            color:{type: String, required:true},
-            horsePower:{type: Number, required:true},
+            brand:{type: String},
+            year:{type: Number},
+            model:{type: String},
+            color:{type: String},
+            horsePower:{type: Number},
             dataSheet:{type: String},
             Image:{type: String},
-            fuel:{type: String, required:true},
-            carRegistration:{type: String, required:true, unique:true},
+            fuel:{type: String},
+            carRegistration:{type: String},
             circulationPermit:{type: String},
         },
         variableFeatures:{

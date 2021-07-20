@@ -1,14 +1,18 @@
 const express =require ("express");
 const {dbConnection} = require('./config');
 const cors= require("cors");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 const app= express();
 
 const path = require('path');
 require('dotenv').config; 
 
-const User = require("./models/User")
-const Car = require("./models/Car")
+const User = require("./models/User");
+const Car = require("./models/Car");
+const userController = require("./controllers/userController");
+const { connection } = require("mongoose");
 
 //connection to DB
 dbConnection();
@@ -17,28 +21,57 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cors())
 
+
 const port = process.env.PORT || 5000 
 
-/* app.get("/user/:id", async(req,res)=>{
-    const userId =req.params.id
-    const user = await User.findById(id).exec()
-    res.status(200).json(user)
-});
 
-app.get("/users", async(req,res)=>{
-    const users =await User.find({}).lean().exec()
-    res.status(200).json(users)
-});
+//Register user
+app.post('/register', (req, res) => {
+    bcrypt
+    .hash(req.body.password,10)
+    .then(hashedPassword => {
+        userController.createUser(req, res);
+    })
+    .catch(hashError => console.error('Error with encoding your password.Error: ${hashError}'))
+})
 
-app.post("/user", async()=>{
-    const userToCreate = req.body.user
-    const user = await User.create(userToCreate)
-    res.status(201).json(user.toJSON())
-}); */
+//Login user
 
-//routes
+app.post('/login', async (req, res, next) => {
 
-app.use('/api/users', require('./routes/users'))
+    const user = await User.findOne({ 'personalDetails.email': req.body.email });
+
+    if(user){
+        bcrypt
+        .compare(req.body.password, user.personalDetails.password)
+        .then((isAmatch) => {
+            if(isAmatch){
+                const token = jwt.sign(JSON.stringify(user), "mysupersecret")
+                return user 
+                    ? res.json({user, token})  
+                    : res.status(400).json({ message: 'Email or password is incorrect' })
+        
+            }else {
+                res.status(400).send('Incorrect password')
+            }
+    
+        })
+    } else {
+        res.status(400).send('Email or password is incorrect')
+    }
+})
+
+
+app.get('/users', async (req, res, next) => {
+
+    const user = await User.find({});
+
+    if(user){
+        res.json({user})
+    } else {
+        res.status(500).send('Unexpected error')
+    }
+})
 
 
 app.listen(port,(err)=>{
