@@ -72,6 +72,7 @@ app.get('/users', async (req, res, next) => {
         res.status(500).send('Unexpected error')
     }
 })
+app.use('/api/users', require('./routes/users'))
 
 
 app.listen(port,(err)=>{

@@ -3,9 +3,50 @@ const { response } = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-
-
 exports.createUser = async (req, res) => {
+
+    /*  bcrypt
+         .hash(req.body.password,10)
+         .then((hashedPassword)=>{
+             let user={
+                 firstName:req.body.firstName,
+                 password:req.body.password,
+                 email:req.body.email,
+             }
+         })
+  */
+ 
+     try {
+       
+         // create el nuevo usuario
+         user = new User(req.body);
+ 
+         //password hash
+ 
+         // save user
+         await user.save();
+ 
+ 
+     }catch(error) {
+         console.log(error);
+         res.status(400).send('Hubo un error');
+     }
+ }
+ 
+ exports.getUserInfo = async (req, res=response) => {
+ 
+    
+ 
+     try {
+         const user = await User.find({});
+         res.json({ user });
+     } catch (error) {
+         console.log(error);
+         res.status(500).send('Hubo un error');
+     }  
+ }
+
+/* exports.createUser = async (req, res) => {
 
     try {
 
@@ -32,7 +73,7 @@ exports.createUser = async (req, res) => {
     }catch(error) {
         res.status(400).send('There was an error');
     }
-}
+} */
 
 
 /*exports.authenticate = async ({ email, password }) => {
@@ -63,7 +104,7 @@ exports.createUser = async (req, res) => {
 
 }*/
 
-exports.getUserInfo = async (req, res=response) => {
+/* exports.getUserInfo = async (req, res=response) => {
 
     try {
         const user = await User.find({});
@@ -73,4 +114,4 @@ exports.getUserInfo = async (req, res=response) => {
         res.status(500).send('There was an error');
     }  
 }
-
+ */
