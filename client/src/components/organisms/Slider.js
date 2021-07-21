@@ -41,7 +41,7 @@ function Slider (props) {
     onSlideChange={() => console.log('slide change')}
     onSwiper={(swiper) => console.log(swiper)}
   >
-       {context.carStatusLoaded && context.user[0].cars.map(cars => (
+       {context.carStatusLoaded && context.user.cars.map(cars => (
                 
        <SwiperSlide key={cars.id} className="slide">
 

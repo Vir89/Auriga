@@ -65,9 +65,9 @@ export const ProfileBodyContainer = () => {
             <Div column borderBottom>
                 
                 <H3>Dirección Principal</H3>
-                <P> Calle: {context.user[0].personalDetails.address.street}</P>
-                <P> Código postal: {context.user[0].personalDetails.address.postalCode}</P>
-                <P> Ciudad: {context.user[0].personalDetails.address.city}</P>
+                <P> Calle: {context.user.personalDetails.address.street}</P>
+                <P> Código postal: {context.user.personalDetails.address.postalCode}</P>
+                <P> Ciudad: {context.user.personalDetails.address.city}</P>
                
             </Div>
 

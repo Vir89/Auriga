@@ -13,7 +13,6 @@ import getSuscriptionShowPlansFromObject from '../../utils/getSuscriptionShowPla
 
 
 
-
  
 const MoreTypeSuscription = (props) => {
 
@@ -84,8 +83,8 @@ const MoreTypeSuscription = (props) => {
               {context.usersLoaded && 
                 <Div centerButton>
                   <Button landButtonNoSuscrip 
-                    style={context.user[0].personalDetails.suscriptionPlan === "" ? 
-                      {display: getSuscriptionShowPlansFromObject(context.user[0].personalDetails.suscriptionPlan)} : {display:"none"}}>
+                    style={context.user.personalDetails.suscriptionPlan === "" ? 
+                      {display: getSuscriptionShowPlansFromObject(context.user.personalDetails.suscriptionPlan)} : {display:"none"}}>
                       
                       No Tienes Plan Activado
                   
@@ -103,8 +102,8 @@ const MoreTypeSuscription = (props) => {
                         visible={isActive[index].visible} onClick={(event) => clickHandler(event.target.value)}>
                           
                           {isActive[index].contentShow}
-                          {context.user[0].personalDetails.suscriptionPlan === isActive[index].content ? 
-                            getSuscriptionShowPlansFromObject(context.user[0].personalDetails.suscriptionPlan) : "" }
+                          {context.user.personalDetails.suscriptionPlan === isActive[index].content ? 
+                            getSuscriptionShowPlansFromObject(context.user.personalDetails.suscriptionPlan) : "" }
                       
                       </Button>)
                     }

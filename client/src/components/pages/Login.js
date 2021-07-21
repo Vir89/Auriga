@@ -50,9 +50,11 @@ const Login = (props) => {
                 .post("http://localhost:5000/login", loginData)
                 .then(function (response) {
                     // handle success
-                    context.setNewUser(response.data.user);
+                    context.setUser(response.data.user);
+                    context.setUsersLoaded(true)
                     localStorage.setItem("token", response.data.token);
-                    props.history.push("/home");
+                    props.history.push("/");
+                    
                 })
                 .catch(function (error) {
                     // handle error
