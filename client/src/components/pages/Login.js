@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect, useContext  } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from '../atoms/Button';
 import Div from '../atoms/Div';
@@ -12,13 +12,21 @@ import './Form.css';
 import GoogleIcon from '../atoms/GoogleIcon';
 import Ahref from '../atoms/Ahref';
 import ButtonSpan from '../atoms/ButtonSpan';
+import { ApiContext } from '../../context/ApiContext';
+
+
 const Login =()=> {
+
+    const context = useContext(ApiContext);
+
+
     const [inputs, setInputs] = useState({
         email: '',
         password: ''
     });
     const [submitted, setSubmitted] = useState(false);
     const [loggingStatus , setLoggingStatus ] = useState('');
+    
     const { email, password } = inputs;
 
     // reset login status
@@ -31,6 +39,7 @@ const Login =()=> {
         const { name, value } = e.target;
         setInputs(inputs => ({ ...inputs, [name]: value }));
     }
+    
 
     const handleSubmit=(e)=> {
         e.preventDefault();
@@ -47,10 +56,14 @@ const Login =()=> {
               axios.post("http://localhost:5000/login", loginData)
               .then(function (response) {
                 // handle success
+                console.log(response.data.user)
                 localStorage.setItem('user', JSON.stringify(response.data.user));
+                //context.setNewUser(response.data.user);
+               
                 localStorage.setItem('token', response.data.token);
                 window.location = '/home';
               })
+
               .catch(function (error) {
                 // handle error
                 setLoggingStatus('KO');

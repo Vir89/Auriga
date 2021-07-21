@@ -14,15 +14,15 @@ const APIProvider = (props) => {
   const [carStatusLoaded, setCarStatusLoaded]= useState(false)
   const {user} =users
   const isInitialMount = useRef(true);
+  const [newUser , setNewUser ] = useState({});
 
 
   
     
-    useEffect(() => {
-        if(JSON.parse(localStorage.getItem('user')).cars.length)
+    /* useEffect(() => {
+        if(JSON.parse(localStorage.getItem('user')))
             fetchData('http://localhost:5000/users', setUser, setUsersLoaded);
-
-    }, [])
+    }, [])*/
 
     useEffect(() => {
     
@@ -32,6 +32,8 @@ const APIProvider = (props) => {
             const kmTotal=users.user[0].cars[0].variableFeatures.kM
             const kmToMaintance=users.user[0].cars[0].variableFeatures.nextMaintenance
             console.log(carStatus)
+            console.log(newUser)
+         
 
             setAnArrayOfElementsWithTheStatus(
                 users.user[0].cars[0].variableFeatures.status,
@@ -52,7 +54,7 @@ const APIProvider = (props) => {
   
 
   return (
-      <ApiContext.Provider value={{ user: user, usersLoaded:usersLoaded, carStatus:carStatus, carStatusLoaded:carStatusLoaded}} >
+      <ApiContext.Provider value={{ setNewUser:setNewUser, user: user, usersLoaded:usersLoaded, carStatus:carStatus, carStatusLoaded:carStatusLoaded}} >
           { props.children }
       </ApiContext.Provider>
   )
