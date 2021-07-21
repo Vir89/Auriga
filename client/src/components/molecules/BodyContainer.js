@@ -11,13 +11,13 @@ const BodyContainer = () => {
            
             <Div row spaceBet>
                 <H3>Kilómetros/año</H3>
-                <H3>{context.user[0].cars[0].variableFeatures.kM} kms</H3>
+                <H3>{context.user.cars[0].variableFeatures.kM} kms</H3>
                 
             </Div >
 
             <Div row spaceBet>
                 <H3>Valor de vehículo</H3>
-                <H3>{context.user[0].cars[0].variableFeatures.currentValue} €</H3>
+                <H3>{context.user.cars[0].variableFeatures.currentValue} €</H3>
                 
             </Div>
 
