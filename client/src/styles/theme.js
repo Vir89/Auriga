@@ -18,7 +18,8 @@ const theme = {
         black: "#000000",
         googleBlue: "#4285f4",
         hoverButton: "#1669f2",
-        darkGray: "#828282"
+        darkGray: "#828282",
+        whiteSmoke:"#f5f5f5"
 
 
     },
