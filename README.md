@@ -8,6 +8,10 @@ Así que aquí tienes a Auriga hoy. Paco más centrado en lo comercial y Antonio
 
 Crear una aplicación web para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
 
+## Nuestro objetivo
+
+Consiste en la creación de un sitio web para llevar a cabo el control del estado del vehículo; y de mantenimiento tanto para clientes que están suscritos en sus servicios: Básico, Estándar, Premium como los que no están suscritos en la empresa Auriga; dirigido principalmente al publico móvil ya que su mayoría de clientes son del mismo.
+
 ## Instalación
 
 Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local con fines de desarrollo y prueba.
@@ -41,11 +45,9 @@ Ejecute la aplicación en modo de desarrollo. Abra http://localhost:3000 para ve
 
 La página se recargará si haces algún cambio.
 
-## Nuestro objetivo
+## Herramientas, librerias, dependencias
 
-Consiste en la creación de un sitio web para llevar a cabo el control del estado del vehículo; y de mantenimiento tanto para clientes que están suscritos en sus servicios: Básico, Estándar, Premium como los que no están suscritos en la empresa Auriga; dirigido principalmente al publico móvil ya que su mayoría de clientes son del mismo.
-
-## Herramientas
+### herramientas Frontend
 
 ### React.js, 
 es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.
@@ -66,7 +68,8 @@ es una nueva forma de utilizar CSS con tus componentes en las aplicaciones front
 utilizamos esta metodologia ya que nos obliga a coger cada diseño y diseccionarlo para poder separar cada átomo
 
 ### herramientas Backend:
-### Node.js, es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos
+### Node.js, 
+es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos
 
 ### Express.js, 
 es un framework web transigente, escrito en JavaScript y alojado dentro del entorno de ejecución NodeJS. que proporciona un conjunto sólido de funciones para aplicaciones web y móviles
@@ -123,7 +126,7 @@ Somos un grupo de 4 alumnos del bootcamp Wild Code School españa: Alba, Manuel,
 - [@Alba-López](https://www.linkedin.com/in/albalopezmelian/)
 - [@Manuel-Marque](https://www.linkedin.com/in/manuel-marque/)
 - [@Virginia-Herrera](https://www.linkedin.com/in/virginia-herrera-herrera/)
-- [@Sergio-Caballero](https://www.linkedin.com/in/sergio-caballero-gallego
+- [@Sergio-Caballero](https://www.linkedin.com/in/sergio-caballero-gallego/)
 
 
 ---------------------------------------------EXTRA--------------------------------------
