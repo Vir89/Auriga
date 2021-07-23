@@ -12,7 +12,6 @@ const SuscriptionType = (props) => {
 
         props.history.push({
             pathname: "/suscripciones"
-  
         }) 
 
     }
