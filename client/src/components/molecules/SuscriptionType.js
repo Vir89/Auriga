@@ -26,7 +26,7 @@ const SuscriptionType = (props) => {
             <Div row spaceBet onClick={handleButtonSuscription}>
                 <H2>Tipo de Suscripción mi.Auriga:</H2>
 
-                <H3>{context.user[0] ? getSuscriptionPlanFromObject(context.user[0]) : "No está suscrito"}</H3>
+                <H3>{context.user ? getSuscriptionPlanFromObject(context.user) : "No está suscrito"}</H3>
                 
             </Div>  
         
