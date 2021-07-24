@@ -137,62 +137,6 @@ export const Div = styled.div `
        //landing page - subscription services type 
 
 
-    ${props=>props.containerTypeServices && css`
-        display: flex;
-        flex-direction: row wrap;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        padding: 10px;
-
-        /*@media (max-width: 869px){
-      flex-flow: column wrap;
-      width: 90%;
-      align-items: center;
-    }*/
-    `}
-
-    ${props=>props.suscriCard && css`
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: flex-start;
-        width: 100%;
-        align-items: center;
-        height: auto;
-        box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
-        margin: 30px;
-        border-radius: 10px;
-        padding: 10px;
-
-    `}
-
-    ${props=>props.levelSubscription && css`
-        display: flex;
-        flex-direction: row wrap;
-        width: 90%;
-        height: 100px;
-        margin: 10px;
-        justify-content: center;
-        align-items: center;
-    `}
-    
-    ${props=>props.descripFrequency && css`
-        margin-bottom: 20px;
-        border-bottom: 2px outset rgb(0 0 0 / 30%);
-    `}
-
-    ${props=>props.listDescripSuscriCard && css`
-        display: flex;
-        flex-flow: column wrap;
-    `}
-
-    ${props=>props.listDescriptionInfo && css`
-        padding: 10px;
-        padding-top: 30px;
-        display: flex;
-        flex-direction: column;
-    `}
-
     ${props=>props.descripFrequencyVisits && css`
         display: flex;
         flex-direction: row;
