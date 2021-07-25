@@ -51,7 +51,8 @@ const CarStatusContainer = () => {
                     <CarStatus
                     key={nanoid()}
                     title = {item.title}
-                    status={item.status}  
+                    status={item.status} 
+                    type ={item.type} 
                    />)} 
                 </AccordionItemPanel>
             </AccordionItem>
@@ -73,6 +74,7 @@ const CarStatusContainer = () => {
                     key={nanoid()}
                     title = {item.title}
                     status={item.status}
+                    type ={item.type} 
                     
                     />)}
                 </AccordionItemPanel>
@@ -94,6 +96,7 @@ const CarStatusContainer = () => {
                     key={nanoid()}
                     title = {item.title}
                     status={item.status}
+                    type ={item.type} 
                     />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -114,6 +117,7 @@ const CarStatusContainer = () => {
                     key={nanoid()}
                     title = {item.title}
                     status={item.status}
+                    type ={item.type} 
                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -134,6 +138,7 @@ const CarStatusContainer = () => {
                     key={nanoid()}
                     title = {item.title}
                     status={item.status}
+                    type ={item.type} 
                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -154,6 +159,7 @@ const CarStatusContainer = () => {
                     key={nanoid()}
                     title = {item.title}
                     status={item.status}
+                    type ={item.type} 
                    />)}
                 </AccordionItemPanel>
             </AccordionItem>
@@ -174,6 +180,7 @@ const CarStatusContainer = () => {
                     key={nanoid()}
                     title = {item.title}
                     status={item.status}
+                    type ={item.type} 
                     />)}
                 </AccordionItemPanel>
             </AccordionItem>
