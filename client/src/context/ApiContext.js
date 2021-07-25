@@ -32,10 +32,10 @@ const APIProvider = (props) => {
     }, [usersLoaded]) */
 
     useEffect(() => {
-    
+        
         if (isInitialMount.current) {
             isInitialMount.current = false;
-         } else {
+         } else if(usersLoaded){
 
             console.log(user)
             console.log(user.personalDetails)

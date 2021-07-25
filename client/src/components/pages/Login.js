@@ -25,8 +25,10 @@ const Login = (props) => {
     const [loggingStatus, setLoggingStatus] = useState("");
     const { email, password } = inputs;
 
-    // reset login status
+    // reset login status when logout
     useEffect(() => {
+        context.setUser({});
+        context.setUsersLoaded(false);
         localStorage.removeItem("user");
         localStorage.removeItem("token");
     }, []);
@@ -51,7 +53,7 @@ const Login = (props) => {
                 .then(function (response) {
                     // handle success
                     context.setUser(response.data.user);
-                    context.setUsersLoaded(true)
+                    context.setUsersLoaded(true);
                     localStorage.setItem("token", response.data.token);
                     props.history.push("/");
                     
