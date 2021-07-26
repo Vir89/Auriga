@@ -4,7 +4,7 @@
 Creación de una aplicación web durante el Bootcamp de Wild Code School de desarrollo Web realizados por  4 desarrolladores; para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
 
 
-## :microscope: Demo
+## Demo
 
 Insert gif or link to demo
 
