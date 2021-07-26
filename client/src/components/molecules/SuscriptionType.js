@@ -10,14 +10,6 @@ import { Link } from 'react-router-dom';
 
 const SuscriptionType = (props) => {
 
-    /*const handleButtonSuscription = () => {
-
-        props.history.push({
-            pathname: "/suscripciones"
-        }) 
-
-    }*/
-    
         const context = useContext(ApiContext);
 
     
