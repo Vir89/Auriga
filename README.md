@@ -1,7 +1,7 @@
 
 # Proyecto 3: Aplicación web para la gestion de mantenimiento de automóviles de los clientes de la empresa Auriga.
 
-Creación de una aplicación web durante el Bootcamp de Wild Code School de desarrollo Web realizados por  4 desarrolladores; para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
+Creación de una aplicación web durante el Bootcamp de Wild Code School de Desarrollo Web realizados por 4 desarrolladores; para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
 
 
 ## Demo
