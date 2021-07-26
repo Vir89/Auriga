@@ -10,9 +10,7 @@ const Span = styled.span `
     border-radius: 50px;
     color:${props=>props.theme.colors.white};
     box-shadow: -1px 1px 1px 0px #000;
-   
-    
-    
+       
     ${props=>props.danger && css`
     background-color:${props=>props.theme.colors.danger};
     `}
@@ -23,5 +21,7 @@ const Span = styled.span `
     background-color:${props=>props.theme.colors.warning};
     `}
 `
-
+const SpanInvalid = styled.span `
+    color:red;
+`
 export default Span

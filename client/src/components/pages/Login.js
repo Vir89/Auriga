@@ -13,6 +13,12 @@ import GoogleIcon from "../atoms/GoogleIcon";
 import Ahref from "../atoms/Ahref";
 import ButtonSpan from "../atoms/ButtonSpan";
 import { ApiContext } from "../../context/ApiContext";
+import logo from "../../styles/img/logo.png"
+import google from "../../styles/img/google.png"
+import facebook from "../../styles/img/facebook.png"
+import Img from "../atoms/Img";
+import H1 from "../atoms/H1";
+import Form from  "../atoms/Form";
 
 const Login = (props) => {
 
@@ -66,12 +72,13 @@ const Login = (props) => {
 
     return (
         <Main>
-            <Section form>
+         <Section form>
                 <Div column>
-                    {/*  Logo */}
-                    <H2>Login?</H2>
-                    <form name="form" onSubmit={(e) => handleSubmit(e)}>
-                        <div className="form-group">
+                 <Img logo  src={logo}  alt='Logo-Auriga'/>
+                    <H1 logo>AURIGA</H1>
+                    <Div row>
+                    <Form name="form" onSubmit={(e) => handleSubmit(e)}>                       
+                        
                             <label>Email</label>
                             <Input
                                 type="email"
@@ -85,8 +92,7 @@ const Login = (props) => {
                                     Email es requerido
                                 </div>
                             )}
-                        </div>
-                        <div className="form-group">
+                        
                             <label>Contraseña</label>
                             <Input
                                 type="password"
@@ -103,43 +109,29 @@ const Login = (props) => {
                                     Contraseña es requerida
                                 </div>
                             )}
-                        </div>
-                        <div className="form-group">
                             {loggingStatus === "KO" && (
                                 <div className="invalid-feedback">
                                     Email y/o contraseña no válido/s
                                 </div>
                             )}
                             <Button type="submit" main>
-                                <ButtonSpan>Entrar!!!!</ButtonSpan>
+                                <ButtonSpan>Entrar</ButtonSpan>
                             </Button>
-                            <Div row>
                                 <P>¿Aún no estas registrado? </P>
                                 <Link to="/registro" className="btn btn-link">
                                     {" "}
                                     Registro
                                 </Link>
-                            </Div>
-                            <Div authSocialNetworks>
-                                <Div googleBtn>
-                                    <Div googleIconWrapper>
-                                        <GoogleIcon
-                                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                                            alt="google button"
-                                        />
-                                    </Div>
-                                    <Ahref
-                                        google
-                                        href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser"
-                                    >
-                                        Sign in with google
-                                    </Ahref>
-                                </Div>
-                            </Div>
-                        </div>
-                    </form>
+                          
+                    </Form> 
+                    </Div> 
                 </Div>
             </Section>
+            <Div links>
+            <H2>Ingresar con</H2>
+           <Img google src={google} alt='google' />
+           <Img facebook src={facebook} alt='facebook'/>
+           </Div>
         </Main>
     );
 };

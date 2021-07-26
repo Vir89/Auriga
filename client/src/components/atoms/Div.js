@@ -24,7 +24,7 @@ export const Div = styled.div `
     ${props=>props.column && css`
         display: flex;
         flex-direction: column;
-        padding:5px;
+        //padding:5px;
 
         ${props=>props.left && css`
             align-items: flex-start;
@@ -75,6 +75,8 @@ export const Div = styled.div `
     ${props=>props.row && css`
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        width: 100%;
         
 
         ${props=>props.spaceBet && css`
@@ -119,7 +121,13 @@ export const Div = styled.div `
         width: 100%;
         
     `}
-
+       
+    ${props=>props.links && css`
+        text-align:center;
+        justify-content: space-around;
+        padding-top: 20px;
+        padding-bottom: 20px;        
+    `}
     
 
 
