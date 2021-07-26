@@ -1,8 +1,7 @@
 
 # Proyecto 3: Aplicación web para la gestion de mantenimiento de automóviles de los clientes de la empresa Auriga.
 
-Creación de una aplicación web durante el Bootcamp de Wild Code School de Desarrollo Web realizados por 4 desarrolladores; para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
-
+Creación de una aplicación web durante el Bootcamp de Wild Code School de Desarrollo Web realizados por cuatro desarrolladores; para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
 
 ## Demo
 
@@ -14,6 +13,26 @@ Insert gif or link to demo
 - [Nuestro objetivo](#nuestro-objetivo).
 - [Stack Tecnológico](#microscope-stack-tecnológico).
 - [Herramientas, librerías, dependencias y metodologías utilizadas](#microscope-herramientas-librerías-dependencias-y-metodologías-utilizadas).
+  - [Herramientas Frontend](#herramientas-frontend).
+    - [React.js](#herramientas-frontend).
+    - [Javascript](#herramientas-frontend).
+    - [HTML](#herramientas-frontend).
+    - [CSS](#herramientas-frontend).
+    - [Styled-Components](#herramientas-frontend).
+    - [Atomic design](#herramientas-frontend).
+  - [Herramientas Backend](#herramientas-backend).
+    - [Node.js](#herramientas-backend).
+    - [Express.js](#herramientas-backend).
+    - [mongoDB](#herramientas-backend).
+    - [Heroku](#herramientas-backend).
+  - [Control de Versiones](#control-de-versiones).
+    - [Git y Github](#control-de-versiones).
+  - [Metodología SCRUM](#metodología-scrum).
+    - [Jira](#metodología-scrum).
+  - [Comunicación e Intercambio de Información](#comunicación-e-intercambio-de-información).
+    - [Slack](#comunicación-e-intercambio-de-información).
+    - [Discord](#comunicación-e-intercambio-de-información).
+    - [Google Meet](#comunicación-e-intercambio-de-información).
 - [Instalación](#floppy_disk-instalación).
 - [Autores](#autores).
 - [Perfiles Linkedln](#perfiles-linkedln).
@@ -45,7 +64,7 @@ Consiste en la creación de un sitio web para llevar a cabo el control del estad
 
 ## :microscope: Herramientas, librerías, dependencias y metodologías utilizadas:
 
-### Herramientas Frontend
+### Herramientas Frontend:
 
 - **React.js:** 
 Es una biblioteca o librería de Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.
@@ -65,6 +84,8 @@ Es una nueva forma de utilizar CSS con tus componentes en las aplicaciones front
 - **Atomic design:** 
 Utilizamos esta metodología ya que nos obliga a coger cada diseño y diseccionarlo para poder separar cada átomo.
 
+## [:top:](#tabla-de-contenido)
+
 ### Herramientas Backend:
 
 - **Node.js:** 
@@ -77,15 +98,24 @@ Es un framework web transigente, escrito en JavaScript y alojado dentro del ento
 Es un motor de base de datos NoSQL basado en documentos. 
 Es de alto rendimiento y alta escalabilidad lo hace ideal para un sistema que se ha creado. Además de proveer una estructura de documento JSON, soporta un esquema dinámico llamado BSON.
 
+- **Heroku:** 
+Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
+
+## [:top:](#tabla-de-contenido)
+
 ### Control de Versiones: 
 
 - **Git y Github:** 
 Lo utilizamos para control de versiones ya que nos facilita el trabajo colaborativo, Reduce considerablemente los tiempos de deploy (despliegue) a la vez que el proyecto evolucionando.
 
-### Metodología SCRUM :
+## [:top:](#tabla-de-contenido)
+
+### Metodología SCRUM:
 
 - **Jira:**
 Se utilizo Jira Software para la administración o gestión del proyecto; ya que nos ayuda ahorrar tiempo y dinero, fomenta el trabajo en equipo, se adapta fácil a la empresa o al grupo que lo quiera utilizar, es de fácil manejo.
+
+## [:top:](#tabla-de-contenido)
 
 ### Comunicación e Intercambio de Información:
 
