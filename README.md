@@ -24,10 +24,14 @@ Insert gif or link to demo
 Es una empresa nació hace unos dos años unos renegados estudiantes de una escuela de negocios decidieron darle una vuelta al tema de tener un coche en propiedad. El carsharing comenzaba a despuntar,conductores particulares empezaban a interesarse por el renting, Uber/Cabify estaban en pleno ataque al gran consumidor... Algo estaba mal en la propiedad de vehículos. Vimos como el sector era oscuro y tenía semejanzas con otros sectores que ya habían sufrido la disrupción digital como los hoteles o el taxi. Y donde más fallaba era en la post-venta. Así que decidimos centrarnos en eso y surgió Auriga.
 ¿Por qué el nombre de Auriga? Los aurigas conducían a ciudadanos romanos, principalmente comandantes militares; en carros de caballos y al estar en sus manos la seguridad de los mismos, eran seleccionados muy cuidadosamente. Su responsabilidad iba más allá de la conducción, al ser quienes por su propio interés mantenían el carro y los caballos en el mejor estado posible.
 Así que aquí tienes a Auriga hoy. Paco más centrado en lo comercial y Antonio dedicado a estrategia y tecnología. Y esta web y servicios ante los que te encuentras es nuestra primera aproximación a la solución del problema.
+
+## [:top:](#tabla-de-contenido)
   
 ## Nuestro objetivo
 
 Consiste en la creación de un sitio web para llevar a cabo el control del estado del vehículo; y de mantenimiento tanto para clientes que están suscritos en sus servicios: Básico, Estándar, Premium como los que no están suscritos en la empresa Auriga; dirigido principalmente al publico móvil ya que su mayoría de clientes son del mismo.
+
+## [:top:](#tabla-de-contenido)
 
 ## :microscope: Stack Tecnológico
 
@@ -36,6 +40,8 @@ Consiste en la creación de un sitio web para llevar a cabo el control del estad
 **Servidor:** Node.js, Express.js, mongoDB.
 
 **Control de Versiones:** Git y Github.
+
+## [:top:](#tabla-de-contenido)
 
 ## :microscope: Herramientas, librerías, dependencias y metodologías utilizadas:
 
@@ -92,6 +98,8 @@ Este servicio de mensajería lo utilizamos el grupo de desarrolladores solamente
 - **Google Meet:**
 Este servicio de mensajería de videotelefonía lo utilizamos para las reuniones establecidas con cliente y el equipo  de desarrolladores.
 
+## [:top:](#tabla-de-contenido)
+
 ## :floppy_disk: Instalación
 
 Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local con fines de desarrollo y prueba.
@@ -123,6 +131,8 @@ Ejecute la aplicación en modo de desarrollo. Abra http://localhost:3000 para ve
 
 La página se recargará si haces algún cambio.
 
+## [:top:](#tabla-de-contenido)
+
 ## Autores
 
 Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Manuel, Sergio y Virginia, este es nuestro tercer proyecto, y se ha creado este proyecto donde aplicamos conocimientos de Frontend y Backend.
@@ -132,6 +142,7 @@ Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Ma
 - [@Sergio-Caballero](https://www.github.com/SergKcode)
 - [@Virginia-Herrera](https://www.github.com/Vir89)
 
+## [:top:](#tabla-de-contenido)
 
 ## Perfiles Linkedln
 
@@ -140,8 +151,13 @@ Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Ma
 - [@Sergio-Caballero](https://www.linkedin.com/in/sergio-caballero-gallego/)
 - [@Virginia-Herrera](https://www.linkedin.com/in/virginia-herrera-herrera/)
 
+## [:top:](#tabla-de-contenido)
+
 ## :cop: Licencia
 Consulte el archivo [LICENSE](LICENSE.md) para conocer los derechos y limitaciones de la licencia (MIT).
+
+## [:top:](#tabla-de-contenido)
+
 
 
   
