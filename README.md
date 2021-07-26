@@ -137,7 +137,7 @@ Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento 
 1. Clonar nuestro repositorio :
 
 ```bash 
-git clone https://github.com/Vir89/Auriga
+git clone https://github.com/Vir89/Auriga.git
 cd Auriga
 ```
 
