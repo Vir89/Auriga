@@ -8,6 +8,17 @@ Creación de una aplicación web durante el Bootcamp de Wild Code School de desa
 
 Insert gif or link to demo
 
+## Tabla de contenido
+
+- [Auriga](#auriga).
+- [Nuestro objetivo](#nuestro-objetivo).
+- [Stack Tecnológico](#microscope-stack-tecnológico).
+- [Herramientas, librerías, dependencias y metodologías utilizadas](#microscope-herramientas-librerías-dependencias-y-metodologías-utilizadas).
+- [Instalación](#floppy_disk-instalación).
+- [Autores](#autores).
+- [Perfiles Linkedln](#perfiles-linkedln).
+- [Licencia](#cop-licencia).
+
 ## Auriga
 
 Es una empresa nació hace unos dos años unos renegados estudiantes de una escuela de negocios decidieron darle una vuelta al tema de tener un coche en propiedad. El carsharing comenzaba a despuntar,conductores particulares empezaban a interesarse por el renting, Uber/Cabify estaban en pleno ataque al gran consumidor... Algo estaba mal en la propiedad de vehículos. Vimos como el sector era oscuro y tenía semejanzas con otros sectores que ya habían sufrido la disrupción digital como los hoteles o el taxi. Y donde más fallaba era en la post-venta. Así que decidimos centrarnos en eso y surgió Auriga.
@@ -26,7 +37,7 @@ Consiste en la creación de un sitio web para llevar a cabo el control del estad
 
 **Control de Versiones:** Git y Github.
 
-## :microscope: Herramientas, librerías, dependencias y metodologías  utilizadas:
+## :microscope: Herramientas, librerías, dependencias y metodologías utilizadas:
 
 ### Herramientas Frontend
 
@@ -81,7 +92,7 @@ Este servicio de mensajería lo utilizamos el grupo de desarrolladores solamente
 - **Google Meet:**
 Este servicio de mensajería de videotelefonía lo utilizamos para las reuniones establecidas con cliente y el equipo  de desarrolladores.
 
-## :floppy_disk: Installation
+## :floppy_disk: Instalación
 
 Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local con fines de desarrollo y prueba.
 
@@ -112,7 +123,7 @@ Ejecute la aplicación en modo de desarrollo. Abra http://localhost:3000 para ve
 
 La página se recargará si haces algún cambio.
 
-## Authors
+## Autores
 
 Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Manuel, Sergio y Virginia, este es nuestro tercer proyecto, y se ha creado este proyecto donde aplicamos conocimientos de Frontend y Backend.
 
@@ -122,14 +133,14 @@ Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Ma
 - [@Virginia-Herrera](https://www.github.com/Vir89)
 
 
-## Linkedln profiles
+## Perfiles Linkedln
 
 - [@Alba-López](https://www.linkedin.com/in/albalopezmelian/)
 - [@Manuel-Marque](https://www.linkedin.com/in/manuel-marque/)
 - [@Sergio-Caballero](https://www.linkedin.com/in/sergio-caballero-gallego/)
 - [@Virginia-Herrera](https://www.linkedin.com/in/virginia-herrera-herrera/)
 
-## :cop: License
+## :cop: Licencia
 Consulte el archivo [LICENSE](LICENSE.md) para conocer los derechos y limitaciones de la licencia (MIT).
 
 
