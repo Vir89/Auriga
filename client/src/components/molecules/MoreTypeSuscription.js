@@ -5,7 +5,7 @@ import P from '../atoms/P'
 import Div from '../atoms/Div';
 import Button from '../atoms/Button';
 import Section from "../atoms/Section"
-import {GiCheckMark} from "react-icons/gi"
+import {ImCheckmark} from "react-icons/im"
 import {VscCircleFilled} from "react-icons/vsc"
 import getSuscriptionShowPlansFromObject from '../../utils/getSuscriptionShowPlansFromObject';
 
@@ -169,7 +169,7 @@ const MoreTypeSuscription = (props) => {
                     key={index}  
                     visibleNo={isActive[index].visible}>
 
-                      <GiCheckMark/>
+                      <ImCheckmark/>
 
                   </Button>)
                 }
