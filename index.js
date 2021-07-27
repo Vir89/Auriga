@@ -10,7 +10,6 @@ const path = require('path');
 require('dotenv').config; 
 
 const User = require("./models/User");
-const Car = require("./models/Car");
 const userController = require("./controllers/userController");
 const { connection } = require("mongoose");
 
