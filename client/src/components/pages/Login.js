@@ -107,14 +107,14 @@ const Login = (props) => {
                                     }
                             />
                             {submitted && !password && (
-                                <div className="invalid-feedback">
+                                <Div red>
                                     Contraseña es requerida
-                                </div>
+                                </Div>
                             )}
                             {loggingStatus === "KO" && (
-                                <div className="invalid-feedback">
+                                <Div red>
                                     Email y/o contraseña no válido/s
-                                </div>
+                                </Div>
                             )}
                             <Button type="submit" main>
                                 <ButtonSpan>Entrar</ButtonSpan>
