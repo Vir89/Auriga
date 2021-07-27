@@ -8,7 +8,6 @@ import Profile from './components/pages/Profile';
 import Car from './components/pages/Car';
 import Login from './components/pages/Login';
 import MoreTypeSuscription from './components/molecules/MoreTypeSuscription';
-import Slider from './components/organisms/Slider';
 import { ApiContext } from './context/ApiContext';
 
 
