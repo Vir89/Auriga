@@ -1,188 +1,166 @@
-import React, { useContext, useState } from 'react'
-import {ApiContext} from '../../context/ApiContext';
-import H1 from '../atoms/H1'
-import P from '../atoms/P'
-import Div from '../atoms/Div';
-import Button from '../atoms/Button';
-import Section from "../atoms/Section"
-import {ImCheckmark} from "react-icons/im"
-import {VscCircleFilled} from "react-icons/vsc"
-import getSuscriptionShowPlansFromObject from '../../utils/getSuscriptionShowPlansFromObject';
+import React, { useContext, useState } from "react";
+import { ApiContext } from "../../context/ApiContext";
+import { nanoid } from "nanoid";
+import H1 from "../atoms/H1";
+import P from "../atoms/P";
+import Div from "../atoms/Div";
+import Button from "../atoms/Button";
+import Section from "../atoms/Section";
+import { ImCheckmark } from "react-icons/im";
+import { VscCircleFilled } from "react-icons/vsc";
+import getSuscriptionShowPlansFromObject from "../../utils/getSuscriptionShowPlansFromObject";
+import plansData from "../../data/plansData";
 
+const MoreTypeSuscription = () => {
+    const context = useContext(ApiContext);
 
+    const [activePlanIndex, setActivePlanIndex] = useState(null);
 
-
-
- 
-const MoreTypeSuscription = (props) => {
-
-  const context = useContext(ApiContext);
-
- 
-    const [isActive, setIsActive] = useState([
-        {
-          id: 0,
-          visible: false,
-          contentShow: "Básico",
-          content: "basic",
-          price: "10€",
-          quality: "Bueno",
-          frequency: "Trimestral"
-        },
-        {
-          id: 1,
-          visible: false,
-          contentShow: "Estándar",
-          content: "estandar",
-          price: "14€",
-          quality: "Muy Bueno",
-          frequency: "Bimestral"
-
-        },
-        {
-          id: 2,
-          visible: false,
-          contentShow: "Premium",
-          content: "premium",
-          price: "22€",
-          quality: "Excelente",
-          frequency: "Mensual"
-
-        }
-      ]);
-
-          
-    const [activeId, setActiveId] = useState(undefined);
-
-    const clickHandler = (id) => {
-        const newIsActive = isActive;
-        newIsActive.forEach((el) => (el.visible = false));
-        newIsActive[id].visible = true;
-        setIsActive(newIsActive);
-        setActiveId(id);
-      };
-
+    const handleClickPlan = (index) => {
+        setActivePlanIndex(parseInt(index));
+    };
 
     return (
-      <Section>
+        <Section>
+            <Div centerBodyLandingPage>
+                <H1>Suscripciones</H1>
+                <Div descripFrequencyVisits>
+                    <p>Selecciona el plan ideal para ti</p>
+                </Div>
 
-        <Div centerBodyLandingPage>
+                <Div centerDescripLanding>
+                    <ul>
+                        <li>
+                            <VscCircleFilled /> Todos los aspectos de tu coche
+                            bajo control
+                        </li>
+                        <li>
+                            <VscCircleFilled /> Elige según tus necesidades de
+                            limpieza
+                        </li>
+                        <li>
+                            <VscCircleFilled /> Cambia de plan o cancela cuando
+                            quieras
+                        </li>
+                    </ul>
 
-          <H1>Suscripciones</H1>
-          <Div descripFrequencyVisits>
-            <p>Selecciona el plan ideal para ti</p>
-          </Div>
+                    {context.usersLoaded && (
+                        <Div centerButton>
+                            <Button
+                                landButtonNoSuscrip
+                                style={context.user.personalDetails.suscriptionPlan === ""
+                                        ?   {
+                                              display: getSuscriptionShowPlansFromObject(context.user.personalDetails.suscriptionPlan),
+                                            }
+                                        :   { 
+                                            display: "none" 
+                                            }
+                                }
+                            >
+                                No Tienes Plan Activado
+                            </Button>
+                        </Div>
+                    )}
 
-            <Div centerDescripLanding>
-              <ul>
-                <li><VscCircleFilled/> Todos los aspectos de tu coche bajo control</li>
-                <li><VscCircleFilled/> Elige según tus necesidades de limpieza</li>
-                <li><VscCircleFilled/> Cambia de plan o cancela cuando quieras</li>
-              </ul>
+                    {context.usersLoaded && (
+                        <Div centerButton effectSticky>
+                            {plansData.map((plan, index) => (
+                                <Button
+                                    landButton
+                                    key={nanoid()}
+                                    value={index}
+                                    visible={index === activePlanIndex}
+                                    onClick={(event) => handleClickPlan(event.target.value)}
+                                >
+                                    {plan.contentShow}
+                                    {context.user.personalDetails.suscriptionPlan === plan.content &&
+                                        getSuscriptionShowPlansFromObject(context.user.personalDetails.suscriptionPlan)}
+                                </Button>
+                            ))}
+                        </Div>
+                    )}
 
-              {context.usersLoaded && 
-                <Div centerButton>
-                  <Button landButtonNoSuscrip 
-                    style={context.user.personalDetails.suscriptionPlan === "" ? 
-                      {display: getSuscriptionShowPlansFromObject(context.user.personalDetails.suscriptionPlan)} : {display:"none"}}>
-                      
-                      No Tienes Plan Activado
-                  
-                  </Button>
-                
-                </Div>}
+                    <P paragraphLanding>Precio al mes</P>
 
-              {context.usersLoaded && 
-                <Div centerButton effectSticky>
-                    {isActive.map((elem, index)=> 
-                      
-                      <Button landButton
-                        key={index}  
-                        value={index} 
-                        visible={isActive[index].visible} onClick={(event) => clickHandler(event.target.value)}>
-                          
-                          {isActive[index].contentShow}
-                          {context.user.personalDetails.suscriptionPlan === isActive[index].content ? 
-                            getSuscriptionShowPlansFromObject(context.user.personalDetails.suscriptionPlan) : "" }
-                      
-                      </Button>)
-                    }
+                    <Div centerButton>
+                        {plansData.map((plan, index) => (
+                            <Button
+                                landButton
+                                landButtonSec
+                                key={nanoid()}
+                                visibleNo={index === activePlanIndex}
+                            >
+                                {plan.price}
+                            </Button>
+                        ))}
+                    </Div>
 
-                </Div>}
+                    <Div hr></Div>
 
-              <P paragraphLanding>Precio al mes</P>
+                    <P paragraphLanding>Visitas Auriga</P>
 
-              <Div centerButton>
-                {isActive.map((elem, index) => 
-                  <Button landButton landButtonSec 
-                    key={index}
-                    visibleNo={isActive[index].visible}>
-                      
-                      {isActive[index].price}
-                      
-                  </Button>)
-                }
+                    <Div centerButton>
+                        {plansData.map((plan, index) => (
+                            <Button
+                                landButton
+                                landButtonSec
+                                key={nanoid()}
+                                visibleNo={index === activePlanIndex}
+                            >
+                                {plan.frequency}
+                            </Button>
+                        ))}
+                    </Div>
 
-              </Div>
+                    <Div hr></Div>
 
-              <Div hr></Div>
-               
-              <P paragraphLanding>Visitas Auriga</P>
+                    <P paragraphLanding>Calidad de limpieza</P>
 
-              <Div centerButton>
-                {isActive.map((elem, index) => 
-                  <Button landButton landButtonSec
-                    key={index}  
-                    visibleNo={isActive[index].visible} >
+                    <Div centerButton>
+                        {plansData.map((plan, index) => (
+                            <Button
+                                landButton
+                                landButtonSec
+                                key={nanoid()}
+                                visibleNo={index === activePlanIndex}
+                            >
+                                {plan.quality}
+                            </Button>
+                        ))}
+                    </Div>
 
-                    {isActive[index].frequency}
-                    
-                  </Button>)
-                }
+                    <Div hr></Div>
 
-              </Div>
+                    <P paragraphLanding>Gestion total de vehiculo</P>
 
-              <Div hr></Div>
-              
-              <P paragraphLanding>Calidad de limpieza</P>
+                    <Div centerButton>
+                        <Button
+                            landButton
+                            landButtonSec
+                            visibleNo={0 === activePlanIndex}
+                        >
+                            <ImCheckmark />
+                        </Button>
+                        <Button
+                            landButton
+                            landButtonSec
+                            visibleNo={1 === activePlanIndex}
+                        >
+                            <ImCheckmark />
+                        </Button>
+                        <Button
+                            landButton
+                            landButtonSec
+                            visibleNo={2 === activePlanIndex}
+                        >
+                            <ImCheckmark />
+                        </Button>
+                    </Div>
 
-              <Div centerButton>
-                {isActive.map((elem, index) => 
-                  <Button landButton landButtonSec
-                    key={index}  
-                    visibleNo={isActive[index].visible}>
-                      
-                      {isActive[index].quality}
-                      
-                  </Button>)
-                }
-
-              </Div>
-
-              <Div hr></Div>
-              
-              <P paragraphLanding>Gestion total de vehiculo</P>
-
-              <Div centerButton>
-                {isActive.map((elem, index) => 
-                  <Button landButton landButtonSec
-                    key={index}  
-                    visibleNo={isActive[index].visible}>
-
-                      <ImCheckmark/>
-
-                  </Button>)
-                }
-
-              </Div>
-
-              <Div hr></Div>
-              
-              
+                    <Div hr></Div>
+                </Div>
             </Div>
-        </Div>
-              
-      </Section>
-    )
-}   
+        </Section>
+    );
+};
 export default MoreTypeSuscription;
