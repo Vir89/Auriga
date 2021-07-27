@@ -1,10 +1,7 @@
 import React from 'react'
 import Div from '../atoms/Div'
 import H3 from '../atoms/H3'
-import { RiCheckboxBlankCircleFill } from "react-icons/ri";
-import Span from '../atoms/Span';
-
-
+import SpanIconStatus from './SpanIconStatus';
 
 
 export const CarStatus = (props) => {
@@ -14,7 +11,7 @@ export const CarStatus = (props) => {
 
               <Div alert >
                   <H3>{props.title}</H3>
-                  <Span success={props.status==="success"? true: false} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false}><RiCheckboxBlankCircleFill/></Span>
+                  <SpanIconStatus status={props.status} title={props.title} type={props.type}/>
               </Div>
         
     )

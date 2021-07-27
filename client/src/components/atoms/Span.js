@@ -10,7 +10,21 @@ const Span = styled.span `
     border-radius: 50px;
     color:${props=>props.theme.colors.white};
     box-shadow: -1px 1px 1px 0px #000;
-       
+
+    ${props=>props.title && css`
+        text-decoration: none;
+        color: #f5f5f5;
+        font-size: 14px;
+        width: 95%;
+        height: 100%;
+        border-radius: 4px;
+        margin-left: 5px;
+
+        :hover {
+        background-color: #517B9A;
+        border-radius: 10px;
+    `}
+    
     ${props=>props.danger && css`
     background-color:${props=>props.theme.colors.danger};
     `}

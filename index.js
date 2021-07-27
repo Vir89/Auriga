@@ -50,7 +50,7 @@ app.post('/login', async (req, res, next) => {
                 return user 
                     ? res.json({user, token})  
                     : res.status(400).json({ message: 'Email or password is incorrect' })
-
+        
             }else {
                 res.status(400).send('Incorrect password')
             }
@@ -66,13 +66,12 @@ app.get('/users', async (req, res, next) => {
 
     const user = await User.find({});
 
-    if(user){
-        res.json({user})
+    if(users){
+        res.json({users})
     } else {
         res.status(500).send('Unexpected error')
     }
 })
-app.use('/api/users', require('./routes/users'))
 
 
 app.listen(port,(err)=>{
