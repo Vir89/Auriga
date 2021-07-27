@@ -20,7 +20,7 @@ const App = (props) => {
 
     <Router>           
     
-          <Navbar />          
+          {context.usersLoaded && <Navbar />}          
 
           <Switch>
 
