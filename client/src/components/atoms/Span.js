@@ -35,5 +35,7 @@ const Span = styled.span `
     background-color:${props=>props.theme.colors.warning};
     `}
 `
-
+const SpanInvalid = styled.span `
+    color:red;
+`
 export default Span

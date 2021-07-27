@@ -66,13 +66,13 @@ table {
   isolation: isolate;
 }
 
-html, body, #root {
-  height: 100%;
+ html, body, #root {
+  //height: 100%;
   font-family: "Cabin";
   z-index: 1;
-  background-color: #F3FAEF;
+  //background-color: #F3FAEF;
 
-}
+} 
 `;
 
 export default GlobalStyles;
