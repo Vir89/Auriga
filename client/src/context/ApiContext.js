@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef} from 'react';
-import fetchData from "../utils/fetchData"
 import { setAnArrayOfElementsWithTheStatus } from '../utils/setAnArrayOfElementsWithTheStatus';
 
 

@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import Section from "../atoms/Section"
 import Main from '../atoms/Main';
-import SuscriptionContainer from '../organisms/SuscriptionContainer';
-import { AlertsContainer } from '../organisms/AlertsContainer';
+//import SuscriptionContainer from '../organisms/SuscriptionContainer';
+//import { AlertsContainer } from '../organisms/AlertsContainer';
 //import { userActions } from '../_actions';
-import HomeMainContent from '../organisms/HomeMainContent';
+//import HomeMainContent from '../organisms/HomeMainContent';
 import {ApiContext} from '../../context/ApiContext';
 import Slider from '../organisms/Slider';
 
@@ -32,16 +32,16 @@ const Home = (props) => {
             <Section zindex>
 
             <Slider/>
-                {context.usersLoaded&&<HomeMainContent/>}
+                {/*{context.usersLoaded&&<HomeMainContent/>}*/}
             </Section>
 
-            <Section>
+            {/*<Section>
                 {context.usersLoaded&&<SuscriptionContainer {...props}/>}
             </Section>
 
             <Section>
                 {context.usersLoaded&&<AlertsContainer/>}
-            </Section>            
+            </Section>*/}            
         </Main>
 
     )

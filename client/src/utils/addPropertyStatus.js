@@ -22,6 +22,5 @@ export const addPropertyStatus =(object, kmTotal, kmToMaintance)=>{
         
     });
     return newObject 
-    console.log(newObject)
     
 }

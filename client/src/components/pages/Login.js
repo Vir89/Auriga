@@ -9,8 +9,6 @@ import Input from "../atoms/Input";
 import Main from "../atoms/Main";
 import Section from "../atoms/Section";
 import "./Form.css";
-import GoogleIcon from "../atoms/GoogleIcon";
-import Ahref from "../atoms/Ahref";
 import ButtonSpan from "../atoms/ButtonSpan";
 import { ApiContext } from "../../context/ApiContext";
 import logo from "../../styles/img/logo.png"

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import Div from '../atoms/Div'
 import H2 from '../atoms/H2'
 import H3 from '../atoms/H3'
