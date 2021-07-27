@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Card from '../atoms/Card'
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { IoAlertCircleSharp, IoDocumentText } from "react-icons/io5"; 
 import { GiCarWheel } from "react-icons/gi";
