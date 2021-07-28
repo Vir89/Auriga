@@ -1,6 +1,5 @@
 import React, { useContext }from 'react';
 
-import Alert from '../molecules/Alert';
 import Div from '../atoms/Div';
 import H2 from "../atoms/H2";
 import H3 from "../atoms/H3";
@@ -8,8 +7,6 @@ import Img from "../atoms/Img";
 import P from "../atoms/P";
 
 import { ApiContext } from '../../context/ApiContext';
-import {nanoid} from "nanoid";
-import sortBySeverity from '../../utils/sortBySeverity';
 import SuscriptionType from '../molecules/SuscriptionType';
 
 
@@ -22,6 +19,7 @@ import "swiper/components/navigation/navigation.min.css"
 import SwiperCore, {
   Navigation
 } from 'swiper/core';
+import { AlertsContainer } from './AlertsContainer';
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -68,8 +66,9 @@ function Slider (props) {
            <Div column>
            <SuscriptionType {...props}/>
            </Div>
+           <AlertsContainer/>
             
-           <Div column>
+          {/*  <Div column>
            <H2>Avisos pendientes</H2>
 
            {context.carStatusLoaded && context.carStatus.flat().sort((a,b)=>sortBySeverity(a.status)-(sortBySeverity(b.status))).map(elem=>{
@@ -87,7 +86,7 @@ function Slider (props) {
                )
 
                })}                
-       </Div>
+                </Div> */}
        </SwiperSlide>
         
        ))}
