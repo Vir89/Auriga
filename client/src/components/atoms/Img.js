@@ -8,6 +8,8 @@ const Img = styled.img `
         width: 150px;
         height: 150px;
         margin:auto;
+        margin-top:30px;
+        margin-bottom:50px;
     `}
     ${props=>props.google && css`
         width: 50px;

@@ -18,7 +18,6 @@ import { nanoid } from 'nanoid';
 const CarStatusContainer = () => {
 
     const context = useContext(ApiContext);
-    /* console.log(context.user[0].cars[0].variableFeatures.generalStatus) */
 
     
     const accordion={

@@ -7,7 +7,7 @@ const Card = styled.div `
 	display: flex;
 	max-width: 95%;
 	margin: 10px;
-	overflow: hidden;
+	/* overflow: hidden; */
 	width: 95%;
 	transition: all 500ms;
 
@@ -23,6 +23,10 @@ const Card = styled.div `
 		`}
 		
     }
+
+	/* @media screen and (min-width: 578px) {
+		width:50%;
+	} */
 
 	
 

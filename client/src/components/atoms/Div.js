@@ -83,6 +83,10 @@ export const Div = styled.div `
         flex-direction: row;
         justify-content: center;
         width: 100%;
+
+        ${props=>props.cards && css`
+            flex-wrap: wrap;
+        `}
         
 
         ${props=>props.spaceBet && css`

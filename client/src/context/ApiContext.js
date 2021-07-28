@@ -12,23 +12,7 @@ const APIProvider = (props) => {
   const [carStatus, setCarStatus]= useState([]);
   const [carStatusLoaded, setCarStatusLoaded]= useState(false)
   const isInitialMount = useRef(true);
-    
-   /*  useEffect(() => {
-        
-            console.log(user)
-            console.log(user.personalDetails)
-            console.log(user.cars)
-            const kmTotal = user.cars[0].variableFeatures.kM
-            const kmToMaintance = user.cars[0].variableFeatures.nextMaintenance 
-
-            setAnArrayOfElementsWithTheStatus(
-                user.cars[0].variableFeatures.status, 
-                setCarStatus,
-                kmTotal,
-                kmToMaintance
-            ) 
-            setCarStatusLoaded(true)
-    }, [usersLoaded]) */
+ 
 
     useEffect(() => {
         
@@ -55,10 +39,6 @@ const APIProvider = (props) => {
         
     }, [usersLoaded]) 
 
-   
-
- 
-  
 
   return (
       <ApiContext.Provider value={{ setUser:setUser, user: user, setUsersLoaded:setUsersLoaded, usersLoaded:usersLoaded, carStatus:carStatus, carStatusLoaded:carStatusLoaded}} >

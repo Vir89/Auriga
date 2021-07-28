@@ -5,6 +5,7 @@ import Button from "../atoms/Button";
 import Div from "../atoms/Div";
 import H2 from "../atoms/H2";
 import P from "../atoms/P";
+import Label from "../atoms/Label";
 import Input from "../atoms/Input";
 import Main from "../atoms/Main";
 import Section from "../atoms/Section";
@@ -72,58 +73,64 @@ const Login = (props) => {
 
     return (
         <Main>
-         <Section form>
+         <Section formLogin>
                 <Div column>
                  <Img logo  src={logo}  alt='Logo-Auriga'/>
-                    <H1 logo>AURIGA</H1>
-                    <Div row>
-                    <Form name="form" onSubmit={(e) => handleSubmit(e)}>                       
-                        
-                            <label>Email</label>
-                            <Input
-                                type="email"
-                                name="email"
-                                defaultValue={email}
-                                onChange={handleChange}
-                                className={"form-control" + (submitted && !email ? " is-invalid" : "")}
-                            />
-                            {submitted && !email && (
-                                <div className="invalid-feedback">
-                                    Email es requerido
-                                </div>
-                            )}
-                        
-                            <label>Contraseña</label>
-                            <Input
-                                type="password"
-                                name="password"
-                                defaultValue={password}
-                                onChange={handleChange}
-                                className={"form-control" + (submitted && !password
-                                        ? " is-invalid"
-                                        : "")
-                                    }
-                            />
-                            {submitted && !password && (
-                                <Div red>
-                                    Contraseña es requerida
-                                </Div>
-                            )}
-                            {loggingStatus === "KO" && (
-                                <Div red>
-                                    Email y/o contraseña no válido/s
-                                </Div>
-                            )}
-                            <Button type="submit" main>
-                                <ButtonSpan>Entrar</ButtonSpan>
-                            </Button>
-                                <P>¿Aún no estas registrado? </P>
-                                <Link to="/registro" className="btn btn-link">
-                                    {" "}
-                                    Registro
-                                </Link>
-                          
-                    </Form> 
+                    {/* <H1 logo>AURIGA</H1> */}
+                    <Div column center>
+                        <Form name="form" onSubmit={(e) => handleSubmit(e)}>                       
+                            <Div column center>
+                                <Label>Email</Label>
+                                <Input
+                                    type="email"
+                                    name="email"
+                                    defaultValue={email}
+                                    onChange={handleChange}
+                                    className={"form-control" + (submitted && !email ? " is-invalid" : "")}
+                                />
+                                {submitted && !email && (
+                                    <div className="invalid-feedback">
+                                        Email es requerido
+                                    </div>
+                                )}
+                            </Div>
+
+                            <Div column center>
+                            
+                                <Label>Contraseña</Label>
+                                <Input
+                                    type="password"
+                                    name="password"
+                                    defaultValue={password}
+                                    onChange={handleChange}
+                                    className={"form-control" + (submitted && !password
+                                            ? " is-invalid"
+                                            : "")
+                                        }
+                                />
+                                {submitted && !password && (
+                                    <Div red>
+                                        Contraseña es requerida
+                                    </Div>
+                                )}
+                                {loggingStatus === "KO" && (
+                                    <Div red>
+                                        Email y/o contraseña no válido/s
+                                    </Div>
+                                )}
+                            </Div>
+                            <Div column center>
+                                <Button type="submit" main>
+                                    <ButtonSpan>Entrar</ButtonSpan>
+                                </Button>
+                                    <P>¿Aún no estas registrado? </P>
+                                    <Link to="/registro" className="btn btn-link">
+                                        {" "}
+                                        Registro
+                                    </Link>
+                            </Div>
+                            
+                        </Form> 
                     </Div> 
                 </Div>
             </Section>
