@@ -200,8 +200,8 @@ La página se recargará si haces algún cambio.
 
 ## :unlock: Acceso 
 Para acceder a la web y visualizar el contenido existen dos usuarios:
-·s.caballero1993@gmail.com
-·virginia@gmail.com
+- s.caballero1993@gmail.com
+- virginia@gmail.com
 
 Ambos usuarios emplean la contraseña: 0123456789
 
