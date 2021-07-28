@@ -40,7 +40,7 @@ Insert gif or link to demo
     - [Discord](#comunicación-e-intercambio-de-información).
     - [Google Meet](#comunicación-e-intercambio-de-información).
 - [Instalación](#floppy_disk-instalación).
-- [Acceso](#acceso).
+- [Acceso](#unlock-acceso).
 - [Autores](#octocat-autores).
 - [Perfiles Linkedln](#busts_in_silhouette-perfiles-linkedln).
 - [Licencia](#cop-licencia).
