@@ -2,10 +2,13 @@ import styled, {css} from "styled-components";
 
 export const Div = styled.div `
 
+
     ${props=>props.red && css`
         color:red;
        
     `} 
+
+    
 
     ${props=>props.alert && css`
         width: 101%;
@@ -23,9 +26,7 @@ export const Div = styled.div `
         `}
     `}
 
-    ${props=>props.borderBottom && css`
-        border-bottom: 1px solid #333;
-    `}
+    
     
 
     ${props=>props.column && css`
@@ -215,6 +216,8 @@ export const Div = styled.div `
     ${props=>props.centerDescripLanding && css`
         width: 80%;
     `}
+
+    
    
 `
 

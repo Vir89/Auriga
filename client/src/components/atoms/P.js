@@ -32,6 +32,34 @@ const P = styled.p `
         color:${props => props.theme.colors.black};
 
     `}
+
+    ${props=>props.profile && css`
+        width:70%;
+        padding: 10px;
+        margin:10px;
+        border: 2px solid darkblue;
+        position: relative;
+        border-radius: 5px;
+
+        :before {
+            ${(props) => css`
+            content: "${props.tag}";
+            color:${props => props.theme.colors.primary};
+            font-weight: bold;
+            `}
+            position: absolute;
+            font-size: 75%;
+            top: -10px;
+            left: 15px;
+            width: max-content;
+            padding: 0 20px 0 20px;
+            background-color:${props => props.theme.colors.white};
+        }
+
+    `}
+
+
+  
     
 
 
