@@ -3,7 +3,7 @@
 
 Creación de una aplicación web durante el Bootcamp de Wild Code School de Desarrollo Web realizados por cuatro desarrolladores; para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
 
-## Demo
+## :link: Demo
 
 Insert gif or link to demo
 
@@ -46,7 +46,7 @@ Así que aquí tienes a Auriga hoy. Paco más centrado en lo comercial y Antonio
 
 ## [:top:](#tabla-de-contenido)
   
-## Nuestro objetivo
+## :memo: Nuestro objetivo
 
 Consiste en la creación de un sitio web para llevar a cabo el control del estado del vehículo; y de mantenimiento tanto para clientes que están suscritos en sus servicios: Básico, Estándar, Premium como los que no están suscritos en la empresa Auriga; dirigido principalmente al publico móvil ya que su mayoría de clientes son del mismo.
 
