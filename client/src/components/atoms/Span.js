@@ -9,7 +9,7 @@ const Span = styled.span `
     margin: 0px 5px 0px 5px;
     border-radius: 50px;
     color:${props=>props.theme.colors.white};
-    box-shadow: -1px 1px 1px 0px #000;
+    box-shadow: -1px 1px 4px 0px #747171;
 
     ${props=>props.title && css`
         text-decoration: none;

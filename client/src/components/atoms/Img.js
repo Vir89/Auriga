@@ -5,22 +5,25 @@ const Img = styled.img `
      width: 250px;
 
      ${props=>props.logo && css`
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         margin:auto;
         margin-top:30px;
-        margin-bottom:50px;
+        margin-bottom:20px;
     `}
-    ${props=>props.google && css`
-        width: 50px;
-        height: 50px;
-        margin:30px;
+
+    ${props=>props.auriga && css`
+        margin-left: 40px;
     `}
-    ${props=>props.facebook && css`
-        width: 50px;
-        height: 50px;
-        margin:30px;
+    ${props=>props.links && css`
+    width: 68px;
+    height: 68px;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(50 50 93 / 9%) 0px 0px 1px 1px, rgb(0 0 0 / 30%) 0px 2px 1px 0px;
     `}
+    
     `
 
 export default Img;

@@ -1,7 +1,8 @@
 import React, {useContext} from 'react'
 import * as FaIcons from 'react-icons/fa';
 import DivNavBar from '../atoms/DivNavBar'
-import H2 from "../atoms/H2.js"
+import AurigaLogo from '../../styles/img/AurigaLogo.png'
+import Img from '../atoms/Img';
 import { Link } from 'react-router-dom';
 import { ApiContext } from '../../context/ApiContext';
 
@@ -11,10 +12,15 @@ export const NavBarDiv = (props) => {
 
     return (
         <DivNavBar  sidebar={props.sidebar}>            
-            <H2 nav>AURIGA</H2>
+            <Img auriga src={AurigaLogo} />
             {context.usersLoaded&&  
             <Link to="#">
-               <FaIcons.FaBars onClick={props.showSidebar} />
+               <FaIcons.FaBars onClick={props.showSidebar} style={{
+               height: "190px",
+               width: "30px",
+               marginRight: "12px",
+               }}
+               />
             </Link>
             }
         </DivNavBar>

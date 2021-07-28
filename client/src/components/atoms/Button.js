@@ -5,10 +5,10 @@ const Button = styled.button `
         border: none;
         background-color:${props => props.theme.colors.primary};
         color:${props => props.theme.colors.white};
-        width: 90%;
+        width: 77%;
         height:44px;
         border-radius:5px;
-        margin: 8px;
+        margin: 15px;
 
         @media screen and (min-width: 578px) {
 		width:70%;

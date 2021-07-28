@@ -1,23 +1,22 @@
-import React from 'react'
+import AurigaLogo from '../../styles/img/AurigaLogo.png'
+import DivNavBar from '../atoms/DivNavBar';
+import Img from '../atoms/Img';
+import { SidebarData } from '../organisms/SidebarData';
+import { Link } from 'react-router-dom';
+import LiNavText from '../atoms/LiNavText';
+import React from 'react';
+import styled from 'styled-components';
 import NavMenu from '../atoms/NavMenu'
 import UlNavMenu from '../atoms/UlNavMenu';
-import { Link } from 'react-router-dom';
-//import LiItems from '../atoms/LiItems';
-import LiNavText from '../atoms/LiNavText';
-import { SidebarData } from '../organisms/SidebarData';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
-import Span from '../atoms/Span';
-//import H3 from '../atoms/H3';
-import H2 from '../atoms/H2';
-import DivNavBar from '../atoms/DivNavBar';
-import styled from 'styled-components';
 
- const StyledLink = styled(Link)`
-  text-decoration: none;
-  margin: 1rem;
-  position: relative;
-  z-index: 90,
+const StyledLink = styled(Link)`
+text-decoration: none;
+margin: 1rem;
+position: relative;
+color: #ffff;
+font-size: 1.2rem;
 `
 
 export const NavMenuLinks = (props) => {
@@ -28,28 +27,30 @@ export const NavMenuLinks = (props) => {
             
             <UlNavMenu>                
             <DivNavBar  sidebar={props.sidebar}>            
-            <H2 nav>AURIGA</H2>
+            
+            <Img auriga src={AurigaLogo} />
             <Link to="#">
-                <AiIcons.AiOutlineClose onClick={props.showSidebar}/>
+                <AiIcons.AiOutlineClose  onClick={props.showSidebar} style={{
+                    height: "110px",
+                    width: "31px",
+                    marginRight: "12px"                
+                }} 
+                />
             </Link>
         </DivNavBar>
-                {/* <LiItems>
-                    <H2 client> Hola (Nombre del Cliente)</H2>
-                    <H3 cars> Coches: (Marca-Modelo)<IoIcons.IoIosArrowDown /> </H3>
-                </LiItems> */}
                 {
                     SidebarData.map((item, index) => {
                         return (
                             <LiNavText key={index}  onClick={props.showSidebar}>
-                                <StyledLink to={item.path}>                                                                                                                                   
-                                   {item.icon} <Span title>  {item.title} <IoIcons.IoIosArrowForward /></Span>
+                                {item.icon}                                
+                                <StyledLink to={item.path}>                      
+                                {item.title}
                                 </StyledLink>
-                                
+                                 <IoIcons.IoIosArrowForward styled={{marginRight: "auto"}}/>                                
                             </LiNavText>               
                         )
                     })}                
-            </UlNavMenu>
-        
+            </UlNavMenu>        
         </NavMenu>
     )
 }

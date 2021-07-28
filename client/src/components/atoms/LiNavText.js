@@ -6,7 +6,7 @@ const LiNavText = styled.li `
     align-items: center;
     list-style: none;
     height: 60px;
-    margin-left: 10px;
+    margin: 10px;
     font-weight: ${props => props.theme.textWeight.regular};
     z-index: 1;
    

@@ -15,9 +15,7 @@ export const AlertsContainer = () => {
 
     return (
         <Div column>
-            <H2>Avisos pendientes</H2>
-
-            <Div column cards>
+            <H2 avisos>Avisos pendientes</H2>
                 {context.usersLoaded && context.carStatus.flat().sort((a,b)=>sortBySeverity(a.status)-(sortBySeverity(b.status))).map(elem=>{
                 
                 return ( 
@@ -33,8 +31,6 @@ export const AlertsContainer = () => {
                     )
 
                     })}
-            </Div> 
-                
         </Div>
     )
 }

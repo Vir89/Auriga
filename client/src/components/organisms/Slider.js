@@ -1,11 +1,11 @@
 import React, { useContext }from 'react';
-
+import { ImArrowRight2, ImArrowLeft2 } from "react-icons/im";
 import Div from '../atoms/Div';
 import H2 from "../atoms/H2";
 import H3 from "../atoms/H3";
 import Img from "../atoms/Img";
 import P from "../atoms/P";
-
+import SpanValue from '../atoms/SpanValue';
 import { ApiContext } from '../../context/ApiContext';
 import SuscriptionType from '../molecules/SuscriptionType';
 
@@ -20,6 +20,7 @@ import SwiperCore, {
   Navigation
 } from 'swiper/core';
 import { AlertsContainer } from './AlertsContainer';
+import Span from '../atoms/Span';
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -34,7 +35,7 @@ function Slider (props) {
    return (
        
     <Swiper
-    spaceBetween={0}
+    spaceBetween={20}
     slidesPerView={1}
     onSlideChange={() => console.log('slide change')}
     onSwiper={(swiper) => console.log(swiper)}
@@ -45,48 +46,33 @@ function Slider (props) {
 
           
            <Div column center>
-               <Div img>
-                   <Img src={cars.staticFeatures.Image}/>
-               </Div>
-                   <H2>{cars.staticFeatures.brand} {cars.staticFeatures.model}</H2>
-                   <P>{cars.staticFeatures.year} - {cars.variableFeatures.kM} kms</P>
-           </Div>
-            
-           <Div column>           
-               <Div row spaceBet>
-                   <H3>Kilómetros/año</H3>
-                   <H3>{cars.variableFeatures.kM} kms</H3>
-               </Div >
-               <Div row spaceBet>
-               <H3>Valor de vehículo</H3>
-               <H3>{cars.variableFeatures.currentValue} €</H3>
-               </Div>
-           </Div >
-            
-           <Div column>
+         
            <SuscriptionType {...props}/>
+           
+               <Div img>
+            
+                    <ImArrowLeft2 style={{ 
+                        color:"#1D4A7E", 
+                        width: "29px",
+                        height: "51px",
+                        margin: "14px" }}
+                    />
+            
+                    <Img src={cars.staticFeatures.Image}/> 
+            
+                    <ImArrowRight2 style={{ 
+                        color:"#1D4A7E", 
+                        width: "29px",
+                        height: "51px",
+                        margin: "14px" }}
+                    />
+
+               </Div>
+
+                   <H2>{cars.staticFeatures.brand} {cars.staticFeatures.model}</H2>
+                   <P>{cars.staticFeatures.year} - {cars.variableFeatures.kM} kms - {cars.variableFeatures.currentValue} € <SpanValue>(Valor Actual)</SpanValue></P>
            </Div>
            <AlertsContainer/>
-            
-          {/*  <Div column>
-           <H2>Avisos pendientes</H2>
-
-           {context.carStatusLoaded && context.carStatus.flat().sort((a,b)=>sortBySeverity(a.status)-(sortBySeverity(b.status))).map(elem=>{
-              console.log(elem);
-              return ( 
-                   elem.status!=="success" && 
-                   <Alert
-                       key={nanoid()}
-                       dueDate = {elem.dueDate}
-                       title= {elem.title}
-                       description={elem.statusDescription}
-                       type={elem.type} 
-                       status={elem.status}  
-                   />
-               )
-
-               })}                
-                </Div> */}
        </SwiperSlide>
         
        ))}
