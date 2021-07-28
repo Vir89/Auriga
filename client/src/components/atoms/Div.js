@@ -17,6 +17,7 @@ export const Div = styled.div `
         justify-content: space-between;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         background-color:${props => props.theme.colors.white} !important;
+
         ${props=>props.danger && css`
             background-color:${props => props.theme.colors.lightDanger} !important;
         `}
@@ -31,6 +32,28 @@ export const Div = styled.div `
         display: flex;
         flex-direction: column;
         //padding:5px;
+
+        ${props=>props.cards && css`
+            flex-wrap:wrap;
+            align-content: space-between;
+            
+            @media screen and (min-width: 700px) {
+                height:950px;
+
+            }
+
+            @media screen and (min-width: 800px) {
+                height:890px;
+
+            }
+
+            @media screen and (min-width: 994px) {
+                height:816px;
+
+            }
+
+            
+        `}
 
         ${props=>props.left && css`
             align-items: flex-start;
@@ -81,14 +104,15 @@ export const Div = styled.div `
     ${props=>props.row && css`
         display: flex;
         flex-direction: row;
-        justify-content: center;
         width: 100%;
 
         ${props=>props.cards && css`
             flex-wrap: wrap;
-        `}
-        
+            
 
+        `}
+    
+        
         ${props=>props.spaceBet && css`
             justify-content: space-between;
         `}

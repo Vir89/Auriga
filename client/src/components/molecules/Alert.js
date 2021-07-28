@@ -18,7 +18,7 @@ const Alert = (props) => {
 
     return (
         
-            <Card onClick={handleToggle} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false}>
+            <Card onClick={handleToggle} warning={props.status==="warning"? true: false} danger={props.status==="danger"? true: false} >
 
                 <Div column span>
                     <SpanIconStatus status={props.status} title={props.title} type={props.type}/>
