@@ -4,6 +4,10 @@ import H2 from '../atoms/H2'
 import H3 from '../atoms/H3'
 import P from '../atoms/P'
 import { ApiContext } from '../../context/ApiContext';
+import Span from '../atoms/Span';
+import { HiPencilAlt } from "react-icons/hi";
+
+
 
 
 
@@ -13,19 +17,51 @@ export const ProfileBodyContainer = () => {
    
     return (
         
-            <Div column borderBottom>
+            <Div column>
                 <H2>Area Personal</H2>
-                <H3>Nombre:</H3><P>{context.user.personalDetails.firstName}</P>
-                <H3>Apellidos:</H3><P>{context.user.personalDetails.lastName}</P>
-                <H3>Email:</H3><P> {context.user.personalDetails.email}</P>
-                <H3>Teléfono:</H3><P>{context.user.personalDetails.phoneNumber}</P>
+              
+
+                <P profile tag="Nombre">
+                    {context.user.personalDetails.firstName}
+                    
+                </P>
+                <P profile tag="Apellidos">
+                    {context.user.personalDetails.lastName}
+                </P>
+                <P profile tag="Email">
+                    {context.user.personalDetails.email}
+                </P>
+                <P profile tag="Teléfono">
+                    {context.user.personalDetails.phoneNumber}
+                    <HiPencilAlt/>
+                </P>
                 
+
                 <H3>Dirección Principal</H3>
-                <P> Calle: {context.user.personalDetails.address.street}</P>
-                <P> Código postal: {context.user.personalDetails.address.postalCode}</P>
-                <P> Ciudad: {context.user.personalDetails.address.city}</P>
-                {context.user.personalDetails.suscriptor && <H3>Suscripción: {context.user.personalDetails.suscriptionPlan}</H3> }
-            
+                <P profile tag="Calle">
+                    {context.user.personalDetails.address.street}
+                    <HiPencilAlt/>
+                </P>
+                <P profile tag="Código Postal">
+                    {context.user.personalDetails.address.postalCode}
+                    <HiPencilAlt/>
+                </P>
+                <P profile tag="Ciudad">
+                     {context.user.personalDetails.address.city}
+                    <HiPencilAlt/>
+                </P>
+
+                <H3>Suscripción</H3>
+
+                <P profile tag="Tipo">
+                     {context.user.personalDetails.suscriptionPlan}
+                </P>
+
+                
+
+
+
+        
                
             </Div>
 

@@ -6,6 +6,7 @@ const H2 = styled.h2 `
     color:${props => props.theme.colors.primary};
     margin: auto;
 
+
     ${props=>props.nav && css`
         color: ${props => props.theme.colors.whiteSmoke};
         padding-left: 136px;
@@ -21,6 +22,8 @@ const H2 = styled.h2 `
         
         margin: 20px;
     `}
+
+    
 
 
     

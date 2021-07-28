@@ -19,6 +19,7 @@ import Img from "../atoms/Img";
 import H1 from "../atoms/H1";
 import Hr from "../atoms/Hr";
 import Form from  "../atoms/Form";
+import Hr from "../atoms/Hr";
 
 const Login = (props) => {
 

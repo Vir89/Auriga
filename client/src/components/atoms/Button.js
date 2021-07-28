@@ -33,6 +33,7 @@ const Button = styled.button `
             font-size: 16px;
             margin: 4px 4px;
             width: 35%;
+	    min-width: 110px;
             font-weight: 700;
                         
 
