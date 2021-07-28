@@ -20,11 +20,17 @@ Insert gif or link to demo
     - [CSS](#herramientas-frontend).
     - [Styled-Components](#herramientas-frontend).
     - [Atomic design](#herramientas-frontend).
+    - [React Router](#herramientas-frontend).
+    - [Context](#herramientas-frontend).
+    - [Swiper](#herramientas-frontend).
   - [Herramientas Backend](#wrench-herramientas-backend).
     - [Node.js](#herramientas-backend).
     - [Express.js](#herramientas-backend).
     - [mongoDB](#herramientas-backend).
     - [Heroku](#herramientas-backend).
+    - [Mongoose](#herramientas-backend).
+    - [Jsonwebtoken](#herramientas-backend).
+    - [Nodemon](#herramientas-backend).
   - [Control de Versiones](#bookmark_tabs-control-de-versiones).
     - [Git y Github](#control-de-versiones).
   - [Metodología SCRUM](#clipboard-metodología-scrum).
@@ -111,13 +117,13 @@ Es de alto rendimiento y alta escalabilidad lo hace ideal para un sistema que se
 Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
 
 - **Mongoose:** 
-Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
+Nos proporciona una solución sencilla basada en esquemas para modelar los datos de su aplicación.
 
 - **Jsonwebtoken:** 
-Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
+Es un estándar abierto basado en JSON propuesto por IETF para la creación de tokens de acceso que permiten la propagación de identidad y privilegios
 
 - **Nodemon:** 
-Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
+Es una herramienta que ayuda a desarrollar aplicaciones basadas en node.js al reiniciar automáticamente la aplicación de node cuando se detectan cambios de archivo en el directorio.
 
 ## [:top:](#tabla-de-contenido)
 
