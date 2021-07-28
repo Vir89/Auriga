@@ -84,6 +84,15 @@ Es una nueva forma de utilizar CSS con tus componentes en las aplicaciones front
 - **Atomic design:** 
 Utilizamos esta metodología ya que nos obliga a coger cada diseño y diseccionarlo para poder separar cada átomo.
 
+- **React Router:** 
+Nos permiten crear una aplicación web de una sola página con navegación sin que la página se actualice mientras el usuario navega. React Router utiliza la estructura de componentes para llamar a componentes, que muestran la información adecuada.
+
+- **Context:** 
+Nos provee una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel.
+
+- **Swiper:** 
+Es un control deslizante táctil móvil; está destinado a ser utilizado en sitios web móviles, aplicaciones web móviles y aplicaciones móviles nativas / híbridas.
+
 ## [:top:](#tabla-de-contenido)
 
 ### :wrench: Herramientas Backend:
@@ -99,6 +108,15 @@ Es un motor de base de datos NoSQL basado en documentos.
 Es de alto rendimiento y alta escalabilidad lo hace ideal para un sistema que se ha creado. Además de proveer una estructura de documento JSON, soporta un esquema dinámico llamado BSON.
 
 - **Heroku:** 
+Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
+
+- **Mongoose:** 
+Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
+
+- **Jsonwebtoken:** 
+Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
+
+- **Nodemon:** 
 Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
 
 ## [:top:](#tabla-de-contenido)
