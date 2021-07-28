@@ -40,7 +40,7 @@ Insert gif or link to demo
     - [Discord](#comunicación-e-intercambio-de-información).
     - [Google Meet](#comunicación-e-intercambio-de-información).
 - [Instalación](#floppy_disk-instalación).
-- [Acceso](#floppy_disk-instalación).
+- [Acceso](#acceso).
 - [Autores](#octocat-autores).
 - [Perfiles Linkedln](#busts_in_silhouette-perfiles-linkedln).
 - [Licencia](#cop-licencia).
@@ -198,7 +198,7 @@ La página se recargará si haces algún cambio.
 
 ## [:top:](#tabla-de-contenido)
 
-## :octocat: Acceso
+## :unlock: Acceso 
 Para acceder a la web y visualizar el contenido existen dos usuarios:
 ·s.caballero1993@gmail.com
 ·virginia@gmail.com
