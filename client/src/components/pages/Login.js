@@ -17,6 +17,7 @@ import google from "../../styles/img/google.png"
 import facebook from "../../styles/img/facebook.png"
 import Img from "../atoms/Img";
 import H1 from "../atoms/H1";
+import Hr from "../atoms/Hr";
 import Form from  "../atoms/Form";
 import Hr from "../atoms/Hr";
 
@@ -77,14 +78,15 @@ const Login = (props) => {
          <Section formLogin>
                 <Div column>
                  <Img logo  src={logo}  alt='Logo-Auriga'/>
-                    {/* <H1 logo>AURIGA</H1> */}
+                     <H1 logo>Mi.Auriga</H1>                    
                     <Div column center>
                         <Form name="form" onSubmit={(e) => handleSubmit(e)}>                       
                             <Div column center>
-                                <Label>Email</Label>
+                                {/* <Label>Email</Label> */}
                                 <Input
                                     type="email"
                                     name="email"
+                                    placeholder="Email"
                                     defaultValue={email}
                                     onChange={handleChange}
                                     className={"form-control" + (submitted && !email ? " is-invalid" : "")}
@@ -94,14 +96,13 @@ const Login = (props) => {
                                         Email es requerido
                                     </div>
                                 )}
-                            </Div>
 
-                            <Div column center>
                             
-                                <Label>Contraseña</Label>
+                                {/* <Label>Contraseña</Label> */}
                                 <Input
                                     type="password"
                                     name="password"
+                                    placeholder="Contraseña"
                                     defaultValue={password}
                                     onChange={handleChange}
                                     className={"form-control" + (submitted && !password
@@ -136,10 +137,11 @@ const Login = (props) => {
                 </Div>
             </Section>
             <Div links>
-                <H2>Ingresar con</H2>
-                <Hr/>
-                <Img google src={google} alt='google' />
-                <Img facebook src={facebook} alt='facebook'/>
+             <Div hr>
+             <Hr></Hr><H2 network>Incicia Sesión</H2><Hr></Hr>
+             </Div>
+           <Img links src={google} alt='google' />
+           <Img links src={facebook} alt='facebook'/>
            </Div>
         </Main>
     );
