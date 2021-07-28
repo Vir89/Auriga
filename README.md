@@ -10,32 +10,32 @@ Insert gif or link to demo
 ## Tabla de contenido
 
 - [Auriga](#auriga).
-- [Nuestro objetivo](#nuestro-objetivo).
+- [Nuestro objetivo](#memo-nuestro-objetivo).
 - [Stack Tecnológico](#microscope-stack-tecnológico).
 - [Herramientas, librerías, dependencias y metodologías utilizadas](#microscope-herramientas-librerías-dependencias-y-metodologías-utilizadas).
-  - [Herramientas Frontend](#herramientas-frontend).
+  - [Herramientas Frontend](#wrench-herramientas-frontend).
     - [React.js](#herramientas-frontend).
     - [Javascript](#herramientas-frontend).
     - [HTML](#herramientas-frontend).
     - [CSS](#herramientas-frontend).
     - [Styled-Components](#herramientas-frontend).
     - [Atomic design](#herramientas-frontend).
-  - [Herramientas Backend](#herramientas-backend).
+  - [Herramientas Backend](#wrench-herramientas-backend).
     - [Node.js](#herramientas-backend).
     - [Express.js](#herramientas-backend).
     - [mongoDB](#herramientas-backend).
     - [Heroku](#herramientas-backend).
-  - [Control de Versiones](#control-de-versiones).
+  - [Control de Versiones](#bookmark_tabs-control-de-versiones).
     - [Git y Github](#control-de-versiones).
-  - [Metodología SCRUM](#metodología-scrum).
+  - [Metodología SCRUM](#clipboard-metodología-scrum).
     - [Jira](#metodología-scrum).
-  - [Comunicación e Intercambio de Información](#comunicación-e-intercambio-de-información).
+  - [Comunicación e Intercambio de Información](#telephone_receiver-comunicación-e-intercambio-de-información).
     - [Slack](#comunicación-e-intercambio-de-información).
     - [Discord](#comunicación-e-intercambio-de-información).
     - [Google Meet](#comunicación-e-intercambio-de-información).
 - [Instalación](#floppy_disk-instalación).
-- [Autores](#autores).
-- [Perfiles Linkedln](#perfiles-linkedln).
+- [Autores](#octocat-autores).
+- [Perfiles Linkedln](#busts_in_silhouette-perfiles-linkedln).
 - [Licencia](#cop-licencia).
 
 ## Auriga
