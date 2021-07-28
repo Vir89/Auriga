@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from 'react';
 import './Form.css';
-import Login from './Login';
 import FormSignup from './FormSignup';
 import FormSuccess from './FormSuccess';
 
@@ -11,7 +10,7 @@ const Form = () => {
     setIsSubmitted(true);
   }
   return (
-    <Fragment>
+    <>
       <div className='form-container'>
         <span className='close-btn'>×</span>
         <div className='form-content-left'>
@@ -24,7 +23,7 @@ const Form = () => {
         ) 
         }
       </div>
-    </Fragment>
+    </>
   );
 };
 

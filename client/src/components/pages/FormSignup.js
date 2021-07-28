@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from 'react';
 import Form from  "../atoms/Form";
 import Div from '../atoms/Div';
+import Label from '../atoms/Label';
 import {useForm} from './useForm';
 import './Form.css';
 import GoogleLogin from 'react-google-login';
@@ -61,14 +62,15 @@ const FormSignup = () => {
   return (
 
     <Main>
-      <Section form>
-      <Div column>
+      <Section formRegister>
+      <Div column center>
           <Img logo  src={logo}  alt='Logo-Auriga'/>
           <H1 logo>AURIGA</H1>
           <Div row>
             <Form name="form" onSubmit={handleSubmit} noValidate>
+            <Div column center>
      
-              <label >Nombre</label>
+              <Label >Nombre</Label>
               <Input
                 
                 type='text'
@@ -78,9 +80,10 @@ const FormSignup = () => {
                 onChange={handleChange}
               />
               {errors.firstName && <p>{errors.firstName}</p>}
-            
+            </Div>
+            <Div column center>
            
-              <label>Apellidos</label>
+              <Label>Apellidos</Label>
               <Input
                 type='text'
                 name='lastName'
@@ -89,8 +92,9 @@ const FormSignup = () => {
                 onChange={handleChange}
               />
               {errors.lastName && <p>{errors.lastName}</p>}
-          
-              <label >Email</label>
+            </Div>
+            <Div column center>
+              <Label >Email</Label>
               <Input
               
                 type='email'
@@ -100,8 +104,9 @@ const FormSignup = () => {
                 onChange={handleChange}
               />
               {errors.email && <p>{errors.email}</p>}
-         
-              <label >Contraseña</label>
+            </Div>
+            <Div column center>
+              <Label >Contraseña</Label>
               <Input
                 type='password'
                 name='password'
@@ -110,8 +115,10 @@ const FormSignup = () => {
                 onChange={handleChange}
               />
               {errors.password && <p>{errors.password}</p>}
+            </Div>
+            <Div column center>
            
-              <label >Confirma la Contraseña</label>
+              <Label >Confirma la Contraseña</Label>
               <Input
                 type='password'
                 name='password2'
@@ -120,6 +127,8 @@ const FormSignup = () => {
                 onChange={handleChange}
               />
               {errors.password2 && <p>{errors.password2}</p>}
+            </Div>
+            <Div column center>
             
             <Button type="submit" main>
               Registra aquí
@@ -127,6 +136,7 @@ const FormSignup = () => {
             {/*<span className='form-input-loginGoogle'>
               Login with Google <a href='/logingoogle'>Here</a>
       </span>*/}
+            </Div>
 
       <br></br>
 
@@ -148,6 +158,7 @@ const FormSignup = () => {
             //onSuccess = { answerGoogle }
             //onFailure = { answerGoogle }
             cookiePolicy = { 'single_host_origin' }
+            className="GoogleBox"
             />
 
             </div>

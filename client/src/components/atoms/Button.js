@@ -10,6 +10,14 @@ const Button = styled.button `
         border-radius:5px;
         margin: 8px;
 
+        @media screen and (min-width: 578px) {
+		width:70%;
+		}
+
+        @media screen and (min-width: 1000px) {
+		width:50%;
+		}
+
 
     `}
 
