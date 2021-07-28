@@ -64,7 +64,7 @@ Consiste en la creación de un sitio web para llevar a cabo el control del estad
 
 ## :microscope: Herramientas, librerías, dependencias y metodologías utilizadas:
 
-### Herramientas Frontend:
+### :wrench: Herramientas Frontend:
 
 - **React.js:** 
 Es una biblioteca o librería de Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.
@@ -86,7 +86,7 @@ Utilizamos esta metodología ya que nos obliga a coger cada diseño y disecciona
 
 ## [:top:](#tabla-de-contenido)
 
-### Herramientas Backend:
+### :wrench: Herramientas Backend:
 
 - **Node.js:** 
 Es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos.
@@ -103,21 +103,21 @@ Es una plataforma en la nube que permite a las empresas construir, entregar, sup
 
 ## [:top:](#tabla-de-contenido)
 
-### Control de Versiones: 
+### :bookmark_tabs: Control de Versiones: 
 
 - **Git y Github:** 
 Lo utilizamos para control de versiones ya que nos facilita el trabajo colaborativo, Reduce considerablemente los tiempos de deploy (despliegue) a la vez que el proyecto evolucionando.
 
 ## [:top:](#tabla-de-contenido)
 
-### Metodología SCRUM:
+### :clipboard: Metodología SCRUM:
 
 - **Jira:**
 Se utilizo Jira Software para la administración o gestión del proyecto; ya que nos ayuda ahorrar tiempo y dinero, fomenta el trabajo en equipo, se adapta fácil a la empresa o al grupo que lo quiera utilizar, es de fácil manejo.
 
 ## [:top:](#tabla-de-contenido)
 
-### Comunicación e Intercambio de Información:
+### :telephone_receiver: Comunicación e Intercambio de Información:
 
 - **Slack:**
 Esta herramienta lo utilizamos para comunicarnos con cliente y el equipo de desarrolladores: más rápida, mejor organizada y más segura que el correo electrónico y así establecer establecer reuniones o consultas sobre dudas que aclarar.
@@ -146,7 +146,7 @@ cd Auriga
 Donde escribirá lo siguiente dentro del archivo creado anteriormente
 
 ```bash 
-PORT= .........Puerto.........
+PORT=5000
 DB_CONNECTION= .........Conexion a la base de datos.........
 ```
 
@@ -173,7 +173,7 @@ La página se recargará si haces algún cambio.
 
 ## [:top:](#tabla-de-contenido)
 
-## Autores
+## :octocat: Autores
 
 Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Manuel, Sergio y Virginia, este es nuestro tercer proyecto, y se ha creado este proyecto donde aplicamos conocimientos de Frontend y Backend.
 
@@ -184,7 +184,7 @@ Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Ma
 
 ## [:top:](#tabla-de-contenido)
 
-## Perfiles Linkedln
+## :busts_in_silhouette: Perfiles Linkedln
 
 - [@Alba-López](https://www.linkedin.com/in/albalopezmelian/)
 - [@Manuel-Marque](https://www.linkedin.com/in/manuel-marque/)
