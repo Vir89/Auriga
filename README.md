@@ -141,7 +141,16 @@ git clone https://github.com/Vir89/Auriga.git
 cd Auriga
 ```
 
-2. Instalando las dependencias:
+2. También para la parte de backend se requiere crear un archivo ".env" :
+
+Donde escribirá lo siguiente dentro del archivo creado anteriormente
+
+```bash 
+PORT= .........Puerto.........
+DB_CONNECTION= .........Conexion a la base de datos.........
+```
+
+3. Instalando las dependencias:
 
 ```bash 
 npm install
@@ -152,11 +161,12 @@ Y luego hacer
 npm run client-install
 ```
 
-3. Iniciar la aplicación web:
+4. Iniciar la aplicación web:
 
 ```bash 
 npm run-script dev
 ```
+
 Ejecute la aplicación en modo de desarrollo. Abra http://localhost:3000 para verla en el navegador.
 
 La página se recargará si haces algún cambio.
