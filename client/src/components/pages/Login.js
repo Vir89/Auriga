@@ -18,6 +18,7 @@ import facebook from "../../styles/img/facebook.png"
 import Img from "../atoms/Img";
 import H1 from "../atoms/H1";
 import Form from  "../atoms/Form";
+import Hr from "../atoms/Hr";
 
 const Login = (props) => {
 
@@ -135,9 +136,10 @@ const Login = (props) => {
                 </Div>
             </Section>
             <Div links>
-            <H2>Ingresar con</H2>
-           <Img google src={google} alt='google' />
-           <Img facebook src={facebook} alt='facebook'/>
+                <H2>Ingresar con</H2>
+                <Hr/>
+                <Img google src={google} alt='google' />
+                <Img facebook src={facebook} alt='facebook'/>
            </Div>
         </Main>
     );
