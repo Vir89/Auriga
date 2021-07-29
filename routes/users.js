@@ -4,13 +4,13 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 
 // Create a new user
-router.post('/', 
+router.post('/api/', 
     
     userController.createUser
 );
 
 //Get info of user by id
-router.get('/',
+router.get('/api/',
 //authentication first then display info
     userController.getUserInfo
 );
