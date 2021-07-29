@@ -16,6 +16,7 @@ import google from "../../styles/img/google.png"
 import facebook from "../../styles/img/facebook.png"
 import Img from "../atoms/Img";
 import H1 from "../atoms/H1";
+import Hr from "../atoms/Hr";
 import Form from  "../atoms/Form";
 
 const Login = (props) => {
