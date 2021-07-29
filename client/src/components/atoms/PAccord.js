@@ -9,7 +9,7 @@ const PAccord = styled.p `
     font-weight: ${props => props.theme.textWeight.regular};
     color:${props => props.theme.colors.primary};
     ${props=>!props.isDisplaying && css`
-    display:none;
+        display:none;
 
         
     `} 

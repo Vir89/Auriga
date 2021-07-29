@@ -55,7 +55,7 @@ function Slider (props) {
                         color:"#1D4A7E", 
                         width: "29px",
                         height: "51px",
-                        margin: "4px" }}
+                        margin: "14px" }}
                     />
             
                     <Img src={cars.staticFeatures.Image}/> 
@@ -64,7 +64,7 @@ function Slider (props) {
                         color:"#1D4A7E", 
                         width: "29px",
                         height: "51px",
-                        margin: "4px" }}
+                        margin: "14px" }}
                     />
 
                </Div>

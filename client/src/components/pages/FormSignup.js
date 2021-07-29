@@ -14,10 +14,7 @@ import Button from "../atoms/Button";
 import H1 from "../atoms/H1";
 import Img from "../atoms/Img";
 import logo from "../../styles/img/logo.png"
-import google from "../../styles/img/google.png"
-import facebook from "../../styles/img/facebook.png"
-import Hr from "../atoms/Hr";
-import H2 from "../atoms/H2";
+
 const FormSignup = () => {
 
   const [user, setUser] = useState({
@@ -72,51 +69,60 @@ const FormSignup = () => {
           <Div row>
             <Form name="form" onSubmit={handleSubmit} noValidate>
             <Div column center>
-              <Input                
+     
+              <Label >Nombre</Label>
+              <Input
+                
                 type='text'
                 name='firstName'
-                placeholder='Nombre'
+                placeholder='Enter your firstName'
                 value={values.firstName}
                 onChange={handleChange}
               />
               {errors.firstName && <p>{errors.firstName}</p>}
             </Div>
-            {/* <Div column center>
+            <Div column center>
+           
+              <Label>Apellidos</Label>
               <Input
                 type='text'
                 name='lastName'
-                placeholder='Apellidos'
+                placeholder='Enter your lastname'
                 value={values.lastName}
                 onChange={handleChange}
               />
               {errors.lastName && <p>{errors.lastName}</p>}
-            </Div> */}
+            </Div>
             <Div column center>
-
-              <Input              
+              <Label >Email</Label>
+              <Input
+              
                 type='email'
                 name='email'
-                placeholder='Email'
+                placeholder='Enter your email'
                 value={values.email}
                 onChange={handleChange}
               />
               {errors.email && <p>{errors.email}</p>}
             </Div>
             <Div column center>
+              <Label >Contraseña</Label>
               <Input
                 type='password'
                 name='password'
-                placeholder='Contraseña'
+                placeholder='Enter your password'
                 value={values.password}
                 onChange={handleChange}
               />
               {errors.password && <p>{errors.password}</p>}
             </Div>
             <Div column center>
+           
+              <Label >Confirma la Contraseña</Label>
               <Input
                 type='password'
                 name='password2'
-                placeholder='Confirma la contraseña'
+                placeholder='Confirm your password'
                 value={values.password2}
                 onChange={handleChange}
               />
@@ -127,22 +133,44 @@ const FormSignup = () => {
             <Button type="submit" main>
               Registra aquí
             </Button>
-            </Div>  
-      </Form>    
+            {/*<span className='form-input-loginGoogle'>
+              Login with Google <a href='/logingoogle'>Here</a>
+      </span>*/}
+            </Div>
+
+      <br></br>
+
+        <div className="login">
+
+            <span className='form-input-login'>
+              ¿Ya tienes cuenta con nosotros? Haz click <a href='/login'>Aquí</a>
+
+            </span>
+        </div>    
+        
+            <div className="autencticate">
+            <br / > < br / >
+            <GoogleLogin clientId = "600656666058-4vbo5ne30rqc84rb13e6mjkpgt384k7d.apps.googleusercontent.com"
+            buttonText = "Entra con Google"
+            //render={renderProps => (
+            // <button onClick={renderProps.onClick} disabled={renderProps.disabled}>This is my custom Google button</button>
+            //)}
+            //onSuccess = { answerGoogle }
+            //onFailure = { answerGoogle }
+            cookiePolicy = { 'single_host_origin' }
+            className="GoogleBox"
+            />
+
+            </div>
+
+          
+        </Form>
+
         </Div>
 
         </Div>
-      </Section>  
-      <Div links>
-      <span className='form-input-login'>
-          ¿Ya tienes cuenta con nosotros? Haz click <a href='/login'>Aquí</a>
-      </span>
-             <Div hr>
-             <Hr></Hr><H2 netwk>Inicia Sesión</H2><Hr></Hr>
-             </Div>
-           <Img links src={google} alt='google' />
-           <Img links src={facebook} alt='facebook'/>
-           </Div>
+      </Section>
+
   </Main>
   );
 };

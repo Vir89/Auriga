@@ -70,7 +70,7 @@ table {
   //height: 100%;
   font-family: "Cabin";
   z-index: 1;
-  background-color:#F2F2F1;
+  background-color: #F3FAEF;
 
 } 
 `;
