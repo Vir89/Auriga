@@ -17,7 +17,7 @@ export const ProfileBodyContainer = () => {
    
     return (
         
-            <Div column center>
+            <Div column>
                 <H2>Area Personal</H2>
               
 
