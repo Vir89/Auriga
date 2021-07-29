@@ -10,6 +10,11 @@ const H1 = styled.h1 `
         font-size: 2rem;
         
     `}
+    ${props=>props.suscription && css`
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+    `}
 `
 
 export default H1;

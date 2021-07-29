@@ -11,6 +11,11 @@ const H2 = styled.h2 `
         color: ${props => props.theme.colors.whiteSmoke};
         padding-left: 136px;
     `}
+
+    ${props=>props.suscription && css`
+        color: black;
+        text-align: center;
+    `}
     ${props=>props.network&& css`
         color:#675d5d;
     `}
@@ -19,8 +24,9 @@ const H2 = styled.h2 `
         margin: 0px 10px 7px;
     `}
     ${props=>props.avisos && css`
-        
-        margin: 20px;
+        font-size: 1.5rem;
+        margin: auto;
+        margin-top: 20px;
     `}
 
     
