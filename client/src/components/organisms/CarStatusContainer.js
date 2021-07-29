@@ -10,9 +10,9 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
   } from 'react-accessible-accordion';
-/* import 'react-accessible-accordion/dist/fancy-example.css'; */
 import '../../styles/accordion.css';
 import { nanoid } from 'nanoid';
+
 
 
 const CarStatusContainer = () => {
@@ -33,7 +33,7 @@ const CarStatusContainer = () => {
     
    
     return (
-        <Div column>   
+        <Div acordeon>   
             <H2>Estado general</H2>
 
            <Accordion allowZeroExpanded>
@@ -191,4 +191,4 @@ const CarStatusContainer = () => {
     )
 }
 
-export default CarStatusContainer
+export default CarStatusContainer;
