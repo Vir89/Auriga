@@ -11,9 +11,10 @@ const Img = styled.img `
         margin-top:30px;
         margin-bottom:20px;
     `}
-
-    ${props=>props.auriga && css`
-        margin-left: 40px;
+${props=>props.cars && css`
+    aspect-ratio: auto;
+     width: 250px;
+     height: 190px;
     `}
     ${props=>props.links && css`
     width: 68px;

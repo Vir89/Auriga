@@ -10,7 +10,7 @@ const SuscriptionType = (props) => {
 
     return (
         <Link style={{ textDecoration: "none" }} to={"/suscripciones"}>
-            <H3>
+            <H3 home>
                 {context.user
                  ? getSuscriptionPlanFromObject(context.user)
                  : "No está suscrito"}

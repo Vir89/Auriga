@@ -10,7 +10,7 @@ function Navbar() {
         setSidebar(!sidebar)
     };
     return (
-        <Fragment>
+        <Fragment style={{marginBottom: "20px"}}>
         <IconContext.Provider value={{color: '#fff'}}>
          <NavBarDiv showSidebar={showSidebar}/>
          <NavMenuLinks showSidebar={showSidebar} sidebar={sidebar}/>

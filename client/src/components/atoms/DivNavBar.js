@@ -7,6 +7,7 @@ const DivNavBar = styled.div `
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    margin-bottom: 20px;
 `
 
 export default DivNavBar;
