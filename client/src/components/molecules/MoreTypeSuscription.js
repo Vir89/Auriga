@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { ApiContext } from "../../context/ApiContext";
 import { nanoid } from "nanoid";
 import H1 from "../atoms/H1";
-import H2 from "../atoms/H2";
 import P from "../atoms/P";
 import Div from "../atoms/Div";
 import Button from "../atoms/Button";
@@ -11,7 +10,6 @@ import { ImCheckmark } from "react-icons/im";
 import { VscCircleFilled } from "react-icons/vsc";
 import getSuscriptionShowPlansFromObject from "../../utils/getSuscriptionShowPlansFromObject";
 import plansData from "../../data/plansData";
-import {IoMdCheckmarkCircleOutline} from "react-icons/io";
 
 const MoreTypeSuscription = () => {
     const context = useContext(ApiContext);
@@ -25,26 +23,27 @@ const MoreTypeSuscription = () => {
     return (
         <Section>
             <Div centerBodyLandingPage>
-                <H1 suscription>Suscripciones</H1>              
-                    <H2 suscription>Selecciona el plan ideal para ti</H2>
-             </Div>   
+                <H1>Suscripciones</H1>
+                <Div descripFrequencyVisits>
+                    <p>Selecciona el plan ideal para ti</p>
+                </Div>
+
                 <Div centerDescripLanding>
                     <ul>
                         <li>
-                            <IoMdCheckmarkCircleOutline/> Todos los aspectos de tu coche
+                            <VscCircleFilled /> Todos los aspectos de tu coche
                             bajo control
                         </li>
                         <li>
-                            <IoMdCheckmarkCircleOutline/> Elige según tus necesidades de
+                            <VscCircleFilled /> Elige según tus necesidades de
                             limpieza
                         </li>
                         <li>
-                            <IoMdCheckmarkCircleOutline/> Cambia de plan o cancela cuando
+                            <VscCircleFilled /> Cambia de plan o cancela cuando
                             quieras
                         </li>
                     </ul>
-                  </Div>
-                    <Div centerBodyLandingPage>
+
                     {context.usersLoaded && (
                         <Div centerButton>
                             <Button
@@ -160,6 +159,7 @@ const MoreTypeSuscription = () => {
 
                     <Div hr></Div>
                 </Div>
+            </Div>
         </Section>
     );
 };

@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 
 
 const P = styled.p `
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding-left:5px;
     font-weight: ${props => props.theme.textWeight.regular};
     color:${props => props.theme.colors.primary};
@@ -23,7 +23,7 @@ const P = styled.p `
 
         
     `}
-    
+
     ${props=>props.paragraphLanding && css`
         text-align: center;
         font-size: 0.9rem;
@@ -37,10 +37,9 @@ const P = styled.p `
         width:70%;
         padding: 10px;
         margin:10px;
-        border: 2px solid ${props => props.theme.colors.primary};
+        border: 2px solid darkblue;
         position: relative;
         border-radius: 5px;
-        
 
         :before {
             ${(props) => css`
@@ -54,11 +53,17 @@ const P = styled.p `
             left: 15px;
             width: max-content;
             padding: 0 20px 0 20px;
-            background-color: #F2F4F1;
+            background-color:${props => props.theme.colors.white};
         }
 
     `}
 
+
+  
+    
+
+
+    
 `
 
 export default P
