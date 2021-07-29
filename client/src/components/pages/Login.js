@@ -55,7 +55,7 @@ const Login = (props) => {
             };
 
             axios
-                .post("http://localhost:5000/login", loginData)
+                .post("/api/login", loginData)
                 .then(function (response) {
                     // handle success
                     context.setUser(response.data.user);

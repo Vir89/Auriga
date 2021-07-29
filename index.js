@@ -25,7 +25,7 @@ const port = process.env.PORT || 5000
 
 
 //Register user
-app.post('/register', (req, res) => {
+app.post('/api/register', (req, res) => {
     bcrypt
     .hash(req.body.password,10)
     .then(hashedPassword => {
@@ -36,7 +36,7 @@ app.post('/register', (req, res) => {
 
 //Login user
 
-app.post('/login', async (req, res, next) => {
+app.post('/api/login', async (req, res, next) => {
 
     const user = await User.findOne({ 'personalDetails.email': req.body.email });
 
@@ -61,7 +61,7 @@ app.post('/login', async (req, res, next) => {
 })
 
 
-app.get('/users', async (req, res, next) => {
+app.get('/api/users', async (req, res, next) => {
 
     const user = await User.find({});
 
