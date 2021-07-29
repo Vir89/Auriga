@@ -5,7 +5,6 @@ import Button from "../atoms/Button";
 import Div from "../atoms/Div";
 import H2 from "../atoms/H2";
 import P from "../atoms/P";
-import Label from "../atoms/Label";
 import Input from "../atoms/Input";
 import Main from "../atoms/Main";
 import Section from "../atoms/Section";
@@ -18,7 +17,6 @@ import facebook from "../../styles/img/facebook.png"
 import Img from "../atoms/Img";
 import H1 from "../atoms/H1";
 import Form from  "../atoms/Form";
-import Hr from "../atoms/Hr";
 
 const Login = (props) => {
 
@@ -137,7 +135,7 @@ const Login = (props) => {
             </Section>
             <Div links>
              <Div hr>
-             <Hr></Hr><H2 network>Incicia Sesión</H2><Hr></Hr>
+             <Hr></Hr><H2 netwk>Inicia Sesión</H2><Hr></Hr>
              </Div>
            <Img links src={google} alt='google' />
            <Img links src={facebook} alt='facebook'/>

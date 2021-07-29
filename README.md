@@ -1,7 +1,7 @@
 
 # Proyecto 3: Aplicación web para la gestion de mantenimiento de automóviles de los clientes de la empresa Auriga.
 
-Aplicación web creada por un equipo de cuatro desarrolladores en dos meses, como parte del programa del Bootcamp en desarrollo web de Wild Code School. La aplicación esta dirigida para que los usuarios de la empresa Auriga puedan gestionar el mantenimiento de su vehiculo y conocer el estado del mismo, además de acceder a suscripciones.
+Creación de una aplicación web durante el Bootcamp de Wild Code School de Desarrollo Web realizados por cuatro desarrolladores; para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
 
 ## :link: Demo
 
@@ -40,7 +40,6 @@ Insert gif or link to demo
     - [Discord](#comunicación-e-intercambio-de-información).
     - [Google Meet](#comunicación-e-intercambio-de-información).
 - [Instalación](#floppy_disk-instalación).
-- [Acceso](#unlock-acceso).
 - [Autores](#octocat-autores).
 - [Perfiles Linkedln](#busts_in_silhouette-perfiles-linkedln).
 - [Licencia](#cop-licencia).
@@ -55,7 +54,7 @@ Así que aquí tienes a Auriga hoy. Paco más centrado en lo comercial y Antonio
   
 ## :memo: Nuestro objetivo
 
-Consiste en la creación de un sitio web user-friendly para llevar a cabo el control del estado del vehículo; y de mantenimiento tanto para clientes que están suscritos en sus servicios: Básico, Estándar, Premium como los que no están suscritos en la empresa Auriga; dirigido principalmente al usuario de dispositivos móviles.
+Consiste en la creación de un sitio web para llevar a cabo el control del estado del vehículo; y de mantenimiento tanto para clientes que están suscritos en sus servicios: Básico, Estándar, Premium como los que no están suscritos en la empresa Auriga; dirigido principalmente al publico móvil ya que su mayoría de clientes son del mismo.
 
 ## [:top:](#tabla-de-contenido)
 
@@ -195,16 +194,6 @@ npm run-script dev
 Ejecute la aplicación en modo de desarrollo. Abra http://localhost:3000 para verla en el navegador.
 
 La página se recargará si haces algún cambio.
-
-## [:top:](#tabla-de-contenido)
-
-## :unlock: Acceso 
-Para acceder a la web y visualizar el contenido existen dos usuarios:
-- s.caballero1993@gmail.com
-- virginia@gmail.com
-
-Ambos usuarios emplean la contraseña: 0123456789
-
 
 ## [:top:](#tabla-de-contenido)
 
