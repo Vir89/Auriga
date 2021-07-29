@@ -1,7 +1,5 @@
 import styled, {css} from "styled-components";
 
-//card alert container
-
 const Card = styled.div `
 	background-color:  #f1f1f1ab;
 	border-radius: 50px;
