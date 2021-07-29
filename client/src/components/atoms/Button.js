@@ -5,10 +5,11 @@ const Button = styled.button `
         border: none;
         background-color:${props => props.theme.colors.primary};
         color:${props => props.theme.colors.white};
-        width: 90%;
+        width: 72%;
         height:44px;
         border-radius:5px;
-        margin: 8px;
+        margin: 15px;
+        font-size: 1.2rem;
 
         @media screen and (min-width: 578px) {
 		width:70%;
@@ -33,6 +34,7 @@ const Button = styled.button `
             font-size: 16px;
             margin: 4px 4px;
             width: 35%;
+	    min-width: 110px;
             font-weight: 700;
                         
 

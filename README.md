@@ -3,39 +3,45 @@
 
 Creación de una aplicación web durante el Bootcamp de Wild Code School de Desarrollo Web realizados por cuatro desarrolladores; para el mantenimiento del automóviles dirigido para no clientes y clientes fijos de la empresa Auriga.
 
-## Demo
+## :link: Demo
 
 Insert gif or link to demo
 
 ## Tabla de contenido
 
 - [Auriga](#auriga).
-- [Nuestro objetivo](#nuestro-objetivo).
+- [Nuestro objetivo](#memo-nuestro-objetivo).
 - [Stack Tecnológico](#microscope-stack-tecnológico).
 - [Herramientas, librerías, dependencias y metodologías utilizadas](#microscope-herramientas-librerías-dependencias-y-metodologías-utilizadas).
-  - [Herramientas Frontend](#herramientas-frontend).
+  - [Herramientas Frontend](#wrench-herramientas-frontend).
     - [React.js](#herramientas-frontend).
     - [Javascript](#herramientas-frontend).
     - [HTML](#herramientas-frontend).
     - [CSS](#herramientas-frontend).
     - [Styled-Components](#herramientas-frontend).
     - [Atomic design](#herramientas-frontend).
-  - [Herramientas Backend](#herramientas-backend).
+    - [React Router](#herramientas-frontend).
+    - [Context](#herramientas-frontend).
+    - [Swiper](#herramientas-frontend).
+  - [Herramientas Backend](#wrench-herramientas-backend).
     - [Node.js](#herramientas-backend).
     - [Express.js](#herramientas-backend).
     - [mongoDB](#herramientas-backend).
     - [Heroku](#herramientas-backend).
-  - [Control de Versiones](#control-de-versiones).
+    - [Mongoose](#herramientas-backend).
+    - [Jsonwebtoken](#herramientas-backend).
+    - [Nodemon](#herramientas-backend).
+  - [Control de Versiones](#bookmark_tabs-control-de-versiones).
     - [Git y Github](#control-de-versiones).
-  - [Metodología SCRUM](#metodología-scrum).
+  - [Metodología SCRUM](#clipboard-metodología-scrum).
     - [Jira](#metodología-scrum).
-  - [Comunicación e Intercambio de Información](#comunicación-e-intercambio-de-información).
+  - [Comunicación e Intercambio de Información](#telephone_receiver-comunicación-e-intercambio-de-información).
     - [Slack](#comunicación-e-intercambio-de-información).
     - [Discord](#comunicación-e-intercambio-de-información).
     - [Google Meet](#comunicación-e-intercambio-de-información).
 - [Instalación](#floppy_disk-instalación).
-- [Autores](#autores).
-- [Perfiles Linkedln](#perfiles-linkedln).
+- [Autores](#octocat-autores).
+- [Perfiles Linkedln](#busts_in_silhouette-perfiles-linkedln).
 - [Licencia](#cop-licencia).
 
 ## Auriga
@@ -46,7 +52,7 @@ Así que aquí tienes a Auriga hoy. Paco más centrado en lo comercial y Antonio
 
 ## [:top:](#tabla-de-contenido)
   
-## Nuestro objetivo
+## :memo: Nuestro objetivo
 
 Consiste en la creación de un sitio web para llevar a cabo el control del estado del vehículo; y de mantenimiento tanto para clientes que están suscritos en sus servicios: Básico, Estándar, Premium como los que no están suscritos en la empresa Auriga; dirigido principalmente al publico móvil ya que su mayoría de clientes son del mismo.
 
@@ -64,7 +70,7 @@ Consiste en la creación de un sitio web para llevar a cabo el control del estad
 
 ## :microscope: Herramientas, librerías, dependencias y metodologías utilizadas:
 
-### Herramientas Frontend:
+### :wrench: Herramientas Frontend:
 
 - **React.js:** 
 Es una biblioteca o librería de Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.
@@ -84,9 +90,18 @@ Es una nueva forma de utilizar CSS con tus componentes en las aplicaciones front
 - **Atomic design:** 
 Utilizamos esta metodología ya que nos obliga a coger cada diseño y diseccionarlo para poder separar cada átomo.
 
+- **React Router:** 
+Nos permiten crear una aplicación web de una sola página con navegación sin que la página se actualice mientras el usuario navega. React Router utiliza la estructura de componentes para llamar a componentes, que muestran la información adecuada.
+
+- **Context:** 
+Nos provee una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel.
+
+- **Swiper:** 
+Es un control deslizante táctil móvil; está destinado a ser utilizado en sitios web móviles, aplicaciones web móviles y aplicaciones móviles nativas / híbridas.
+
 ## [:top:](#tabla-de-contenido)
 
-### Herramientas Backend:
+### :wrench: Herramientas Backend:
 
 - **Node.js:** 
 Es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos.
@@ -101,23 +116,32 @@ Es de alto rendimiento y alta escalabilidad lo hace ideal para un sistema que se
 - **Heroku:** 
 Es una plataforma en la nube que permite a las empresas construir, entregar, supervisar aplicaciones y alojarlas en la nube. 
 
+- **Mongoose:** 
+Nos proporciona una solución sencilla basada en esquemas para modelar los datos de su aplicación.
+
+- **Jsonwebtoken:** 
+Es un estándar abierto basado en JSON propuesto por IETF para la creación de tokens de acceso que permiten la propagación de identidad y privilegios
+
+- **Nodemon:** 
+Es una herramienta que ayuda a desarrollar aplicaciones basadas en node.js al reiniciar automáticamente la aplicación de node cuando se detectan cambios de archivo en el directorio.
+
 ## [:top:](#tabla-de-contenido)
 
-### Control de Versiones: 
+### :bookmark_tabs: Control de Versiones: 
 
 - **Git y Github:** 
 Lo utilizamos para control de versiones ya que nos facilita el trabajo colaborativo, Reduce considerablemente los tiempos de deploy (despliegue) a la vez que el proyecto evolucionando.
 
 ## [:top:](#tabla-de-contenido)
 
-### Metodología SCRUM:
+### :clipboard: Metodología SCRUM:
 
 - **Jira:**
 Se utilizo Jira Software para la administración o gestión del proyecto; ya que nos ayuda ahorrar tiempo y dinero, fomenta el trabajo en equipo, se adapta fácil a la empresa o al grupo que lo quiera utilizar, es de fácil manejo.
 
 ## [:top:](#tabla-de-contenido)
 
-### Comunicación e Intercambio de Información:
+### :telephone_receiver: Comunicación e Intercambio de Información:
 
 - **Slack:**
 Esta herramienta lo utilizamos para comunicarnos con cliente y el equipo de desarrolladores: más rápida, mejor organizada y más segura que el correo electrónico y así establecer establecer reuniones o consultas sobre dudas que aclarar.
@@ -141,7 +165,16 @@ git clone https://github.com/Vir89/Auriga.git
 cd Auriga
 ```
 
-2. Instalando las dependencias:
+2. También para la parte de backend se requiere crear un archivo ".env" :
+
+Donde escribirá lo siguiente dentro del archivo creado anteriormente
+
+```bash 
+PORT=5000
+DB_CONNECTION= .........Conexion a la base de datos.........
+```
+
+3. Instalando las dependencias:
 
 ```bash 
 npm install
@@ -152,18 +185,19 @@ Y luego hacer
 npm run client-install
 ```
 
-3. Iniciar la aplicación web:
+4. Iniciar la aplicación web:
 
 ```bash 
 npm run-script dev
 ```
+
 Ejecute la aplicación en modo de desarrollo. Abra http://localhost:3000 para verla en el navegador.
 
 La página se recargará si haces algún cambio.
 
 ## [:top:](#tabla-de-contenido)
 
-## Autores
+## :octocat: Autores
 
 Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Manuel, Sergio y Virginia, este es nuestro tercer proyecto, y se ha creado este proyecto donde aplicamos conocimientos de Frontend y Backend.
 
@@ -174,7 +208,7 @@ Somos un grupo de cuatro alumnos del bootcamp Wild Code School España: Alba, Ma
 
 ## [:top:](#tabla-de-contenido)
 
-## Perfiles Linkedln
+## :busts_in_silhouette: Perfiles Linkedln
 
 - [@Alba-López](https://www.linkedin.com/in/albalopezmelian/)
 - [@Manuel-Marque](https://www.linkedin.com/in/manuel-marque/)
