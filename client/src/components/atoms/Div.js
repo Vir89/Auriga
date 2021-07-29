@@ -8,21 +8,24 @@ export const Div = styled.div `
     `} 
     
     ${props=>props.alert && css`
-        width: 101%;
-        margin: 9px -2px;
+        width: 94%;
+        margin: 9px 11px;
         display:flex;
         flex-flow: row wrap;
         padding: 10px;
         align-items: center;
         justify-content: space-between;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        background-color:${props => props.theme.colors.white} !important;
+        background-color:#f1f1f1ab !important;
         ${props=>props.danger && css`
             background-color:${props => props.theme.colors.lightDanger} !important;
         `}
     `}
 
-    
+    ${props=>props.acordeon && css`
+        width: 90%;
+        margin:auto;
+    `}
     
 
     ${props=>props.column && css`
@@ -154,25 +157,20 @@ export const Div = styled.div `
 
 
     ${props=>props.descripFrequencyVisits && css`
-        display: flex;
-        flex-direction: row;
-        justify-content:flex-start;
-        margin: 10px;
+        margin: auto;
         font-size: 20px;
         margin-bottom: 15px;
     `}
 //nuevo
 
     ${props=>props.centerBodyLandingPage && css`
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 90%;
+        margin: auto;
     `}
 
     ${props=>props.centerButton && css`
         display: flex;
         text-align: center;
-        padding: 10px;
 
         ${props=>props.effectSticky && css`
             position: -webkit-sticky;
@@ -188,7 +186,8 @@ export const Div = styled.div `
     `}
 
     ${props=>props.centerDescripLanding && css`
-        width: 80%;
+        width: 90%;
+        margin: 18px 0px 27px 32px;
     `}
 
     
