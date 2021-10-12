@@ -1,3 +1,4 @@
+/*
 const User = require('../models/User');
 const { response } = require('express');
 const bcrypt = require('bcrypt');
@@ -35,3 +36,4 @@ exports.createUser = async (req, res) => {
      }  
  }
 
+*/

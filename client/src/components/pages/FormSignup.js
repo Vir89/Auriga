@@ -5,7 +5,6 @@ import Div from '../atoms/Div';
 import Label from '../atoms/Label';
 import {useForm} from './useForm';
 import './Form.css';
-import GoogleLogin from 'react-google-login';
 import validateInfo from './validateInfo';
 import Main from "../atoms/Main";
 import Section from "../atoms/Section";
@@ -13,13 +12,19 @@ import Input from "../atoms/Input";
 import Button from "../atoms/Button";
 import H1 from "../atoms/H1";
 import Img from "../atoms/Img";
-import logo from "../../styles/img/logo.png"
-import google from "../../styles/img/google.png"
-import facebook from "../../styles/img/facebook.png"
+import logo from "../../styles/img/logo.png";
+//import google from "../../styles/img/google.png";
 import Hr from "../atoms/Hr";
 import H2 from "../atoms/H2";
+import MyFacebookLogin from "../organisms/MyFacebookLogin.js";
+import MyLoginGoogle from "../organisms/MyLoginGoogle.js";
 
-const FormSignup = () => {
+
+
+const FormSignup = (props) => {
+
+
+  const [login, setLogin] = useState(false);
 
   const [user, setUser] = useState({
     firstName: '',
@@ -60,8 +65,12 @@ const FormSignup = () => {
 
   );
 
-  //const answerGoogle = (answer) => {
-    //console.log(answer);
+  
+  const [data, setData] = useState({});
+  const [picture, setPicture] = useState('');
+
+
+ 
 
   return (
 
@@ -147,8 +156,25 @@ const FormSignup = () => {
              <Div hr>
              <Hr></Hr><H2 netwk>Inicia Sesión</H2><Hr></Hr>
              </Div>
-           <Img links src={google} alt='google' />
-           <Img links src={facebook} alt='facebook'/>
+
+
+
+           {/*<Img links src={google} alt='google'
+            GoogleLogin
+            clientId="979160339603-09rs6jej3m4gqi6u35vm1beii6ei3kte.apps.googleusercontent.com"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}           
+          />*/}
+
+        
+
+          {/*<Img links src={facebook} alt='facebook'
+          
+          />*/}
+          <MyFacebookLogin {...props}/>
+          <MyLoginGoogle {...props}/>
+      
            </Div>
   </Main>
   );

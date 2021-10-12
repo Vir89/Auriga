@@ -21,6 +21,7 @@ const APIProvider = (props) => {
          } else if(usersLoaded){
 
             console.log(user)
+            /*
             console.log(user.personalDetails)
             console.log(user.cars)
             const kmTotal = user.cars[0].variableFeatures.kM
@@ -31,7 +32,7 @@ const APIProvider = (props) => {
                 setCarStatus,
                 kmTotal,
                 kmToMaintance
-            ) 
+            ) */
             setCarStatusLoaded(true) 
             
          }

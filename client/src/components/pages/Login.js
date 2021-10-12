@@ -18,6 +18,10 @@ import Img from "../atoms/Img";
 import H1 from "../atoms/H1";
 import Hr from "../atoms/Hr";
 import Form from  "../atoms/Form";
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
+
+
 
 const Login = (props) => {
 
@@ -29,6 +33,17 @@ const Login = (props) => {
     const [submitted, setSubmitted] = useState(false);
     const [loggingStatus, setLoggingStatus] = useState("");
     const { email, password } = inputs;
+
+    const responseFacebook = (response) => {
+        console.log("Aquí tenemos el nombre: "+response.name);
+        console.log("Aquí tenemos el email: " +response.email);
+        console.log("Aquí esta la foto: " +response.picture.date.url);
+      }
+    
+    
+      const responseGoogle = (response) => {
+      console.log(response);
+      }
 
     // reset login status when logout
     useEffect(() => {
@@ -54,7 +69,7 @@ const Login = (props) => {
             };
 
             axios
-                .post("/api/login", loginData)
+                .post("/login", loginData)
                 .then(function (response) {
                     // handle success
                     context.setUser(response.data.user);
@@ -138,8 +153,26 @@ const Login = (props) => {
              <Div hr>
              <Hr></Hr><H2 netwk>Inicia Sesión</H2><Hr></Hr>
              </Div>
-           <Img links src={google} alt='google' />
-           <Img links src={facebook} alt='facebook'/>
+       
+
+
+           <Img links src={google} alt='google'
+            GoogleLogin
+            clientId="979160339603-09rs6jej3m4gqi6u35vm1beii6ei3kte.apps.googleusercontent.com"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+           />
+
+
+          <Img links src={facebook} alt='facebook' 
+          FacebookLogin
+          appId="193878182856813"
+          autoLoad={false}
+          fields="name,email,picture"
+          callback={responseFacebook}
+          />
+
            </Div>
         </Main>
     );

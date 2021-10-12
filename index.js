@@ -1,86 +1,145 @@
-const express =require ("express");
-const {dbConnection} = require('./config');
-const cors= require("cors");
+require('dotenv').config();
+
+const express = require('express')
+const connection = require('./config');
+const app = express();
+const port = process.env.PORT || 5000;
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-const app= express();
+//global middleware
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
 
-const path = require('path');
-require('dotenv').config; 
+//db connection
 
-const User = require("./models/User");
-const userController = require("./controllers/userController");
-const { connection } = require("mongoose");
+connection.connect(err => {
+    if(err) {
+        console.error(`The DB is not connected well, because have an Error: ${err}`)
+        return;
+    }
+    console.log('Well connected!');
+})
 
-//connection to DB
-dbConnection();
-
-app.use(express.urlencoded({extended:true}));
-app.use(express.json());
-app.use(cors())
-
-
-const port = process.env.PORT || 5000 
-
-
-//Register user
-app.post('/api/register', (req, res) => {
+//register
+app.post('/register', (req, res) => {
     bcrypt
-    .hash(req.body.password,10)
+    .hash(req.body.password, 10)
     .then(hashedPassword => {
-        userController.createUser(req, res);
-    })
-    .catch(hashError => console.error('Error with encoding your password.Error: ${hashError}'))
-})
-
-//Login user
-
-app.post('/api/login', async (req, res, next) => {
-
-    const user = await User.findOne({ 'personalDetails.email': req.body.email });
-
-    if(user){
-        bcrypt
-        .compare(req.body.password, user.personalDetails.password)
-        .then((isAmatch) => {
-            if(isAmatch){
-                const token = jwt.sign(JSON.stringify(user), "mysupersecret")
-                return user 
-                    ? res.json({user, token})  
-                    : res.status(400).json({ message: 'Email or password is incorrect' })
-        
-            }else {
-                res.status(400).send('Incorrect password')
+        let user = {
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            birthday: req.body.birthday,
+            nationality: req.body.nationality,
+            phoneNumber: req.body.phoneNumber,
+            suscriptor: req.body.suscriptor,
+            suscriptionPlan: req.body.suscriptionPlan,
+            password: hashedPassword
+        }
+        connection.query('INSERT INTO user SET ?', user, (err) => {
+            if(err) {
+                console.error(`Error registering the user Error: ${err}`)
+                res.status(500).send(`Error registering the user Error: ${err}`)
+            } else {
+                res.status(201).send('Great! User registered without problem.')
             }
-    
         })
-    } else {
-        res.status(400).send('Email or password is incorrect')
-    }
+
+    })
+
+    .catch(hashError => console.error(`Error with your password. Error: ${hashError}`))
 })
 
+//login
 
-app.get('/api/users', async (req, res, next) => {
-
-    const user = await User.find({});
-
-    if(users){
-        res.json({users})
-    } else {
-        res.status(500).send('Unexpected error')
+app.post('/login', (req, res) => {
+    const user = {
+        email: req.body.email,
+        password: req.body.password
     }
+    connection.query('SELECT * FROM user WHERE email=?', user.email, (err, results) => {
+        if(err) {
+            res.status(500).send('Email not found')
+        } else {
+            bcrypt
+            .compare(user.password, results[0].password)
+            .then((isMatch) => {
+                if(isMatch) {
+                    const generatedToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
+                    res.json({token: generatedToken, loggedIn: true})
+                } else {
+                    res.send('Incorrect password')
+                }
+            })
+        }
+
+    })
+
 })
 
+const authenticateToken = (req, res, next) => {
+    const authHeader = req.headers['authorization']
+    const token = authHeader && authHeader.split(' ')[1]
+    if(token === undefined) return res.sendStatus(401)
 
-app.listen(port,(err)=>{
-    if(err) throw new Error("Something failed")
-    console.log(`Server is running on port ${port}`)
-});
-
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname,'client', 'build', 'index.html'))
-    });
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+        if(err) return res.sendStatus(403)
+        req.foundUser = usernext();
+    })
 }
+
+
+app.get('/profile', authenticateToken, (req, res) => {
+    connection.query('SELECT * FROM user WHERE email=?', req.foundUser.email, (err, results) => {
+        if(err) res.sendStatus(500)
+        res.json(results[0])
+    })
+})
+
+app.post('/sso_login', (req, res) => {
+    
+    let user = null;
+
+    if(req.body.googleId){
+        user = {
+            firstName: req.body.it.HU,
+            lastName: req.body.it.YS,
+            email: req.body.it.Tt
+        }
+    }else{
+        user = {
+            firstName: req.body.name,
+            lastName: req.body.name,
+            email: req.body.email
+        }
+    }
+
+    connection.query('SELECT * FROM user WHERE email=?', user.email, (err, results) => {
+        if(err) {
+            console.log(err);
+            res.status(500).send(err);
+        } else if(results.length == 0){
+            //Crear usuario
+            connection.query('INSERT INTO user SET ?', user, (err) => {
+                if(err) {
+                    console.error(`Error registering the user Error: ${err}`)
+                    res.status(500).send(`Error registering the user Error: ${err}`)
+                }
+            })
+
+        }
+
+        const generatedToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+        res.json({token: generatedToken, loggedIn: true});
+    
+    })
+})
+
+
+
+
+app.listen(port, (err) => {
+    if(err) throw new Error(`Server is not working well! Error: ${err}`);
+    console.log(`Server is working well at port: ${port}`)
+});

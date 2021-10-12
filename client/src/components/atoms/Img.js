@@ -22,6 +22,7 @@ const Img = styled.img `
     padding: 10px;
     border-radius: 5px;
     box-shadow: rgb(50 50 93 / 9%) 0px 0px 1px 1px, rgb(0 0 0 / 30%) 0px 2px 1px 0px;
+
     `}
     
     `

@@ -1,3 +1,4 @@
+/*
 const mongoose= require('mongoose');
 
 const userSchema = new mongoose.Schema({
@@ -6,7 +7,7 @@ const userSchema = new mongoose.Schema({
         lastName:{type: String, required:true },
         email:{ type: String, required:true, unique:true, trim:true, lowercase: true, match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'], createIndexes: { unique: true } },
         IDcard:{ type:String, unique:true, trim:true },
-        birthDate:{ type:Date},
+        birthday:{ type:Date},
         nacionality:{ type:String},
         phoneNumber:{ type: Number},
         suscriptor:{ type: Boolean},
@@ -170,3 +171,4 @@ const userSchema = new mongoose.Schema({
 
 
 module.exports = mongoose.model("User", userSchema);
+*/
